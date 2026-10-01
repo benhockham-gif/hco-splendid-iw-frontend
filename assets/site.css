@@ -10,7 +10,7 @@ body{margin:0;background:var(--sand);font-family:'Archivo',system-ui,sans-serif;
 a{color:var(--ink);text-decoration:none}
 a:hover{color:var(--rust)}
 img{display:block}
-button,input{font-family:'Archivo',sans-serif}
+button,input,textarea{font-family:'Archivo',sans-serif}
 form{margin:0}
 .sr{position:absolute!important;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap;border:0}
 .icon{fill:none;stroke:currentColor;stroke-linejoin:round}
@@ -251,10 +251,32 @@ form{margin:0}
 .summary .total .v span{font-size:12.5px;color:var(--mute3)}
 .summary .note{background:var(--sand);padding:14px 16px;font-size:13px;line-height:1.5;color:var(--mute)}
 .summary .note strong{color:var(--ink);font-weight:700}
-.summary form{margin-top:16px}
-.summary .btn.big{width:100%}
-.summary .alt{margin-top:12px;font-size:12.5px;color:var(--mute3);text-align:center}
-.summary .alt a{font-weight:600}
+.bk-side{display:flex;flex-direction:column;gap:24px}
+.details{background:var(--card);border:1px solid var(--line);padding:24px;display:flex;flex-direction:column;gap:16px}
+.details .dh{display:flex;flex-direction:column;gap:5px}
+.details .dh .t{font-size:20px;font-weight:600;letter-spacing:-0.01em;margin:0}
+.details .dh .s{font-size:12.5px;line-height:1.5;color:var(--mute3);margin:0}
+.details .dh .s a{color:var(--ink);font-weight:600;border-bottom:1px solid var(--ink)}
+.details .dh .s a:hover{color:var(--rust);border-color:var(--rust)}
+.details form{display:flex;flex-direction:column;gap:16px}
+.details .field>span{font-size:13px}
+.details .field .opt{font-weight:500;color:var(--mute3)}
+.details .input{border-width:1px;padding:12px 14px;font-size:14px}
+.details textarea.input{display:block;line-height:1.5;resize:vertical}
+.details .pair{display:grid;grid-template-columns:minmax(0,1fr) 140px;gap:12px}
+.details .btn.big{width:100%;margin-top:4px}
+.details .alt{font-size:12.5px;color:var(--mute3);text-align:center}
+.details .alt a{font-weight:600}
+.sent{padding:28px 48px 96px;display:grid;grid-template-columns:minmax(0,1fr) 420px;gap:56px;align-items:start}
+.sent .l{display:flex;flex-direction:column;gap:20px;min-width:0}
+.sent .lede{font-size:18px;line-height:1.5;color:var(--mute);max-width:560px}
+.sent .btn.big{align-self:flex-start;margin-top:8px}
+.sent .r{border-top:1.5px solid var(--ink);padding-top:16px;display:flex;flex-direction:column;gap:12px}
+.sent .r .h{font-size:15px;font-weight:600}
+.sent .r p{font-size:13.5px;line-height:1.5;color:var(--mute);margin:0}
+.sent .r .tel{font-size:28px;font-weight:700;letter-spacing:-0.015em}
+.sent .r .mail{font-size:14px;font-weight:500;color:var(--mute2)}
+.sent .r a:hover{color:var(--rust)}
 
 /* log in / register / account */
 .auth{padding:0 48px 88px;display:grid;grid-template-columns:minmax(0,1fr) 460px;gap:56px;align-items:start}

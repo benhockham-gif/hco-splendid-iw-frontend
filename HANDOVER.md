@@ -4,7 +4,7 @@
 **From:** Claude Design (HCP-249)
 **Source:** approved design 3a (Splendid Export), re-exported as plain HTML and CSS for the Intelligent Websites front-end contract (HCP-140).
 
-The pages contain no script, no `on…=` handlers, no `{{ }}` templates and no outside resources (no Google Fonts either: Archivo is self-hosted in `/assets/fonts/`). The only forms are the contract's slot forms. Sample text and sample items in slots are there for layout only, so the product replaces or drops them.
+The pages contain no script, no `on…=` handlers, no `{{ }}` templates and no outside resources (no Google Fonts either: Archivo is self-hosted in `/assets/fonts/`). The only forms are the contract's slot forms (the basket checkout form now also carries the customer-details inputs; see below). Sample text and sample items in slots are there for layout only, so the product replaces or drops them.
 
 ## Pages
 
@@ -30,6 +30,8 @@ All pages share one header and footer, and every page links `/assets/site.css`.
 | Any product card, `product.html`, `account.html` | Heart outline / heart filled | `<form data-iw-favourite>` › `data-iw-favourite-off` / `data-iw-favourite-on`. The two variants are stacked in the same spot, so the preview shows the filled one. |
 | `basket.html` | Lines, summary, checkout | `data-iw-basket-full` |
 | `basket.html` | "Your basket is empty" panel | `data-iw-basket-empty` |
+| `basket.html` | "Quote request sent" confirmation | `data-iw-basket-sent` (**new, please confirm**) |
+| `basket.html` | "Log in to fill these in." (in the details form) | `data-iw-member="out"` |
 | `login.html` | "Those details don't match." | `data-iw-login-error` |
 | `login.html` | "Awaiting approval" | `data-iw-login-pending` |
 | `register.html` | Heading, form, side panel | `data-iw-register-form` (contains `<form data-iw-register>`) |
@@ -48,7 +50,7 @@ All pages share one header and footer, and every page links `/assets/site.css`.
 - **category.html:** `data-iw-category-title` (breadcrumb), `data-iw-category-text="heading"`, `data-iw-category-text="text"`, `<img data-iw-category-image>`, a side `data-iw-nav` (indented by `data-iw-depth` 0 to 2), and `data-iw-products` › `data-iw-product`.
 - **Product card** (category, account): `data-iw-product-link` (image, name and "View product" button), `data-iw-product-name`, `data-iw-product-price`, `<img data-iw-product-image>`, `<form data-iw-favourite>`.
 - **product.html:** product fields (name appears in the breadcrumb and the heading), `<form data-iw-add-to-basket>` (`input name="quantity"` + button), favourite form, and `data-iw-product-categories` › `data-iw-product-category` (the "Find it in" chips).
-- **basket.html:** `data-iw-basket-lines` › `data-iw-basket-line` (product fields, `data-iw-line-total`, `<form data-iw-basket-quantity>` with `input name="quantity"` + "Update" button, `<form data-iw-basket-remove>`), `data-iw-basket-total`, `<form data-iw-checkout>`.
+- **basket.html:** `data-iw-basket-lines` › `data-iw-basket-line` (product fields, `data-iw-line-total`, `<form data-iw-basket-quantity>` with `input name="quantity"` + "Update" button, `<form data-iw-basket-remove>`), `data-iw-basket-total`, `<form data-iw-checkout>` with `name`, `company`, `email`, `phone`, `postcode` (all required) and `notes` (optional `textarea`) + "Send quote request" button, and the `data-iw-basket-sent` confirmation block.
 - **login.html:** `<form data-iw-login>` with `email` and `password` inputs.
 - **register.html:** `<form data-iw-register>` with `first_name`, `last_name`, `company`, `email` and `password` inputs.
 
@@ -56,11 +58,11 @@ All pages share one header and footer, and every page links `/assets/site.css`.
 
 No `data-iw-image` keys are used. The logo and the two feature photographs are decoration and live in `/assets/`. Product and category images come only from the product and category image slots; their sample `src` is `/assets/placeholder.svg` (a striped tile, not a product image). All Pexels placeholders from the prototype have been removed.
 
-## Assets (238 KB total, limit 5 MB)
+## Assets (240 KB total, limit 5 MB)
 
 | File | Size |
 |---|---|
-| `/assets/site.css` | 21.6 KB |
+| `/assets/site.css` | 23.2 KB |
 | `/assets/logo.png` | 37.3 KB |
 | `/assets/home-feature.avif` | 39.2 KB |
 | `/assets/why-feature.jpg` | 52.5 KB |
@@ -90,6 +92,9 @@ Every visible word sits in a `data-iw-text` slot, apart from words that come fro
 | `basket.checkout` | Send quote request | basket |
 | `basket.continue` | Continue browsing | basket, account |
 | `basket.crumb` | Basket | basket |
+| `basket.details.heading` | Your details | basket |
+| `basket.details.login` | to fill these in. | basket |
+| `basket.details.required` | All fields except notes are required. | basket |
 | `basket.empty.heading` | Your basket is empty | basket |
 | `basket.empty.text` | Add products as you browse, then send the list to us as a quote request. | basket |
 | `basket.heading` | Your basket | basket |
@@ -98,6 +103,11 @@ Every visible word sits in a `data-iw-text` slot, apart from words that come fro
 | `basket.note.text` | No payment is taken. A buyer will confirm prices, availability and delivery before anything is sent. | basket |
 | `basket.quantity` | Quantity | basket |
 | `basket.remove` | Remove | basket |
+| `basket.sent.heading` | Thank you. | basket |
+| `basket.sent.sooner.heading` | Need it sooner? | basket |
+| `basket.sent.sooner.text` | Call the trade counter or email the buying team. | basket |
+| `basket.sent.status` | Quote request sent | basket |
+| `basket.sent.text` | A buyer will reply within one working day with prices and availability for your list. | basket |
 | `basket.summary` | Summary | basket |
 | `basket.talk` | Prefer to talk? Call | basket |
 | `basket.total.label` | Guide total | basket |
@@ -119,11 +129,16 @@ Every visible word sits in a `data-iw-text` slot, apart from words that come fro
 | `footer.shopping.heading` | Shopping with us | home, category, product, basket, login, register, account, notfound |
 | `footer.shopping.privacy` | Privacy policy | home, category, product, basket, login, register, account, notfound |
 | `footer.shopping.terms` | Terms and conditions | home, category, product, basket, login, register, account, notfound |
-| `form.company` | Business name | register |
-| `form.email` | Email | login, register |
+| `form.company` | Business name | basket, register |
+| `form.email` | Email | basket, login, register |
 | `form.first_name` | First name | register |
 | `form.last_name` | Last name | register |
+| `form.name` | Name | basket |
+| `form.notes` | Notes | basket |
+| `form.optional` | (optional) | basket |
 | `form.password` | Password | login, register |
+| `form.phone` | Phone | basket |
+| `form.postcode` | Delivery postcode | basket |
 | `header.basket` | Basket | home, category, product, basket, login, register, account, notfound |
 | `header.favourites` | Favourites | home, category, product, basket, login, register, account, notfound |
 | `header.search.button` | Search | home, category, product, basket, login, register, account, notfound |
@@ -150,7 +165,7 @@ Every visible word sits in a `data-iw-text` slot, apart from words that come fro
 | `login.new` | New to Splendid? | login |
 | `login.pending` | Your account is awaiting approval. We'll email you once it's ready. | login |
 | `member.account` | My account | home, category, product, basket, login, register, account, notfound |
-| `member.login` | Log in | home, category, product, basket, login, register, account, notfound |
+| `member.login` | Log in | home, category, product, basket, login, register, account, notfound (also in the basket details form) |
 | `member.logout` | Log out | home, category, product, basket, login, register, account, notfound |
 | `member.register` | Open a trade account | home, category, product, basket, login, register, account, notfound |
 | `notfound.basket` | View basket | notfound |
@@ -203,7 +218,7 @@ Prototype behaviour has been removed: the localStorage basket, demo login, demo 
 2. **Product page:** supplier, code, stock count, description, pack box, extra image thumbnails, Specification table and "More from …" are not shown, for the same reason. The categories list ("Find it in") sits where Specification was.
 3. **Home:** "Featured products" and "Our brands" are left out because neither has a slot on home. The department cards show a decorative pebble in place of a photo, because nav items have no category image. Subcategory lines are also left out. The "Why buy from Splendid" carousel is a single static panel.
 4. **Category:** the subcategory chips, filters, sort, grid/list toggle and pagination are left out. A "Departments" side nav (indented by depth) keeps the approved two-column layout. A category image slot sits beside the intro text.
-5. **Basket:** the quote-request details form, line/item counts, "Clear basket" and the "Quote request sent" state are left out. Checkout is a single "Send quote request" button. The +/- stepper is replaced by a number input with an "Update" button.
+5. **Basket (revised, HCP-264):** the customer details form and the "Quote request sent" confirmation are back, matching approved 3a. The details inputs (`name`, `company`, `email`, `phone`, `postcode`, `notes`) sit inside `<form data-iw-checkout>`, so one submit sends the list and the details. The confirmation is a new state block, `data-iw-basket-sent`, delivered visible like the others; please confirm the contract can show it after checkout (or tell us the slot name to use). Because the contract has no slots for them, the confirmation drops the reference number and the customer's first name ("Thank you." rather than "Thank you, Sam."), the item summary reads "your list", the notes placeholder text is left out, and the "Filled in from your account" line and pre-filled values for logged-in members are left out. Line/item counts and "Clear basket" are still left out. The +/- stepper is replaced by a number input with an "Update" button.
 6. **Log in:** "Forgot password" and the "Log in to save favourites" note are left out (no slot).
 7. **Register:** the fields follow the contract: first name, last name, business name, email and password. Business type, phone and the terms checkbox are left out. `register.error.*` and `register.exists.*` are new wording, so please approve it.
 8. **Account:** the business-name heading, email and "Remove from favourites" text link are left out. The heart removes a saved item.

@@ -76,13 +76,45 @@
         </ul>
         <a class="underlink more" data-iw-href="home" href="/home.html"><span data-iw-text="basket.continue">Continue browsing</span></a>
       </div>
-      <div class="summary">
-        <div class="h" data-iw-text="basket.summary">Summary</div>
-        <div class="total"><span class="l" data-iw-text="basket.total.label">Guide total</span><span class="v"><b data-iw-basket-total>£387.60</b><span data-iw-text="basket.vat">ex VAT</span></span></div>
-        <div class="note"><strong data-iw-text="basket.note.lead">This is a quote request, not an order.</strong> <span data-iw-text="basket.note.text">No payment is taken. A buyer will confirm prices, availability and delivery before anything is sent.</span></div>
-        <form data-iw-checkout method="post"><button class="btn big" type="submit"><span data-iw-text="basket.checkout">Send quote request</span></button></form>
-        <div class="alt"><span data-iw-text="basket.talk">Prefer to talk? Call</span> <a href="tel:+442076840000"><span data-iw-text="site.phone">020 7684 0000</span></a></div>
+      <div class="bk-side">
+        <div class="summary">
+          <div class="h" data-iw-text="basket.summary">Summary</div>
+          <div class="total"><span class="l" data-iw-text="basket.total.label">Guide total</span><span class="v"><b data-iw-basket-total>£387.60</b><span data-iw-text="basket.vat">ex VAT</span></span></div>
+          <div class="note"><strong data-iw-text="basket.note.lead">This is a quote request, not an order.</strong> <span data-iw-text="basket.note.text">No payment is taken. A buyer will confirm prices, availability and delivery before anything is sent.</span></div>
+        </div>
+        <div class="details">
+          <div class="dh">
+            <h2 class="t" data-iw-text="basket.details.heading">Your details</h2>
+            <p class="s"><span data-iw-text="basket.details.required">All fields except notes are required.</span><span data-iw-member="out"> <a data-iw-href="login" href="/login.html"><span data-iw-text="member.login">Log in</span></a> <span data-iw-text="basket.details.login">to fill these in.</span></span></p>
+          </div>
+          <form data-iw-checkout method="post">
+            <label class="field"><span data-iw-text="form.name">Name</span><input class="input" type="text" name="name" autocomplete="name" required></label>
+            <label class="field"><span data-iw-text="form.company">Business name</span><input class="input" type="text" name="company" autocomplete="organization" required></label>
+            <label class="field"><span data-iw-text="form.email">Email</span><input class="input" type="email" name="email" autocomplete="email" required></label>
+            <div class="pair">
+              <label class="field"><span data-iw-text="form.phone">Phone</span><input class="input" type="tel" name="phone" autocomplete="tel" required></label>
+              <label class="field"><span data-iw-text="form.postcode">Delivery postcode</span><input class="input" type="text" name="postcode" autocomplete="postal-code" required></label>
+            </div>
+            <label class="field"><span><span data-iw-text="form.notes">Notes</span> <span class="opt" data-iw-text="form.optional">(optional)</span></span><textarea class="input" name="notes" rows="4"></textarea></label>
+            <button class="btn big" type="submit"><span data-iw-text="basket.checkout">Send quote request</span></button>
+          </form>
+          <div class="alt"><span data-iw-text="basket.talk">Prefer to talk? Call</span> <a href="tel:+442076840000"><span data-iw-text="site.phone">020 7684 0000</span></a></div>
+        </div>
       </div>
+    </div>
+  </div>
+  <div class="sent" data-iw-basket-sent>
+    <div class="l">
+      <span class="status" data-iw-text="basket.sent.status">Quote request sent</span>
+      <h1 class="h1" data-iw-text="basket.sent.heading">Thank you.</h1>
+      <p class="lede" data-iw-text="basket.sent.text">A buyer will reply within one working day with prices and availability for your list.</p>
+      <a class="btn big" data-iw-href="home" href="/home.html"><span data-iw-text="basket.continue">Continue browsing</span></a>
+    </div>
+    <div class="r">
+      <span class="h" data-iw-text="basket.sent.sooner.heading">Need it sooner?</span>
+      <p data-iw-text="basket.sent.sooner.text">Call the trade counter or email the buying team.</p>
+      <a class="tel" href="tel:+442076840000"><span data-iw-text="site.phone">020 7684 0000</span></a>
+      <a class="mail" href="mailto:sales@splendidtrading.co.uk"><span data-iw-text="site.email">sales@splendidtrading.co.uk</span></a>
     </div>
   </div>
   <div data-iw-basket-empty>
