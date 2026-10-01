@@ -2,6 +2,7 @@
 
 **To:** Software Engineer, Infinite Websites (HCP-252)
 **From:** Claude Design (HCP-249)
+**Revised:** HCP-245, product attributes (contract HCP-269) added to product.html, basket lines and product cards.
 **Source:** approved design 3a (Splendid Export), re-exported as plain HTML and CSS for the Intelligent Websites front-end contract (HCP-140).
 
 The pages contain no script, no `on…=` handlers, no `{{ }}` templates and no outside resources (no Google Fonts either: Archivo is self-hosted in `/assets/fonts/`). The only forms are the contract's slot forms (the basket checkout form now also carries the customer-details inputs; see below). Sample text and sample items in slots are there for layout only, so the product replaces or drops them.
@@ -48,9 +49,9 @@ All pages share one header and footer, and every page links `/assets/site.css`.
 - **Every page:** `data-iw-href` (home, basket, login, register, account), `data-iw-nav` › `data-iw-nav-item` › `data-iw-category-link` + `data-iw-category-name` (header department row; CSS shows only `data-iw-depth="0"`), member blocks, and logout form.
 - **home.html:** a second `data-iw-nav` for the "Shop by department" cards (depth 0 only).
 - **category.html:** `data-iw-category-title` (breadcrumb), `data-iw-category-text="heading"`, `data-iw-category-text="text"`, `<img data-iw-category-image>`, a side `data-iw-nav` (indented by `data-iw-depth` 0 to 2), and `data-iw-products` › `data-iw-product`.
-- **Product card** (category, account): `data-iw-product-link` (image, name and "View product" button), `data-iw-product-name`, `data-iw-product-price`, `<img data-iw-product-image>`, `<form data-iw-favourite>`.
-- **product.html:** product fields (name appears in the breadcrumb and the heading), `<form data-iw-add-to-basket>` (`input name="quantity"` + button), favourite form, and `data-iw-product-categories` › `data-iw-product-category` (the "Find it in" chips).
-- **basket.html:** `data-iw-basket-lines` › `data-iw-basket-line` (product fields, `data-iw-line-total`, `<form data-iw-basket-quantity>` with `input name="quantity"` + "Update" button, `<form data-iw-basket-remove>`), `data-iw-basket-total`, `<form data-iw-checkout>` with `name`, `company`, `email`, `phone`, `postcode` (all required) and `notes` (optional `textarea`) + "Send quote request" button, and the `data-iw-basket-sent` confirmation block.
+- **Product card** (category, account): `data-iw-product-link` (image, name and "View product" button), `data-iw-product-name`, `data-iw-product-price`, `<img data-iw-product-image>`, `<form data-iw-favourite>`, and "Code …" and "Pack …" lines, each in a `data-iw-product-has` wrapper (`code`, `pack`) around `data-iw-product-code` / `data-iw-product-pack`.
+- **product.html:** product fields (name appears in the breadcrumb and the heading); brand line above the heading (`data-iw-product-has="brand"` › `data-iw-product-brand`; Splendid has no brand, so it is removed); "Code …" under the heading (`has="code"`); `data-iw-product-description` paragraph; the pack box above the quantity (`has="pack"` › `data-iw-product-pack`); the Specification list (`data-iw-product-has="specs"` › `<dl data-iw-product-specs>` › `data-iw-product-spec` › `<dt data-iw-spec-label>` + `<dd data-iw-spec-value>`); `<form data-iw-add-to-basket>` (`input name="quantity"` + button), favourite form, and `data-iw-product-categories` › `data-iw-product-category` (the "Find it in" chips).
+- **basket.html:** `data-iw-basket-lines` › `data-iw-basket-line` (product fields, with "Code …" and "Pack …" under the name in `has="code"` / `has="pack"` wrappers, `data-iw-line-total`, `<form data-iw-basket-quantity>` with `input name="quantity"` + "Update" button, `<form data-iw-basket-remove>`), `data-iw-basket-total`, `<form data-iw-checkout>` with `name`, `company`, `email`, `phone`, `postcode` (all required) and `notes` (optional `textarea`) + "Send quote request" button, and the `data-iw-basket-sent` confirmation block.
 - **login.html:** `<form data-iw-login>` with `email` and `password` inputs.
 - **register.html:** `<form data-iw-register>` with `first_name`, `last_name`, `company`, `email` and `password` inputs.
 
@@ -58,11 +59,11 @@ All pages share one header and footer, and every page links `/assets/site.css`.
 
 No `data-iw-image` keys are used. The logo and the two feature photographs are decoration and live in `/assets/`. Product and category images come only from the product and category image slots; their sample `src` is `/assets/placeholder.svg` (a striped tile, not a product image). All Pexels placeholders from the prototype have been removed.
 
-## Assets (240 KB total, limit 5 MB)
+## Assets (241 KB total, limit 5 MB)
 
 | File | Size |
 |---|---|
-| `/assets/site.css` | 23.2 KB |
+| `/assets/site.css` | 24.3 KB |
 | `/assets/logo.png` | 37.3 KB |
 | `/assets/home-feature.avif` | 39.2 KB |
 | `/assets/why-feature.jpg` | 52.5 KB |
@@ -175,7 +176,14 @@ Every visible word sits in a `data-iw-text` slot, apart from words that come fro
 | `product.add` | Add to basket | product |
 | `product.card.view` | View product | category, account |
 | `product.categories.heading` | Find it in | product |
+| `product.code` | Code | category, product, basket, account |
+| `product.each` | each | category, product, account |
+| `product.pack` | Sold in packs of | category, product, basket, account |
+| `product.perpack` | per pack ex VAT | product |
+| `product.perpack.short` | per pack | basket |
+| `product.perpackof` | per pack of | category, account |
 | `product.quantity` | Quantity | product |
+| `product.specs.heading` | Specification | product |
 | `product.talk.call` | Call 020 7684 0000 | product |
 | `product.talk.email` | Email the team | product |
 | `product.talk.heading` | Talk it through | product |
@@ -210,12 +218,64 @@ Every visible word sits in a `data-iw-text` slot, apart from words that come fro
 | `usp.4.title` | Next-day delivery | home, category, product, basket, login, register, account, notfound |
 | `usp.lead` | Trading over 20 years | home, category, product, basket, login, register, account, notfound |
 
+## Product attributes (HCP-269)
+
+- **Sample values** for code, pack, description and specs are for layout only. The Swing Bottle samples have no pack line, to show a removed `has="pack"` wrapper.
+- **Pack wording:** the pack value is always a plain number, so it reads "Sold in packs of 24", as in approved 3a (`product.pack` + `data-iw-product-pack`).
+- **Prices (please action):** the pages can't contain script, so they can't work anything out. The website needs to supply these numbers ready to show:
+
+| Slot | What it holds | Pack empty or 1 | Pack of 24 (example) |
+|---|---|---|---|
+| `data-iw-product-price` | Price of what the customer buys: the whole pack, or the single item | £6.20 | £74.88 |
+| `data-iw-product-unit-price` (**new**) | Price of one item (pack price ÷ pack) | £6.20 (same as price) | £3.12 |
+| `data-iw-product-pack` | Number in the pack | empty (so every `has="pack"` wrapper is removed; 1 counts as empty) | 24 |
+| `data-iw-line-total` | Basket line: price × quantity | £6.20 × qty | £74.88 × qty |
+
+  Where they show: `unit-price` is the big "£3.12 each" on product.html and on every product card. `price` shows in the pack box ("£74.88 per pack ex VAT"), in the card line "£74.88 per pack of 24", and in the basket price column. Both prices are ex VAT, formatted with £ and two decimals.
+- **Spec labels** come from Wix `product.spec.<field>`. Suggested wording, so the list reads well (field names other than `capacity_cl` to be confirmed against the data):
+
+| Field | Suggested label |
+|---|---|
+| `range` | Range |
+| `material` | Material |
+| `colour` | Colour |
+| `capacity_cl` | Capacity (cl) |
+| `capacity_oz` | Capacity (oz) |
+| `height` | Height |
+| `diameter` | Diameter |
+| `length` | Length |
+| `width` | Width |
+| `dishwasher_safe` | Dishwasher safe |
+| `microwave_safe` | Microwave safe |
+| `microwave_freezer_safe` | Microwave and freezer safe |
+| `freezer_safe` | Freezer safe |
+| `oven_safe` | Oven safe |
+| `stackable` | Stackable |
+| `country_of_origin` | Country of origin |
+| `outer_barcode` | Outer barcode |
+
+- **Code and pack in the spec list:** they already show by the heading and in the pack box. If the product also puts them in `data-iw-product-specs`, they will appear twice; please leave them out of the list if the contract allows.
+
+## Still missing from the approved design (to add later)
+
+These parts of approved 3a are not in the pages yet, because the website doesn't send the information or the pages can't contain script. We expect to be asked to add them once slots exist. Details are under "Differences from the prototype" below.
+
+- **Product page:** stock line ("In stock · 1,240 available"), extra image thumbnails, "More from …", the −/+ quantity stepper, the "Added to basket" state and the running total under the button.
+- **Product cards:** supplier line (no brand data for Splendid), stock dot, quantity with "Add to basket" on the card, and "Sold individually" for single items.
+- **Home:** Featured products, Our brands, department photos and subcategory lines, and the "Why buy" carousel (one static panel for now).
+- **Category:** subcategory chips, filters, sort, grid/list switch and page numbers.
+- **Basket:** Lines and Items counts, "Clear basket", "each" for single items in the price column, the quote reference and the customer's first name on the confirmation, and details filled in for logged-in customers.
+- **Log in:** "Forgot password".
+- **Register:** business type, phone and the terms tick box.
+- **Account:** business name heading, email and the "Remove" text link.
+- **Header:** working search box. Help, Contact, Delivery and the footer policy links have no destination yet.
+
 ## Differences from the prototype (decisions to confirm)
 
 Prototype behaviour has been removed: the localStorage basket, demo login, demo note, "Preview state" toggles, header compaction on scroll, carousel and hover counters. Some items had no slot in the contract, so they are left out rather than kept as fixed demo data.
 
-1. **Product card:** supplier, product code, pack line, availability and the quantity + "Add to basket" control are not shown, because the contract has no fields for them and no add-to-basket form on cards. A "View product" button (`product.card.view`) takes their place. If the product can fill `data-iw-add-to-basket` inside a card, the approved quick-add can come back.
-2. **Product page:** supplier, code, stock count, description, pack box, extra image thumbnails, Specification table and "More from …" are not shown, for the same reason. The categories list ("Find it in") sits where Specification was.
+1. **Product card (revised, HCP-245):** code and pack now show under the name and price, as in approved 3a. Supplier, availability and quick add are still left out (no slots), and the "View product" button stays.
+2. **Product page (revised, HCP-245):** brand, code, description, the pack box and the Specification list are back where approved 3a had them. Specification sits above "Find it in" in the left column; the whole block is removed when a product has no specs. Stock count, the pack price, extra thumbnails and "More from …" are still left out (no slots).
 3. **Home:** "Featured products" and "Our brands" are left out because neither has a slot on home. The department cards show a decorative pebble in place of a photo, because nav items have no category image. Subcategory lines are also left out. The "Why buy from Splendid" carousel is a single static panel.
 4. **Category:** the subcategory chips, filters, sort, grid/list toggle and pagination are left out. A "Departments" side nav (indented by depth) keeps the approved two-column layout. A category image slot sits beside the intro text.
 5. **Basket (revised, HCP-264):** the customer details form and the "Quote request sent" confirmation are back, matching approved 3a. The details inputs (`name`, `company`, `email`, `phone`, `postcode`, `notes`) sit inside `<form data-iw-checkout>`, so one submit sends the list and the details. The confirmation is a new state block, `data-iw-basket-sent`, delivered visible like the others; please confirm the contract can show it after checkout (or tell us the slot name to use). Because the contract has no slots for them, the confirmation drops the reference number and the customer's first name ("Thank you." rather than "Thank you, Sam."), the item summary reads "your list", the notes placeholder text is left out, and the "Filled in from your account" line and pre-filled values for logged-in members are left out. Line/item counts and "Clear basket" are still left out. The +/- stepper is replaced by a number input with an "Update" button.

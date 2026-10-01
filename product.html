@@ -50,9 +50,15 @@
   <div class="pdp">
     <div class="pdp-img"><img data-iw-product-image src="/assets/placeholder.svg" alt=""></div>
     <div class="pdp-info">
-      <h1 data-iw-product-name>Coupe Glass 22cl</h1>
+      <div class="pdp-title">
+        <div class="brand" data-iw-product-has="brand"><span data-iw-product-brand>Artis</span></div>
+        <h1 data-iw-product-name>Coupe Glass 22cl</h1>
+        <div class="pdp-meta"><span data-iw-product-has="code"><span data-iw-text="product.code">Code</span> <span data-iw-product-code>52-11-120</span></span></div>
+      </div>
+      <p class="pdp-desc" data-iw-product-description>A shallow, wide-bowled coupe with a fine rim and a short stem. Holds a classic 7.5oz serve with room to spare, and stacks safely in a standard glass rack.</p>
       <div class="buy">
-        <div class="price"><span class="p" data-iw-product-price>£3.12 each</span><span class="x" data-iw-text="product.vat">ex VAT</span></div>
+        <div class="price"><span class="p"><span data-iw-product-unit-price>£3.12</span> <span data-iw-text="product.each">each</span></span><span class="x" data-iw-text="product.vat">ex VAT</span></div>
+        <div class="packbox" data-iw-product-has="pack"><svg class="icon" width="28" height="28" viewBox="0 0 24 24" stroke-width="1.5" aria-hidden="true"><path d="M3 7.5 12 3l9 4.5v9L12 21l-9-4.5Z"></path><path d="M3 7.5 12 12l9-4.5M12 12v9"></path></svg><span class="l"><span data-iw-text="product.pack">Sold in packs of</span> <span data-iw-product-pack>24</span></span><span class="pp"><b data-iw-product-price>£74.88</b> <span data-iw-text="product.perpack">per pack ex VAT</span></span></div>
         <div class="buy-row">
           <form data-iw-add-to-basket method="post">
             <label><span class="sr" data-iw-text="product.quantity">Quantity</span><input class="qty" type="number" name="quantity" value="1" min="1" inputmode="numeric"></label>
@@ -70,12 +76,29 @@
     </div>
   </div>
   <div class="talk">
-    <div class="col indent">
-      <div class="h" data-iw-text="product.categories.heading">Find it in</div>
-      <ul class="cats" data-iw-product-categories>
+    <div class="col indent stack">
+      <div class="col" data-iw-product-has="specs">
+        <h2 class="h" data-iw-text="product.specs.heading">Specification</h2>
+        <dl class="specs" data-iw-product-specs>
+          <div class="spec" data-iw-product-spec><dt data-iw-spec-label>Range</dt><dd data-iw-spec-value>Classic Stemware</dd></div>
+          <div class="spec" data-iw-product-spec><dt data-iw-spec-label>Material</dt><dd data-iw-spec-value>Soda-lime glass</dd></div>
+          <div class="spec" data-iw-product-spec><dt data-iw-spec-label>Colour</dt><dd data-iw-spec-value>Clear</dd></div>
+          <div class="spec" data-iw-product-spec><dt data-iw-spec-label>Capacity (cl)</dt><dd data-iw-spec-value>22</dd></div>
+          <div class="spec" data-iw-product-spec><dt data-iw-spec-label>Capacity (oz)</dt><dd data-iw-spec-value>7.75</dd></div>
+          <div class="spec" data-iw-product-spec><dt data-iw-spec-label>Height</dt><dd data-iw-spec-value>150mm</dd></div>
+          <div class="spec" data-iw-product-spec><dt data-iw-spec-label>Diameter</dt><dd data-iw-spec-value>95mm</dd></div>
+          <div class="spec" data-iw-product-spec><dt data-iw-spec-label>Dishwasher safe</dt><dd data-iw-spec-value>Yes</dd></div>
+          <div class="spec" data-iw-product-spec><dt data-iw-spec-label>Stackable</dt><dd data-iw-spec-value>Yes</dd></div>
+          <div class="spec" data-iw-product-spec><dt data-iw-spec-label>Country of origin</dt><dd data-iw-spec-value>Turkey</dd></div>
+        </dl>
+      </div>
+      <div class="col">
+        <div class="h" data-iw-text="product.categories.heading">Find it in</div>
+        <ul class="cats" data-iw-product-categories>
         <li data-iw-product-category><a data-iw-category-link href="/category.html"><span data-iw-category-name>Glassware</span></a></li>
         <li data-iw-product-category><a data-iw-category-link href="/category.html"><span data-iw-category-name>Cocktails</span></a></li>
-      </ul>
+        </ul>
+        </div>
     </div>
     <div class="col">
       <div class="h" data-iw-text="product.talk.heading">Talk it through</div>
