@@ -5,12 +5,13 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title data-iw-text="site.name">Splendid Trading</title>
 <link rel="stylesheet" href="/assets/site.css">
+<script src="/assets/site.js" defer></script>
 </head>
 <body>
 <div class="page" data-screen-label="Basket">
   <header class="hdr">
     <div class="topbar">
-      <nav class="toplinks"><a href="#"><span data-iw-text="link.help">Help</span></a><a href="#"><span data-iw-text="link.contact">Contact us</span></a><a href="#"><span data-iw-text="link.delivery">Delivery</span></a></nav>
+      <nav class="toplinks"><a href="#"><span data-iw-text="link.help">Help</span></a><a href="mailto:sales@splendidtrading.co.uk"><span data-iw-text="link.contact">Contact us</span></a><a href="#"><span data-iw-text="link.delivery">Delivery</span></a></nav>
       <div class="toplinks">
         <div class="member" data-iw-member="out"><a data-iw-href="register" href="/register.html"><span data-iw-text="member.register">Open a trade account</span></a><a class="strong" data-iw-href="login" href="/login.html"><span data-iw-text="member.login">Log in</span></a></div>
         <div class="member" data-iw-member="in"><span class="who" data-iw-member-name>Sam Okafor</span><a class="strong" data-iw-href="account" href="/account.html"><span data-iw-text="member.account">My account</span></a><form data-iw-logout method="post"><button class="linkbtn" type="submit"><span data-iw-text="member.logout">Log out</span></button></form></div>
@@ -18,24 +19,25 @@
     </div>
     <div class="logorow">
       <a class="logo" data-iw-href="home" href="/home.html"><img src="/assets/logo.png" alt=""><span class="sr" data-iw-text="site.name">Splendid Trading</span></a>
-      <div class="search"><span class="search-hint" data-iw-text="header.search.hint">Search by keyword, code or name</span><span class="search-go" data-iw-text="header.search.button">Search</span></div>
+      <div class="search" data-iw-pending-fallback="search"><span class="search-hint" data-iw-text="header.search.hint">Search by keyword, code or name</span><span class="search-go" data-iw-text="header.search.button">Search</span></div><form class="search" data-iw-search data-iw-pending="search" method="get" action="/search.html" role="search"><label class="search-field"><span class="sr" data-iw-text="search.label">Search products</span><input type="search" name="q" value="" placeholder=" " autocomplete="off"><span class="search-hint" data-iw-text="header.search.hint">Search by keyword, code or name</span></label><button class="search-go" type="submit"><span data-iw-text="header.search.button">Search</span></button></form>
       <div class="contact"><a class="tel" href="tel:+442076840000"><span data-iw-text="site.phone">020 7684 0000</span></a><a class="mail" href="mailto:sales@splendidtrading.co.uk"><span data-iw-text="site.email">sales@splendidtrading.co.uk</span></a></div>
       <div class="hdr-icons">
-        <a class="hdr-icon" data-iw-href="account" href="/account.html"><svg class="icon" width="20" height="20" viewBox="0 0 24 24" stroke-width="1.7" stroke-linecap="round" aria-hidden="true"><path d="M12 20.4 4.1 12.5a4.7 4.7 0 0 1 6.6-6.7l1.3 1.3 1.3-1.3a4.7 4.7 0 0 1 6.6 6.7Z"></path></svg><span class="sr" data-iw-text="header.favourites">Favourites</span></a>
-        <a class="hdr-icon" data-iw-href="basket" href="/basket.html"><svg class="icon" width="20" height="20" viewBox="0 0 24 24" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><path d="M3 8.6h18l-1.5 10.1a2 2 0 0 1-2 1.7H6.5a2 2 0 0 1-2-1.7Z"></path><path d="M8.4 8.6 11 3.6m4.6 5-2.6-5"></path></svg><span class="sr" data-iw-text="header.basket">Basket</span></a>
+        <a class="hdr-icon" data-iw-href="account" href="/account.html"><span class="ic-none" data-iw-pending-fallback="icon-state" data-iw-favourites-none><svg class="icon" width="20" height="20" viewBox="0 0 24 24" stroke-width="1.7" stroke-linecap="round" aria-hidden="true"><path d="M12 20.4 4.1 12.5a4.7 4.7 0 0 1 6.6-6.7l1.3 1.3 1.3-1.3a4.7 4.7 0 0 1 6.6 6.7Z"></path></svg></span><span class="ic-some ic-favourites" data-iw-pending="icon-state" data-iw-favourites-some><svg class="icon" width="20" height="20" viewBox="0 0 24 24" stroke-width="1.7" stroke-linecap="round" aria-hidden="true"><path d="M12 20.4 4.1 12.5a4.7 4.7 0 0 1 6.6-6.7l1.3 1.3 1.3-1.3a4.7 4.7 0 0 1 6.6 6.7Z"></path></svg></span><span class="sr" data-iw-text="header.favourites">Favourites</span></a>
+        <a class="hdr-icon" data-iw-href="basket" href="/basket.html"><span class="ic-none" data-iw-pending-fallback="icon-state" data-iw-basket-none><svg class="icon" width="20" height="20" viewBox="0 0 24 24" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><path d="M3 8.6h18l-1.5 10.1a2 2 0 0 1-2 1.7H6.5a2 2 0 0 1-2-1.7Z"></path><path d="M8.4 8.6 11 3.6m4.6 5-2.6-5"></path></svg></span><span class="ic-some ic-basket" data-iw-pending="icon-state" data-iw-basket-some><svg class="icon" width="20" height="20" viewBox="0 0 24 24" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><path d="M3 8.6h18l-1.5 10.1a2 2 0 0 1-2 1.7H6.5a2 2 0 0 1-2-1.7Z"></path><path d="M8.4 8.6 11 3.6m4.6 5-2.6-5"></path></svg></span><span class="sr" data-iw-text="header.basket">Basket</span></a>
       </div>
     </div>
     <nav class="catrow">
       <ul class="catnav" data-iw-nav>
-        <li data-iw-nav-item data-iw-depth="0"><a data-iw-category-link href="/category.html"><span data-iw-category-name>Glassware</span></a></li>
-        <li data-iw-nav-item data-iw-depth="0"><a data-iw-category-link href="/category.html"><span data-iw-category-name>Barware</span></a></li>
-        <li data-iw-nav-item data-iw-depth="0"><a data-iw-category-link href="/category.html"><span data-iw-category-name>Tableware &amp; Crockery</span></a></li>
-        <li data-iw-nav-item data-iw-depth="0"><a data-iw-category-link href="/category.html"><span data-iw-category-name>Hygiene</span></a></li>
-        <li data-iw-nav-item data-iw-depth="0"><a data-iw-category-link href="/category.html"><span data-iw-category-name>Disposables</span></a></li>
-        <li data-iw-nav-item data-iw-depth="0"><a data-iw-category-link href="/category.html"><span data-iw-category-name>Plastic Drinkware</span></a></li>
-        <li data-iw-nav-item data-iw-depth="0"><a data-iw-category-link href="/category.html"><span data-iw-category-name>Kitchen Sundries</span></a></li>
-        <li data-iw-nav-item data-iw-depth="0"><a data-iw-category-link href="/category.html"><span data-iw-category-name>Catering Equipment</span></a></li>
+        <li data-iw-nav-item data-iw-depth="0"><a data-iw-category-link href="/department.html"><span data-iw-category-name>Glassware</span></a></li>
+        <li data-iw-nav-item data-iw-depth="0"><a data-iw-category-link href="/department.html"><span data-iw-category-name>Barware</span></a></li>
+        <li data-iw-nav-item data-iw-depth="0"><a data-iw-category-link href="/department.html"><span data-iw-category-name>Tableware &amp; Crockery</span></a></li>
+        <li data-iw-nav-item data-iw-depth="0"><a data-iw-category-link href="/department.html"><span data-iw-category-name>Hygiene</span></a></li>
+        <li data-iw-nav-item data-iw-depth="0"><a data-iw-category-link href="/department.html"><span data-iw-category-name>Disposables</span></a></li>
+        <li data-iw-nav-item data-iw-depth="0"><a data-iw-category-link href="/department.html"><span data-iw-category-name>Plastic Drinkware</span></a></li>
+        <li data-iw-nav-item data-iw-depth="0"><a data-iw-category-link href="/department.html"><span data-iw-category-name>Kitchen Sundries</span></a></li>
+        <li data-iw-nav-item data-iw-depth="0"><a data-iw-category-link href="/department.html"><span data-iw-category-name>Catering Equipment</span></a></li>
       </ul>
+      <div class="cat-icons"><a class="cat-icon" data-iw-href="account" href="/account.html"><span class="ic-none" data-iw-pending-fallback="icon-state" data-iw-favourites-none><svg class="icon" width="16" height="16" viewBox="0 0 24 24" stroke-width="1.7" stroke-linecap="round" aria-hidden="true"><path d="M12 20.4 4.1 12.5a4.7 4.7 0 0 1 6.6-6.7l1.3 1.3 1.3-1.3a4.7 4.7 0 0 1 6.6 6.7Z"></path></svg></span><span class="ic-some ic-favourites" data-iw-pending="icon-state" data-iw-favourites-some><svg class="icon" width="16" height="16" viewBox="0 0 24 24" stroke-width="1.7" stroke-linecap="round" aria-hidden="true"><path d="M12 20.4 4.1 12.5a4.7 4.7 0 0 1 6.6-6.7l1.3 1.3 1.3-1.3a4.7 4.7 0 0 1 6.6 6.7Z"></path></svg></span><span class="sr" data-iw-text="header.favourites">Favourites</span></a><a class="cat-icon" data-iw-href="basket" href="/basket.html"><span class="ic-none" data-iw-pending-fallback="icon-state" data-iw-basket-none><svg class="icon" width="16" height="16" viewBox="0 0 24 24" stroke-width="1.7" stroke-linecap="round" aria-hidden="true"><path d="M3 8.6h18l-1.5 10.1a2 2 0 0 1-2 1.7H6.5a2 2 0 0 1-2-1.7Z"></path><path d="M8.4 8.6 11 3.6m4.6 5-2.6-5"></path></svg></span><span class="ic-some ic-basket" data-iw-pending="icon-state" data-iw-basket-some><svg class="icon" width="16" height="16" viewBox="0 0 24 24" stroke-width="1.7" stroke-linecap="round" aria-hidden="true"><path d="M3 8.6h18l-1.5 10.1a2 2 0 0 1-2 1.7H6.5a2 2 0 0 1-2-1.7Z"></path><path d="M8.4 8.6 11 3.6m4.6 5-2.6-5"></path></svg></span><span class="sr" data-iw-text="header.basket">Basket</span></a></div>
     </nav>
     <div class="usps">
       <div class="usp-lead" data-iw-text="usp.lead">Trading over 20 years</div>
@@ -53,32 +55,33 @@
       <div style="display:flex;flex-direction:column;min-width:0">
         <ul class="lines" data-iw-basket-lines>
           <li class="line" data-iw-basket-line>
-            <a class="thumb" data-iw-product-link href="/product.html"><img data-iw-product-image src="/assets/placeholder.svg" alt=""></a>
+            <a class="thumb" data-iw-product-link href="/product.html"><img data-iw-product-image loading="lazy" src="/assets/placeholder.svg" alt=""></a>
             <div class="info"><a class="name" data-iw-product-link href="/product.html"><span data-iw-product-name>Coupe Glass 22cl</span></a><span class="sub"><span data-iw-product-has="code"><span data-iw-text="product.code">Code</span> <span data-iw-product-code>52-11-120</span></span></span><span class="sub"><span data-iw-product-has="pack"><span data-iw-text="product.pack">Sold in packs of</span> <span data-iw-product-pack>24</span></span></span></div>
-            <span class="unit"><span data-iw-product-price>£74.88</span><span class="per" data-iw-product-has="pack" data-iw-text="product.perpack.short">per pack</span></span>
+            <span class="unit"><span data-iw-product-price>£74.88</span><span class="per" data-iw-product-has="pack" data-iw-text="product.perpack.short">per pack</span><span class="per each" data-iw-text="product.each">each</span></span>
             <form data-iw-basket-quantity method="post"><label><span class="sr" data-iw-text="basket.quantity">Quantity</span><input class="qty sm" type="number" name="quantity" value="2" min="1" inputmode="numeric"></label><button class="upd" type="submit"><span data-iw-text="basket.update">Update</span></button></form>
             <div class="tot"><span class="lt" data-iw-line-total>£149.76</span><form data-iw-basket-remove method="post"><button class="upd" type="submit"><span data-iw-text="basket.remove">Remove</span></button></form></div>
           </li>
           <li class="line" data-iw-basket-line>
-            <a class="thumb" data-iw-product-link href="/product.html"><img data-iw-product-image src="/assets/placeholder.svg" alt=""></a>
+            <a class="thumb" data-iw-product-link href="/product.html"><img data-iw-product-image loading="lazy" src="/assets/placeholder.svg" alt=""></a>
             <div class="info"><a class="name" data-iw-product-link href="/product.html"><span data-iw-product-name>Nick &amp; Nora Glass 15cl</span></a><span class="sub"><span data-iw-product-has="code"><span data-iw-text="product.code">Code</span> <span data-iw-product-code>D14002</span></span></span><span class="sub"><span data-iw-product-has="pack"><span data-iw-text="product.pack">Sold in packs of</span> <span data-iw-product-pack>12</span></span></span></div>
-            <span class="unit"><span data-iw-product-price>£53.52</span><span class="per" data-iw-product-has="pack" data-iw-text="product.perpack.short">per pack</span></span>
+            <span class="unit"><span data-iw-product-price>£53.52</span><span class="per" data-iw-product-has="pack" data-iw-text="product.perpack.short">per pack</span><span class="per each" data-iw-text="product.each">each</span></span>
             <form data-iw-basket-quantity method="post"><label><span class="sr" data-iw-text="basket.quantity">Quantity</span><input class="qty sm" type="number" name="quantity" value="1" min="1" inputmode="numeric"></label><button class="upd" type="submit"><span data-iw-text="basket.update">Update</span></button></form>
             <div class="tot"><span class="lt" data-iw-line-total>£53.52</span><form data-iw-basket-remove method="post"><button class="upd" type="submit"><span data-iw-text="basket.remove">Remove</span></button></form></div>
           </li>
           <li class="line" data-iw-basket-line>
-            <a class="thumb" data-iw-product-link href="/product.html"><img data-iw-product-image src="/assets/placeholder.svg" alt=""></a>
+            <a class="thumb" data-iw-product-link href="/product.html"><img data-iw-product-image loading="lazy" src="/assets/placeholder.svg" alt=""></a>
             <div class="info"><a class="name" data-iw-product-link href="/product.html"><span data-iw-product-name>Hi-ball 34cl</span></a><span class="sub"><span data-iw-product-has="code"><span data-iw-text="product.code">Code</span> <span data-iw-product-code>CHG-HB34</span></span></span><span class="sub"><span data-iw-product-has="pack"><span data-iw-text="product.pack">Sold in packs of</span> <span data-iw-product-pack>24</span></span></span></div>
-            <span class="unit"><span data-iw-product-price>£46.08</span><span class="per" data-iw-product-has="pack" data-iw-text="product.perpack.short">per pack</span></span>
+            <span class="unit"><span data-iw-product-price>£46.08</span><span class="per" data-iw-product-has="pack" data-iw-text="product.perpack.short">per pack</span><span class="per each" data-iw-text="product.each">each</span></span>
             <form data-iw-basket-quantity method="post"><label><span class="sr" data-iw-text="basket.quantity">Quantity</span><input class="qty sm" type="number" name="quantity" value="4" min="1" inputmode="numeric"></label><button class="upd" type="submit"><span data-iw-text="basket.update">Update</span></button></form>
             <div class="tot"><span class="lt" data-iw-line-total>£184.32</span><form data-iw-basket-remove method="post"><button class="upd" type="submit"><span data-iw-text="basket.remove">Remove</span></button></form></div>
           </li>
         </ul>
-        <a class="underlink more" data-iw-href="home" href="/home.html"><span data-iw-text="basket.continue">Continue browsing</span></a>
+        <div class="bk-acts"><a class="underlink" data-iw-href="home" href="/home.html"><span data-iw-text="basket.continue">Continue browsing</span></a><form data-iw-basket-clear data-iw-pending="basket-clear" method="post"><button class="clear-btn" type="submit"><span data-iw-text="basket.clear">Clear basket</span></button></form></div>
       </div>
       <div class="bk-side">
         <div class="summary">
           <div class="h" data-iw-text="basket.summary">Summary</div>
+          <div class="counts" data-iw-pending="basket-counts"><span><span data-iw-text="basket.lines">Lines</span><b data-iw-basket-line-count>3</b></span><span><span data-iw-text="basket.items">Items</span><b data-iw-basket-item-count>7</b></span></div>
           <div class="total"><span class="l" data-iw-text="basket.total.label">Guide total</span><span class="v"><b data-iw-basket-total>£387.60</b><span data-iw-text="basket.vat">ex VAT</span></span></div>
           <div class="note"><strong data-iw-text="basket.note.lead">This is a quote request, not an order.</strong> <span data-iw-text="basket.note.text">No payment is taken. A buyer will confirm prices, availability and delivery before anything is sent.</span></div>
         </div>
@@ -105,8 +108,8 @@
   </div>
   <div class="sent" data-iw-basket-sent>
     <div class="l">
-      <span class="status" data-iw-text="basket.sent.status">Quote request sent</span>
-      <h1 class="h1" data-iw-text="basket.sent.heading">Thank you.</h1>
+      <div class="meta-row"><span class="status" data-iw-text="basket.sent.status">Quote request sent</span><span class="ref" data-iw-pending="quote-ref"><span data-iw-text="basket.sent.ref">Reference</span> <b data-iw-quote-ref>SPL-24817</b></span></div>
+      <h1 class="h1"><span data-iw-pending-fallback="sent-name" data-iw-text="basket.sent.heading">Thank you.</span><span data-iw-pending="sent-name"><span data-iw-text="basket.sent.heading.named">Thank you,</span> <span data-iw-member-first-name>Sam</span>.</span></h1>
       <p class="lede" data-iw-text="basket.sent.text">A buyer will reply within one working day with prices and availability for your list.</p>
       <a class="btn big" data-iw-href="home" href="/home.html"><span data-iw-text="basket.continue">Continue browsing</span></a>
     </div>
@@ -131,11 +134,11 @@
   <footer class="ftr">
     <div class="ftr-cols">
       <div class="ftr-col"><div class="h" data-iw-text="footer.shopping.heading">Shopping with us</div><a href="#"><span data-iw-text="footer.shopping.delivery">Delivery and returns</span></a><a href="#"><span data-iw-text="footer.shopping.terms">Terms and conditions</span></a><a href="#"><span data-iw-text="footer.shopping.cookies">Cookie policy</span></a><a href="#"><span data-iw-text="footer.shopping.privacy">Privacy policy</span></a></div>
-      <div class="ftr-col"><div class="h" data-iw-text="footer.help.heading">How can we help</div><a href="#"><span data-iw-text="link.help">Help</span></a><a href="#"><span data-iw-text="link.contact">Contact us</span></a><a data-iw-href="register" href="/register.html"><span data-iw-text="member.register">Open a trade account</span></a></div>
+      <div class="ftr-col"><div class="h" data-iw-text="footer.help.heading">How can we help</div><a href="#"><span data-iw-text="link.help">Help</span></a><a href="mailto:sales@splendidtrading.co.uk"><span data-iw-text="link.contact">Contact us</span></a><a data-iw-href="register" href="/register.html"><span data-iw-text="member.register">Open a trade account</span></a></div>
       <div class="ftr-col"><div class="h" data-iw-text="footer.about.heading">About</div><a href="#"><span data-iw-text="footer.about.us">About us</span></a><a href="#"><span data-iw-text="footer.about.brands">Our brands</span></a></div>
       <div class="ftr-col"><div class="h" data-iw-text="footer.company.heading">Splendid Trading Ltd.</div><span data-iw-text="site.address">151-153 Shoreditch High Street, London E1 6HU</span><a href="mailto:sales@splendidtrading.co.uk"><span data-iw-text="site.email">sales@splendidtrading.co.uk</span></a><a href="tel:+442076840000"><span data-iw-text="site.phone">020 7684 0000</span></a></div>
     </div>
-    <div class="ftr-legal"><span data-iw-text="footer.copyright">© 2026 Splendid Trading Limited. All rights reserved.</span><span data-iw-text="footer.legal">Registered in England and Wales · Company number 04320097 · Registered office: 151–153 Shoreditch High Street, London E1 6HU</span></div>
+    <div class="ftr-legal"><span data-iw-text="footer.copyright">© 2026 Splendid Trading Limited. All rights reserved.</span><a class="powered" href="https://hockhamandco.co.uk/the-infinite-web"><span data-iw-text="footer.powered">Powered by The Infinite Web</span></a><span data-iw-text="footer.legal">Registered in England and Wales · Company number 04320097 · Registered office: 151–153 Shoreditch High Street, London E1 6HU</span></div>
   </footer>
 </div>
 </body>

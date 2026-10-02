@@ -8,7 +8,7 @@
 <script src="/assets/site.js" defer></script>
 </head>
 <body>
-<div class="page" data-screen-label="Home">
+<div class="page" data-screen-label="Search">
   <header class="hdr">
     <div class="topbar">
       <nav class="toplinks"><a href="#"><span data-iw-text="link.help">Help</span></a><a href="mailto:sales@splendidtrading.co.uk"><span data-iw-text="link.contact">Contact us</span></a><a href="#"><span data-iw-text="link.delivery">Delivery</span></a></nav>
@@ -19,7 +19,7 @@
     </div>
     <div class="logorow">
       <a class="logo" data-iw-href="home" href="/home.html"><img src="/assets/logo.png" alt=""><span class="sr" data-iw-text="site.name">Splendid Trading</span></a>
-      <div class="search" data-iw-pending-fallback="search"><span class="search-hint" data-iw-text="header.search.hint">Search by keyword, code or name</span><span class="search-go" data-iw-text="header.search.button">Search</span></div><form class="search" data-iw-search data-iw-pending="search" method="get" action="/search.html" role="search"><label class="search-field"><span class="sr" data-iw-text="search.label">Search products</span><input type="search" name="q" value="" placeholder=" " autocomplete="off"><span class="search-hint" data-iw-text="header.search.hint">Search by keyword, code or name</span></label><button class="search-go" type="submit"><span data-iw-text="header.search.button">Search</span></button></form>
+      <div class="search" data-iw-pending-fallback="search"><span class="search-hint" data-iw-text="header.search.hint">Search by keyword, code or name</span><span class="search-go" data-iw-text="header.search.button">Search</span></div><form class="search" data-iw-search data-iw-pending="search" method="get" action="/search.html" role="search"><label class="search-field"><span class="sr" data-iw-text="search.label">Search products</span><input type="search" name="q" value="glass" placeholder=" " autocomplete="off"><span class="search-hint" data-iw-text="header.search.hint">Search by keyword, code or name</span></label><button class="search-go" type="submit"><span data-iw-text="header.search.button">Search</span></button></form>
       <div class="contact"><a class="tel" href="tel:+442076840000"><span data-iw-text="site.phone">020 7684 0000</span></a><a class="mail" href="mailto:sales@splendidtrading.co.uk"><span data-iw-text="site.email">sales@splendidtrading.co.uk</span></a></div>
       <div class="hdr-icons">
         <a class="hdr-icon" data-iw-href="account" href="/account.html"><span class="ic-none" data-iw-pending-fallback="icon-state" data-iw-favourites-none><svg class="icon" width="20" height="20" viewBox="0 0 24 24" stroke-width="1.7" stroke-linecap="round" aria-hidden="true"><path d="M12 20.4 4.1 12.5a4.7 4.7 0 0 1 6.6-6.7l1.3 1.3 1.3-1.3a4.7 4.7 0 0 1 6.6 6.7Z"></path></svg></span><span class="ic-some ic-favourites" data-iw-pending="icon-state" data-iw-favourites-some><svg class="icon" width="20" height="20" viewBox="0 0 24 24" stroke-width="1.7" stroke-linecap="round" aria-hidden="true"><path d="M12 20.4 4.1 12.5a4.7 4.7 0 0 1 6.6-6.7l1.3 1.3 1.3-1.3a4.7 4.7 0 0 1 6.6 6.7Z"></path></svg></span><span class="sr" data-iw-text="header.favourites">Favourites</span></a>
@@ -48,51 +48,25 @@
     </div>
   </header>
   <main>
-  <section class="hero">
-    <div class="kicker" data-iw-text="home.kicker">Front of house, fully stocked</div>
-    <h1 data-iw-text="home.heading">Glassware worth putting on the table.</h1>
-    <div class="row">
-      <div class="copy">
-        <p data-iw-text="home.text">Bars, restaurants and hotels have bought from us since the 90's. Be inspired, find your perfect match.</p>
-        <div class="acts"><a class="btn" href="#departments"><span data-iw-text="home.cta.primary">Shop glassware</span></a><a class="btn ghost" href="#departments"><span data-iw-text="home.cta.secondary">Full catalogue</span></a></div>
+  <ol class="crumbs"><li><a data-iw-href="home" href="/home.html"><span data-iw-text="crumb.home">Home</span></a></li><li class="here"><span data-iw-text="search.crumb">Search</span></li></ol>
+  <div data-iw-search-results>
+  <div class="cathead"><h1 class="h1 q"><span data-iw-text="search.heading">Results for</span> “<span data-iw-search-query>glass</span>”</h1></div>
+  <div class="listing">
+    <input class="sr" type="checkbox" id="filter-toggle" data-iw-pending="facets">
+    <aside class="side-col">
+      <div class="facets" data-iw-pending="facets" data-iw-facets>
+        <div class="fh"><span data-iw-text="category.filter">Filter</span><a class="clear" data-iw-facets-clear href="#"><span data-iw-text="category.filter.clear">Clear all</span></a></div>
+        <div class="facet" data-iw-facet><span class="t" data-iw-facet-name>Department</span><ul><li data-iw-facet-option><a data-iw-facet-link href="#" aria-current="true"><span data-iw-facet-label>Glassware</span><span class="n" data-iw-facet-count>38</span></a></li><li data-iw-facet-option><a data-iw-facet-link href="#"><span data-iw-facet-label>Barware</span><span class="n" data-iw-facet-count>3</span></a></li><li data-iw-facet-option><a data-iw-facet-link href="#"><span data-iw-facet-label>Plastic Drinkware</span><span class="n" data-iw-facet-count>1</span></a></li></ul></div>
+        <div class="facet" data-iw-facet><span class="t" data-iw-facet-name>Supplier</span><ul><li data-iw-facet-option><a data-iw-facet-link href="#"><span data-iw-facet-label>Artis</span><span class="n" data-iw-facet-count>16</span></a></li><li data-iw-facet-option><a data-iw-facet-link href="#"><span data-iw-facet-label>Utopia</span><span class="n" data-iw-facet-count>14</span></a></li><li data-iw-facet-option><a data-iw-facet-link href="#"><span data-iw-facet-label>Churchill Glass</span><span class="n" data-iw-facet-count>12</span></a></li></ul></div>
+        <div class="facet" data-iw-facet><span class="t" data-iw-facet-name>Availability</span><ul><li data-iw-facet-option><a data-iw-facet-link href="#"><span data-iw-facet-label>In stock</span><span class="n" data-iw-facet-count>36</span></a></li><li data-iw-facet-option><a data-iw-facet-link href="#"><span data-iw-facet-label>On backorder</span><span class="n" data-iw-facet-count>4</span></a></li><li data-iw-facet-option><a data-iw-facet-link href="#"><span data-iw-facet-label>Availability on request</span><span class="n" data-iw-facet-count>2</span></a></li></ul></div>
       </div>
-      <div class="hero-art">
-        <div class="blob"><img src="/assets/home-feature.avif" alt=""></div>
-        <div class="badge"><div class="in"><span class="s" data-iw-text="home.badge.top">TRADING</span><span class="n" data-iw-text="home.badge.number">20+</span><span class="s" data-iw-text="home.badge.bottom">YEARS</span></div></div>
+    </aside>
+    <div class="results">
+      <div class="toolbar" >
+        <span class="count"><span data-iw-search-total>42</span> <span data-iw-text="category.products">products</span> · <span data-iw-text="paging.page">Page</span> <span data-iw-paging-page>1</span> <span data-iw-text="paging.of">of</span> <span data-iw-paging-pages>2</span></span>
+        <div class="tb-acts"><label class="filter-btn" for="filter-toggle" data-iw-pending="facets"><svg class="icon" width="14" height="14" viewBox="0 0 24 24" stroke-width="1.8" aria-hidden="true"><path d="M3 5h18l-7 8v6l-4 2v-8Z"></path></svg><span data-iw-text="category.filter">Filter</span><span class="n" data-iw-facets-active>1</span></label><details class="sort" data-iw-pending="sort"><summary><span data-iw-text="sort.label">Sort by</span><span class="cur"><span data-iw-sort-current>Featured</span><svg class="icon" width="12" height="12" viewBox="0 0 24 24" stroke-width="2" aria-hidden="true"><path d="m6 9 6 6 6-6"></path></svg></span></summary><ul data-iw-sort><li><a data-iw-sort-link="featured" href="#" aria-current="true"><span data-iw-text="sort.featured">Featured</span></a></li><li><a data-iw-sort-link="price-asc" href="#"><span data-iw-text="sort.price_asc">Price, low to high</span></a></li><li><a data-iw-sort-link="price-desc" href="#"><span data-iw-text="sort.price_desc">Price, high to low</span></a></li><li><a data-iw-sort-link="name" href="#"><span data-iw-text="sort.name">Name, A to Z</span></a></li></ul></details></div>
       </div>
-    </div>
-  </section>
-  <section class="section" id="departments">
-    <div class="sechead"><div class="t"><span class="eyebrow" data-iw-text="home.departments.eyebrow">Shop by department</span><span class="big" data-iw-text="home.departments.heading">From the bar to the back of house</span></div></div>
-    <ul class="depts" data-iw-nav>
-      <li data-iw-nav-item data-iw-depth="0"><a class="dept" data-iw-category-link href="/department.html"><div class="peb"><img data-iw-category-image data-iw-pending="nav-image" src="/assets/placeholder.svg" alt=""></div><span class="n" data-iw-category-name>Glassware</span></a></li>
-      <li data-iw-nav-item data-iw-depth="0"><a class="dept" data-iw-category-link href="/department.html"><div class="peb"><img data-iw-category-image data-iw-pending="nav-image" src="/assets/placeholder.svg" alt=""></div><span class="n" data-iw-category-name>Barware</span></a></li>
-      <li data-iw-nav-item data-iw-depth="0"><a class="dept" data-iw-category-link href="/department.html"><div class="peb"><img data-iw-category-image data-iw-pending="nav-image" src="/assets/placeholder.svg" alt=""></div><span class="n" data-iw-category-name>Tableware &amp; Crockery</span></a></li>
-      <li data-iw-nav-item data-iw-depth="0"><a class="dept" data-iw-category-link href="/department.html"><div class="peb"><img data-iw-category-image data-iw-pending="nav-image" src="/assets/placeholder.svg" alt=""></div><span class="n" data-iw-category-name>Hygiene</span></a></li>
-      <li data-iw-nav-item data-iw-depth="0"><a class="dept" data-iw-category-link href="/department.html"><div class="peb"><img data-iw-category-image data-iw-pending="nav-image" src="/assets/placeholder.svg" alt=""></div><span class="n" data-iw-category-name>Disposables</span></a></li>
-      <li data-iw-nav-item data-iw-depth="0"><a class="dept" data-iw-category-link href="/department.html"><div class="peb"><img data-iw-category-image data-iw-pending="nav-image" src="/assets/placeholder.svg" alt=""></div><span class="n" data-iw-category-name>Plastic Drinkware</span></a></li>
-      <li data-iw-nav-item data-iw-depth="0"><a class="dept" data-iw-category-link href="/department.html"><div class="peb"><img data-iw-category-image data-iw-pending="nav-image" src="/assets/placeholder.svg" alt=""></div><span class="n" data-iw-category-name>Kitchen Sundries</span></a></li>
-      <li data-iw-nav-item data-iw-depth="0"><a class="dept" data-iw-category-link href="/department.html"><div class="peb"><img data-iw-category-image data-iw-pending="nav-image" src="/assets/placeholder.svg" alt=""></div><span class="n" data-iw-category-name>Catering Equipment</span></a></li>
-    </ul>
-  </section>
-  <section class="section">
-    <div class="why">
-      <div class="img"><img src="/assets/why-feature.jpg" alt=""></div>
-      <div class="txt">
-        <span class="lbl" data-iw-text="home.why.label">Why buy from Splendid</span>
-        <div class="slides">
-          <div class="slide"><span class="n">01 / 04</span><div class="t" data-iw-text="home.why.heading">Free consultations</div><div class="b" data-iw-text="home.why.text">Talk your list through with a buyer, in person or over the phone. Kitting out a new bar or matching an existing set, we check stock, lead times and alternatives with you.</div></div>
-          <div class="slide"><span class="n">02 / 04</span><div class="t" data-iw-text="usp.2.title">Warehouse in Shoreditch</div><div class="b" data-iw-text="usp.2.text">Collect the same day, by appointment with our team</div></div>
-          <div class="slide"><span class="n">03 / 04</span><div class="t" data-iw-text="usp.3.title">Own van delivery</div><div class="b" data-iw-text="usp.3.text">Our drivers across London, safe hands from door to door</div></div>
-          <div class="slide"><span class="n">04 / 04</span><div class="t" data-iw-text="usp.4.title">Next-day delivery</div><div class="b" data-iw-text="usp.4.text">Order before 2pm and we'll get it out the next morning</div></div>
-        </div>
-        <div class="bars" aria-hidden="true"><span></span><span></span><span></span><span></span></div>
-      </div>
-    </div>
-  </section>
-  <section class="section" data-iw-pending="featured">
-    <div class="sechead"><div class="t"><span class="eyebrow" data-iw-text="home.featured.eyebrow">Featured products</span><span class="big" data-iw-text="home.featured.heading">In stock, ready to go</span></div></div>
-    <ul class="grid" data-iw-featured-products>
+      <ul class="grid three" data-iw-products>
 <li class="card" data-iw-product>
           <form class="fav" data-iw-favourite method="post"><button class="fav-btn" type="submit"><span data-iw-favourite-off><svg class="icon" width="16" height="16" viewBox="0 0 24 24" stroke-width="1.7" stroke-linecap="round" aria-hidden="true"><path d="M12 20.4 4.1 12.5a4.7 4.7 0 0 1 6.6-6.7l1.3 1.3 1.3-1.3a4.7 4.7 0 0 1 6.6 6.7Z"></path></svg><span class="sr" data-iw-text="favourite.save">Save to favourites</span></span><span data-iw-favourite-on><svg class="icon" width="16" height="16" viewBox="0 0 24 24" stroke-width="1.7" stroke-linecap="round" aria-hidden="true"><path d="M12 20.4 4.1 12.5a4.7 4.7 0 0 1 6.6-6.7l1.3 1.3 1.3-1.3a4.7 4.7 0 0 1 6.6 6.7Z"></path></svg><span class="sr" data-iw-text="favourite.remove">Remove from favourites</span></span></button></form>
           <a class="card-img" data-iw-product-link href="/product.html"><img data-iw-product-image loading="lazy" src="/assets/placeholder.svg" alt=""><span class="card-tag" data-iw-product-has="pack"><span data-iw-text="product.pack">Sold in packs of</span> <span data-iw-product-pack>24</span></span></a>
@@ -122,11 +96,24 @@
 <li class="card" data-iw-product>
           <form class="fav" data-iw-favourite method="post"><button class="fav-btn" type="submit"><span data-iw-favourite-off><svg class="icon" width="16" height="16" viewBox="0 0 24 24" stroke-width="1.7" stroke-linecap="round" aria-hidden="true"><path d="M12 20.4 4.1 12.5a4.7 4.7 0 0 1 6.6-6.7l1.3 1.3 1.3-1.3a4.7 4.7 0 0 1 6.6 6.7Z"></path></svg><span class="sr" data-iw-text="favourite.save">Save to favourites</span></span><span data-iw-favourite-on><svg class="icon" width="16" height="16" viewBox="0 0 24 24" stroke-width="1.7" stroke-linecap="round" aria-hidden="true"><path d="M12 20.4 4.1 12.5a4.7 4.7 0 0 1 6.6-6.7l1.3 1.3 1.3-1.3a4.7 4.7 0 0 1 6.6 6.7Z"></path></svg><span class="sr" data-iw-text="favourite.remove">Remove from favourites</span></span></button></form>
           <a class="card-img" data-iw-product-link href="/product.html"><img data-iw-product-image loading="lazy" src="/assets/placeholder.svg" alt=""><span class="card-tag" data-iw-product-has="pack"><span data-iw-text="product.pack">Sold in packs of</span> <span data-iw-product-pack>24</span></span></a>
-          <div class="card-brand" data-iw-product-has="brand"><span data-iw-product-brand>Churchill Glass</span></div>
-          <a class="card-name" data-iw-product-link href="/product.html"><span data-iw-product-name>Hi-ball 34cl</span></a>
-          <div class="card-code"><span data-iw-product-has="code"><span data-iw-text="product.code">Code</span> <span data-iw-product-code>CHG-HB34</span></span></div>
-          <div class="card-price"><span data-iw-product-unit-price>£1.92</span> <span data-iw-text="product.each">each</span></div>
-          <div class="card-pack"><span data-iw-product-has="pack"><span data-iw-product-price>£46.08</span> <span data-iw-text="product.perpackof">per pack of</span> <span data-iw-product-pack>24</span></span></div>
+          <div class="card-brand" data-iw-product-has="brand"><span data-iw-product-brand>Artis</span></div>
+          <a class="card-name" data-iw-product-link href="/product.html"><span data-iw-product-name>Martini Glass 19cl</span></a>
+          <div class="card-code"><span data-iw-product-has="code"><span data-iw-text="product.code">Code</span> <span data-iw-product-code>52-11-119</span></span></div>
+          <div class="card-price"><span data-iw-product-unit-price>£3.28</span> <span data-iw-text="product.each">each</span></div>
+          <div class="card-pack"><span data-iw-product-has="pack"><span data-iw-product-price>£78.72</span> <span data-iw-text="product.perpackof">per pack of</span> <span data-iw-product-pack>24</span></span></div>
+          <div class="card-single" data-iw-text="product.single">Sold individually</div>
+          <div class="stock" data-iw-pending="stock" data-iw-product-stock="in"><span class="s-in" data-iw-text="stock.in">In stock</span><span class="s-back" data-iw-text="stock.back">On backorder</span><span class="s-ask" data-iw-text="stock.ask">Availability on request</span></div>
+          <a class="btn" data-iw-product-link data-iw-pending-fallback="card-add" href="/product.html"><span data-iw-text="product.card.view">View product</span></a>
+          <form class="card-add" data-iw-add-to-basket data-iw-pending="card-add" method="post"><label><span class="sr" data-iw-text="product.quantity">Quantity</span><input class="qty sm" type="number" name="quantity" value="1" min="1" inputmode="numeric"></label><button class="btn" type="submit"><span data-iw-text="product.add">Add to basket</span><span class="added-label" data-iw-text="product.added.short">Added</span></button></form>
+        </li>
+<li class="card" data-iw-product>
+          <form class="fav" data-iw-favourite method="post"><button class="fav-btn" type="submit"><span data-iw-favourite-off><svg class="icon" width="16" height="16" viewBox="0 0 24 24" stroke-width="1.7" stroke-linecap="round" aria-hidden="true"><path d="M12 20.4 4.1 12.5a4.7 4.7 0 0 1 6.6-6.7l1.3 1.3 1.3-1.3a4.7 4.7 0 0 1 6.6 6.7Z"></path></svg><span class="sr" data-iw-text="favourite.save">Save to favourites</span></span><span data-iw-favourite-on><svg class="icon" width="16" height="16" viewBox="0 0 24 24" stroke-width="1.7" stroke-linecap="round" aria-hidden="true"><path d="M12 20.4 4.1 12.5a4.7 4.7 0 0 1 6.6-6.7l1.3 1.3 1.3-1.3a4.7 4.7 0 0 1 6.6 6.7Z"></path></svg><span class="sr" data-iw-text="favourite.remove">Remove from favourites</span></span></button></form>
+          <a class="card-img" data-iw-product-link href="/product.html"><img data-iw-product-image loading="lazy" src="/assets/placeholder.svg" alt=""><span class="card-tag" data-iw-product-has="pack"><span data-iw-text="product.pack">Sold in packs of</span> <span data-iw-product-pack>24</span></span></a>
+          <div class="card-brand" data-iw-product-has="brand"><span data-iw-product-brand>Artis</span></div>
+          <a class="card-name" data-iw-product-link href="/product.html"><span data-iw-product-name>Champagne Flute 17cl</span></a>
+          <div class="card-code"><span data-iw-product-has="code"><span data-iw-text="product.code">Code</span> <span data-iw-product-code>52-11-121</span></span></div>
+          <div class="card-price"><span data-iw-product-unit-price>£3.05</span> <span data-iw-text="product.each">each</span></div>
+          <div class="card-pack"><span data-iw-product-has="pack"><span data-iw-product-price>£73.20</span> <span data-iw-text="product.perpackof">per pack of</span> <span data-iw-product-pack>24</span></span></div>
           <div class="card-single" data-iw-text="product.single">Sold individually</div>
           <div class="stock" data-iw-pending="stock" data-iw-product-stock="in"><span class="s-in" data-iw-text="stock.in">In stock</span><span class="s-back" data-iw-text="stock.back">On backorder</span><span class="s-ask" data-iw-text="stock.ask">Availability on request</span></div>
           <a class="btn" data-iw-product-link data-iw-pending-fallback="card-add" href="/product.html"><span data-iw-text="product.card.view">View product</span></a>
@@ -144,12 +131,42 @@
           <a class="btn" data-iw-product-link data-iw-pending-fallback="card-add" href="/product.html"><span data-iw-text="product.card.view">View product</span></a>
           <form class="card-add" data-iw-add-to-basket data-iw-pending="card-add" method="post"><label><span class="sr" data-iw-text="product.quantity">Quantity</span><input class="qty sm" type="number" name="quantity" value="1" min="1" inputmode="numeric"></label><button class="btn" type="submit"><span data-iw-text="product.add">Add to basket</span><span class="added-label" data-iw-text="product.added.short">Added</span></button></form>
         </li>
+<li class="card" data-iw-product>
+          <form class="fav" data-iw-favourite method="post"><button class="fav-btn" type="submit"><span data-iw-favourite-off><svg class="icon" width="16" height="16" viewBox="0 0 24 24" stroke-width="1.7" stroke-linecap="round" aria-hidden="true"><path d="M12 20.4 4.1 12.5a4.7 4.7 0 0 1 6.6-6.7l1.3 1.3 1.3-1.3a4.7 4.7 0 0 1 6.6 6.7Z"></path></svg><span class="sr" data-iw-text="favourite.save">Save to favourites</span></span><span data-iw-favourite-on><svg class="icon" width="16" height="16" viewBox="0 0 24 24" stroke-width="1.7" stroke-linecap="round" aria-hidden="true"><path d="M12 20.4 4.1 12.5a4.7 4.7 0 0 1 6.6-6.7l1.3 1.3 1.3-1.3a4.7 4.7 0 0 1 6.6 6.7Z"></path></svg><span class="sr" data-iw-text="favourite.remove">Remove from favourites</span></span></button></form>
+          <a class="card-img" data-iw-product-link href="/product.html"><img data-iw-product-image loading="lazy" src="/assets/placeholder.svg" alt=""><span class="card-tag" data-iw-product-has="pack"><span data-iw-text="product.pack">Sold in packs of</span> <span data-iw-product-pack>24</span></span></a>
+          <div class="card-brand" data-iw-product-has="brand"><span data-iw-product-brand>Artis</span></div>
+          <a class="card-name" data-iw-product-link href="/product.html"><span data-iw-product-name>Highball 36cl</span></a>
+          <div class="card-code"><span data-iw-product-has="code"><span data-iw-text="product.code">Code</span> <span data-iw-product-code>52-14-236</span></span></div>
+          <div class="card-price"><span data-iw-product-unit-price>£2.10</span> <span data-iw-text="product.each">each</span></div>
+          <div class="card-pack"><span data-iw-product-has="pack"><span data-iw-product-price>£50.40</span> <span data-iw-text="product.perpackof">per pack of</span> <span data-iw-product-pack>24</span></span></div>
+          <div class="card-single" data-iw-text="product.single">Sold individually</div>
+          <div class="stock" data-iw-pending="stock" data-iw-product-stock="in"><span class="s-in" data-iw-text="stock.in">In stock</span><span class="s-back" data-iw-text="stock.back">On backorder</span><span class="s-ask" data-iw-text="stock.ask">Availability on request</span></div>
+          <a class="btn" data-iw-product-link data-iw-pending-fallback="card-add" href="/product.html"><span data-iw-text="product.card.view">View product</span></a>
+          <form class="card-add" data-iw-add-to-basket data-iw-pending="card-add" method="post"><label><span class="sr" data-iw-text="product.quantity">Quantity</span><input class="qty sm" type="number" name="quantity" value="1" min="1" inputmode="numeric"></label><button class="btn" type="submit"><span data-iw-text="product.add">Add to basket</span><span class="added-label" data-iw-text="product.added.short">Added</span></button></form>
+        </li>
       </ul>
-  </section>
-  <section class="section" data-iw-pending="brands">
-    <div class="sechead"><div class="t"><span class="eyebrow" data-iw-text="home.brands.eyebrow">Hand-picked for the trade</span><span class="big" data-iw-text="footer.about.brands">Our brands</span></div><a class="underlink" data-iw-href="brands" href="#"><span data-iw-text="home.brands.all">All brands</span></a></div>
-    <ul class="brands" data-iw-brands><li data-iw-brand-item><a class="brand-chip" data-iw-brand-link href="/supplier.html"><span data-iw-brand-name>Artis</span></a></li><li data-iw-brand-item><a class="brand-chip" data-iw-brand-link href="/supplier.html"><span data-iw-brand-name>Churchill Glass</span></a></li><li data-iw-brand-item><a class="brand-chip" data-iw-brand-link href="/supplier.html"><span data-iw-brand-name>DPS Tableware</span></a></li><li data-iw-brand-item><a class="brand-chip" data-iw-brand-link href="/supplier.html"><span data-iw-brand-name>Dudson</span></a></li><li data-iw-brand-item><a class="brand-chip" data-iw-brand-link href="/supplier.html"><span data-iw-brand-name>Steelite</span></a></li><li data-iw-brand-item><a class="brand-chip" data-iw-brand-link href="/supplier.html"><span data-iw-brand-name>Utopia</span></a></li></ul>
-  </section>
+      
+      <nav class="pager" data-iw-paging>
+        <ol data-iw-pages><li data-iw-page-item><a class="pg" data-iw-page-link href="#" aria-current="page"><span data-iw-page-number>1</span></a></li><li data-iw-page-item><a class="pg" data-iw-page-link href="#"><span data-iw-page-number>2</span></a></li></ol>
+        <a class="pg-step" data-iw-page-next href="#"><span data-iw-text="paging.next">Next</span></a>
+      </nav>
+    </div>
+  </div>
+  </div>
+  <div data-iw-search-empty>
+  <div class="cathead"><h1 class="h1 q"><span data-iw-text="search.empty.heading">No matches for</span> “<span data-iw-search-query>copper moscow mule mug</span>”</h1></div>
+  <div class="nores"><div class="in">
+    <div class="col">
+      <span class="h" data-iw-text="search.tips.heading">Try this</span>
+      <ol class="tips"><li><span data-iw-text="search.tips.1">Check the spelling, or use fewer words</span></li><li><span data-iw-text="search.tips.2">Search by product code, like 52-11-120</span></li><li><span data-iw-text="search.tips.3">Use a broader term: “flute” rather than “champagne flute 17cl”</span></li></ol>
+      <div class="callband"><span data-iw-text="search.call">Call the trade counter on</span><a href="tel:+442076840000"><span data-iw-text="site.phone">020 7684 0000</span></a></div>
+    </div>
+    <div class="col">
+      <span class="h" data-iw-text="search.popular">Popular departments</span>
+      <ul class="chips" data-iw-nav><li data-iw-nav-item data-iw-depth="0"><a class="chip" data-iw-category-link href="/category.html"><span data-iw-category-name>Glassware</span></a></li><li data-iw-nav-item data-iw-depth="0"><a class="chip" data-iw-category-link href="/category.html"><span data-iw-category-name>Barware</span></a></li><li data-iw-nav-item data-iw-depth="0"><a class="chip" data-iw-category-link href="/category.html"><span data-iw-category-name>Tableware &amp; Crockery</span></a></li><li data-iw-nav-item data-iw-depth="0"><a class="chip" data-iw-category-link href="/category.html"><span data-iw-category-name>Hygiene</span></a></li><li data-iw-nav-item data-iw-depth="0"><a class="chip" data-iw-category-link href="/category.html"><span data-iw-category-name>Disposables</span></a></li><li data-iw-nav-item data-iw-depth="0"><a class="chip" data-iw-category-link href="/category.html"><span data-iw-category-name>Catering Equipment</span></a></li></ul>
+    </div>
+  </div></div>
+  </div>
   </main>
   <footer class="ftr">
     <div class="ftr-cols">

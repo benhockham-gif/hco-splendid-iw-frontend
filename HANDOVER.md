@@ -3,22 +3,26 @@
 **To:** Software Engineer, Infinite Websites (HCP-252)
 **From:** Claude Design (HCP-249)
 **Revised:** HCP-245, product attributes (contract HCP-269) added to product.html, basket lines and product cards.
+**Revised (v4, HCP-308):** see `HCP-308-RESPONSE.md` for the design decisions on the 16 UAT points, the `data-iw-pending` mechanism, the new slots and the new text keys. Where the two files disagree, the response wins.
 **Source:** approved design 3a (Splendid Export), re-exported as plain HTML and CSS for the Intelligent Websites front-end contract (HCP-140).
 
-The pages contain no script, no `on…=` handlers, no `{{ }}` templates and no outside resources (no Google Fonts either: Archivo is self-hosted in `/assets/fonts/`). The only forms are the contract's slot forms (the basket checkout form now also carries the customer-details inputs; see below). Sample text and sample items in slots are there for layout only, so the product replaces or drops them.
+**v4.2:** the pages now load one approved script, `<script src="/assets/site.js" defer></script>` (approved by Ben; see "site.js" below). Apart from that, the pages contain no script, no `on…=` handlers, no `{{ }}` templates and no outside resources (no Google Fonts either: Archivo is self-hosted in `/assets/fonts/`). The only forms are the contract's slot forms (the basket checkout form now also carries the customer-details inputs; see below). Sample text and sample items in slots are there for layout only, so the product replaces or drops them.
 
 ## Pages
 
 | File | Page |
 |---|---|
 | `home.html` | Home |
-| `category.html` | Category (from "Products") |
+| `department.html` | Department landing: top-level category with subcategory tiles (**new, v4.1**) |
+| `category.html` | Subcategory product listing |
 | `product.html` | Product detail |
 | `basket.html` | Basket (quote request) |
 | `login.html` | Log in |
 | `register.html` | Open a trade account |
 | `account.html` | My account (favourites only) |
 | `notfound.html` | Not found (optional) |
+| `search.html` | Search results and no results (**new, v4**) |
+| `supplier.html` | Supplier / brand (**new, v4**, data coming) |
 
 All pages share one header and footer, and every page links `/assets/site.css`.
 
@@ -256,19 +260,9 @@ Every visible word sits in a `data-iw-text` slot, apart from words that come fro
 
 - **Code and pack in the spec list:** they already show by the heading and in the pack box. If the product also puts them in `data-iw-product-specs`, they will appear twice; please leave them out of the list if the contract allows.
 
-## Still missing from the approved design (to add later)
+## Still missing from the approved design
 
-These parts of approved 3a are not in the pages yet, because the website doesn't send the information or the pages can't contain script. We expect to be asked to add them once slots exist. Details are under "Differences from the prototype" below.
-
-- **Product page:** stock line ("In stock · 1,240 available"), extra image thumbnails, "More from …", the −/+ quantity stepper, the "Added to basket" state and the running total under the button.
-- **Product cards:** supplier line (no brand data for Splendid), stock dot, quantity with "Add to basket" on the card, and "Sold individually" for single items.
-- **Home:** Featured products, Our brands, department photos and subcategory lines, and the "Why buy" carousel (one static panel for now).
-- **Category:** subcategory chips, filters, sort, grid/list switch and page numbers.
-- **Basket:** Lines and Items counts, "Clear basket", "each" for single items in the price column, the quote reference and the customer's first name on the confirmation, and details filled in for logged-in customers.
-- **Log in:** "Forgot password".
-- **Register:** business type, phone and the terms tick box.
-- **Account:** business name heading, email and the "Remove" text link.
-- **Header:** working search box. Help, Contact, Delivery and the footer policy links have no destination yet.
+Superseded by `HCP-308-RESPONSE.md` (v4). Every remaining part of approved 3a is now built (some hidden until its slot exists) or has been dropped, with the reason given there.
 
 ## Differences from the prototype (decisions to confirm)
 
@@ -284,8 +278,26 @@ Prototype behaviour has been removed: the localStorage basket, demo login, demo 
 8. **Account:** the business-name heading, email and "Remove from favourites" text link are left out. The heart removes a saved item.
 9. **Header:** the search box is visual only (two text slots, with no input or form). The header now pins the department row and USP strip on scroll, using CSS only. USP descriptions open on hover or keyboard focus, using CSS only.
 10. **Links with no destination slot** use `href="#"`: Help, Contact us, Delivery, and the footer policy and about links. Hero buttons jump to the department grid. Phone and email links have the number and address fixed in `tel:`/`mailto:`. If `site.phone` or `site.email` changes in Wix, these hrefs need updating.
-11. **Layout:** the approved design is a fixed 1280px canvas. It is kept at 1280px and scaled down in steps with CSS `zoom` on narrower screens, as the prototype did.
+11. **Layout (revised v4):** the 1280px canvas zooms 0.9 and 0.8 down to 1024px. Below that the pages reflow (3 columns, then 2 below 640px) instead of zooming. See HCP-308 item 5.
 
 ## Reviewing locally
 
 The delivery folder is `splendid-static/`. Serve it as the web root (for example `npx serve splendid-static`), so the `/assets/…` links resolve. `splendid-review/` is a preview-only copy with relative links. Do not deliver it.
+
+## site.js (v4.2, approved by Ben)
+
+One file, `/assets/site.js` (about 9 KB), loaded with `defer` on every page. Every page works fully without it. It makes no outside requests, sets no cookies, uses no storage, and never changes slot contents, form fields or form actions. It adds `class="js"` to `<html>`, and the styles that depend on it are under "v4.2" at the end of `site.css`.
+
+| # | What it does | Where |
+|---|---|---|
+| 1 | Tap a USP again to close it. Tapping outside, or Esc, closes the USPs, the Sort dropdown and the mobile Filter panel. | Header, category, search, supplier |
+| 2 | Adds a −/+ stepper around every quantity input. It only changes the input's value, as typing would. | Product, cards, basket |
+| 3 | Running total under Add to basket ("Total £149.76 ex VAT") when the quantity is above 1. It reads the pack price, or the unit price if there's no pack, from the page. | Product |
+| 4 | **Add to basket without a reload:** posts the same `data-iw-add-to-basket` form to its own action (same site, `credentials: same-origin`, header `X-Requested-With: site.js`), then the button shows "Added" for 2 s. If the post fails, it submits the form normally. | Product, cards |
+| 5 | Shows the department-row Favourites and Basket icons once the header is stuck, in every browser (replaces the CSS-only version). | Every page, 1024 px and up |
+| 6 | "Why buy" carousel: dots and Previous/Next arrows, a 6 s autoplay that pauses on hover or focus, and no autoplay with reduced motion. | Home |
+| 7 | Scroll-in: section headings and cards below the first screen fade up as they arrive. Off with reduced motion. | All pages |
+
+New text keys: `product.added` Added to basket · `product.added.short` Added · `product.total` Total. The stepper and carousel buttons carry aria-labels from the script (Decrease, Increase, Previous, Next, "1 of 4").
+
+**Please confirm:** that a POST with `X-Requested-With: site.js` to the add-to-basket action returns a 2xx (a redirect that ends in 200 is fine).
