@@ -174,3 +174,12 @@ The contract's no-script rule (HCP-140) is now stopping us doing basic things th
 - It's one file, the same on every page, and you review it before it goes live.
 
 Until we hear back we'll keep building CSS only. Please reply to Ben.
+
+## v4.3: product page key facts, feature pills, range link (Ben's review of real attribute data)
+
+Reviewed against the Artis 31-51-228 and Steelite 11010590 samples (`splendid-review/product-attrs-*.html`). All three are hidden until wired (see HANDOVER.md, "Hidden until wired").
+
+- **Key facts** (pending `keyfacts`): four tiles above the Specification list. `data-iw-product-keyfacts` › `data-iw-keyfact` › `data-iw-keyfact-label`, `data-iw-keyfact-value`, optional `data-iw-keyfact-sub`. Proposed tiles, each dropped when empty: **Capacity** (cl, sub: oz), **Size** (L × W or Ø, sub: height, unit mm), **Material** (last part only, sub: colour), **Made in**. Fields used in a tile should be left out of the Specification list below it.
+- **Feature pills** (pending `features`): under the product image. `data-iw-product-features` › `data-iw-product-feature` › `data-iw-feature-name`. One pill per yes/no field that is **true** (dishwasher, microwave, freezer, oven, grill safe; stackable; toughened; thermal shock resistant; edge-chip warranty; etc.). False or blank fields show nothing. Remove these fields from the Specification list.
+- **Range link** (pending `range-link`): under the code, "Bauscher Purity White range →". `<a data-iw-range-link href>` › `data-iw-product-range` (brand + range name), new key `product.range.suffix` "range". The link goes to the product list filtered to that range. **Needs:** a `range` filter on the category/search listing (a new facet), and the URL format from you.
+- **Data clean-up needed before launch** (from the samples): booleans arrive as "true"; units are mixed (`capacity_oz` "16oz" vs 12.25); `material` holds a path ("Ceramic > Alumina Vitrified"); `supplier_part_no` looks truncated; brand (Bauscher) vs supplier (Artis) needs a rule; about 18 internal/logistics fields (pallet, rack, waste, commodity, status, supplier URL) must not reach the Specification list.

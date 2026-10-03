@@ -6,7 +6,53 @@
 **Revised (v4, HCP-308):** see `HCP-308-RESPONSE.md` for the design decisions on the 16 UAT points, the `data-iw-pending` mechanism, the new slots and the new text keys. Where the two files disagree, the response wins.
 **Source:** approved design 3a (Splendid Export), re-exported as plain HTML and CSS for the Intelligent Websites front-end contract (HCP-140).
 
+**v4.5 (HCP-246):** product attributes (Specification list, Shipping & packaging, key points, description lists, pack breakdown, 18+ notice, price each per item), variant table, and the category filter order. See `HCP-246-v4.5-RESPONSE.md`; it wins where the files disagree.
+
+**v4.4 (HCP-316):** forgot password (`forgot.html`, plus a reset notice on `login.html`), Our brands (`brands.html`), one content page template (`content.html`) and `data-iw-href` keys for every footer and top-bar link. See `HCP-316-RESPONSE.md`; it wins where the files disagree.
+
 **v4.2:** the pages now load one approved script, `<script src="/assets/site.js" defer></script>` (approved by Ben; see "site.js" below). Apart from that, the pages contain no script, no `on…=` handlers, no `{{ }}` templates and no outside resources (no Google Fonts either: Archivo is self-hosted in `/assets/fonts/`). The only forms are the contract's slot forms (the basket checkout form now also carries the customer-details inputs; see below). Sample text and sample items in slots are there for layout only, so the product replaces or drops them.
+
+## ⚠ Hidden until wired (please action)
+
+These parts of approved 3a **are built and in the pages, but switched off.** Each carries `data-iw-pending="<name>"`, and `site.css` hides it until the slot exists. Nothing on this list is dropped; it is all waiting on you.
+
+**How to see them:** add `?gaps` to any page URL (e.g. `/home.html?gaps`). Every pending block then shows with a dashed rust outline, and its fallback hides. Each page also logs its pending blocks to the browser console. **To switch one on:** wire the slot, remove `data-iw-pending`, and delete any `data-iw-pending-fallback` element beside it.
+
+| Pending name | What's hidden | Pages | Detail (HCP-308) |
+|---|---|---|---|
+| `search` | Working header search box (fallback: visual-only box) | all | 6 |
+| `icon-state` | Filled heart and basket icons when the customer has items | all | Header icon state |
+| `featured` | **Featured products**, 4 cards | home | 9 |
+| `brands` | **Our brands** chips [data coming] | home | 9 |
+| `nav-image` | Department and subcategory photos (pebble pattern until then) | home, department, supplier | 9, Departments |
+| `stock` | Stock indicator (cards, and product price line) | home, department, category, search, supplier, product, account | 10, 11 |
+| `card-add` | Quantity and Add to basket on cards (fallback: "View product") | home, department, category, search, supplier, product, account | 11 |
+| `parent-crumb` | Department in the breadcrumb | category | Departments |
+| `subcategories` | Sibling subcategory chips | category | 8 |
+| `facets` | Filters, and the mobile Filter button | category, search | 8 |
+| `sort` | Sort dropdown | category, search | 8 |
+| `paging` | Product count and pager | category | 1 |
+| `box` | Box quantity (e.g. stirrers) | category | Open questions |
+| `images` | Extra product thumbnails (fallback: single image) | product | 10 |
+| `in-basket` | "In your basket · Quantity N" line | product | 10 |
+| `related` | "More from …" cards [data coming] | product | 10 |
+| `basket-counts` | Lines and items counts | basket | 12 |
+| `basket-clear` | Clear basket | basket | 12 |
+| `quote-ref` | Quote reference on "Quote request sent" | basket | 12 |
+| `sent-name` | Customer first name ("Thank you, Sam.") | basket | 12 |
+| `register-extra` | Business type, phone and terms checkbox | register | 13 |
+| `member-company` | Business name as the account heading | account | 14 |
+| `member-email` | Customer email under the heading | account | 14 |
+| `favourite-link` | "Remove from favourites" text link | account | 14 |
+| `brand-promo` | Promo banner (optional) | supplier | 7 |
+| `brand-ranges` | Brand ranges tiles | supplier | 7 |
+| `brand-categories` | Departments selling this brand | supplier | 7 |
+| `brand-products` | Popular in [brand], 8 cards | supplier | 7 |
+| `catalogue` | Catalogue PDF, View and Download | supplier | 7 |
+| `spec-list` | Specification list and Shipping & packaging (left column); old list is the fallback | product | v4.5 |
+| `variants` | Sizes in this range table | product | v4.5 |
+| `features` | Feature pills under the image | product | v4.3 |
+| `range-link` | "Brand Range range →" link to a filtered list | product | v4.3 |
 
 ## Pages
 
@@ -23,6 +69,9 @@
 | `notfound.html` | Not found (optional) |
 | `search.html` | Search results and no results (**new, v4**) |
 | `supplier.html` | Supplier / brand (**new, v4**, data coming) |
+| `forgot.html` | Forgot password: form, error, sent (**new, v4.4**) |
+| `brands.html` | Our brands, A to Z (**new, v4.4**) |
+| `content.html` | Content page: About us, Help, Delivery and returns, Privacy, Cookies, Terms (**new, v4.4**) |
 
 All pages share one header and footer, and every page links `/assets/site.css`.
 
@@ -266,11 +315,13 @@ Superseded by `HCP-308-RESPONSE.md` (v4). Every remaining part of approved 3a is
 
 ## Differences from the prototype (decisions to confirm)
 
+> **Out of date in places (v3 wording).** Anything below described as "left out" that appears in "Hidden until wired" above is now built and waiting on its slot. That table wins.
+
 Prototype behaviour has been removed: the localStorage basket, demo login, demo note, "Preview state" toggles, header compaction on scroll, carousel and hover counters. Some items had no slot in the contract, so they are left out rather than kept as fixed demo data.
 
 1. **Product card (revised, HCP-245):** code and pack now show under the name and price, as in approved 3a. Supplier, availability and quick add are still left out (no slots), and the "View product" button stays.
 2. **Product page (revised, HCP-245):** brand, code, description, the pack box and the Specification list are back where approved 3a had them. Specification sits above "Find it in" in the left column; the whole block is removed when a product has no specs. Stock count, the pack price, extra thumbnails and "More from …" are still left out (no slots).
-3. **Home:** "Featured products" and "Our brands" are left out because neither has a slot on home. The department cards show a decorative pebble in place of a photo, because nav items have no category image. Subcategory lines are also left out. The "Why buy from Splendid" carousel is a single static panel.
+3. **Home:** "Featured products" and "Our brands" are built but hidden until their slots exist (`featured`, `brands`; see "Hidden until wired"). The department cards show a decorative pebble until nav items carry a category image (`nav-image`). Subcategory lines are also left out. The "Why buy from Splendid" carousel is a single static panel.
 4. **Category:** the subcategory chips, filters, sort, grid/list toggle and pagination are left out. A "Departments" side nav (indented by depth) keeps the approved two-column layout. A category image slot sits beside the intro text.
 5. **Basket (revised, HCP-264):** the customer details form and the "Quote request sent" confirmation are back, matching approved 3a. The details inputs (`name`, `company`, `email`, `phone`, `postcode`, `notes`) sit inside `<form data-iw-checkout>`, so one submit sends the list and the details. The confirmation is a new state block, `data-iw-basket-sent`, delivered visible like the others; please confirm the contract can show it after checkout (or tell us the slot name to use). Because the contract has no slots for them, the confirmation drops the reference number and the customer's first name ("Thank you." rather than "Thank you, Sam."), the item summary reads "your list", the notes placeholder text is left out, and the "Filled in from your account" line and pre-filled values for logged-in members are left out. Line/item counts and "Clear basket" are still left out. The +/- stepper is replaced by a number input with an "Update" button.
 6. **Log in:** "Forgot password" and the "Log in to save favourites" note are left out (no slot).

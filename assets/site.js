@@ -6,6 +6,8 @@
   'use strict';
   var d = document, html = d.documentElement;
   html.classList.add('js');
+  /* 0. Gaps: add ?gaps to any URL to outline every block still hidden until its slot is wired */
+  if (/[?&]gaps\b/.test(location.search)) html.classList.add('review');
   var reduce = window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches;
   function $(s, r) { return (r || d).querySelector(s); }
   function $$(s, r) { return Array.prototype.slice.call((r || d).querySelectorAll(s)); }
@@ -171,5 +173,13 @@
       var cols = getComputedStyle(g).gridTemplateColumns.split(' ').length || 1;
       Array.prototype.slice.call(g.children).forEach(function (li, k) { prep(li, (k % cols) * 90); });
     });
+  }
+
+  /* 8. Gaps: list the blocks hidden until their slot is wired (data-iw-pending) in the console */
+  var pend = $$('[data-iw-pending]');
+  if (pend.length && window.console) {
+    var c = {};
+    pend.forEach(function (e) { var n = e.getAttribute('data-iw-pending'); c[n] = (c[n] || 0) + 1; });
+    console.warn('Splendid: ' + Object.keys(c).length + ' kinds of block are hidden until their slot is wired (data-iw-pending). Add ?gaps to the URL to see them. See HANDOVER.md, "Hidden until wired".', c);
   }
 })();
