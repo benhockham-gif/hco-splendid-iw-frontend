@@ -3,7 +3,7 @@
 @font-face{font-family:'Archivo';font-style:normal;font-weight:400 700;font-stretch:100%;font-display:swap;src:url("fonts/archivo-latin-ext.woff2") format('woff2');unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF}
 @font-face{font-family:'Archivo';font-style:normal;font-weight:400 700;font-stretch:100%;font-display:swap;src:url("fonts/archivo-latin.woff2") format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
 
-:root{--ink:#1A1712;--paper:#F4EBDD;--sand:#EADFCB;--card:#FBF7F0;--line:#DDD2C0;--line2:#C9BDA8;--rust:#9C4527;--mute:#4A443B;--mute2:#5F5849;--mute3:#6B6456;--green:#2F6B4F;--amber:#8A5214}
+:root{--ink:#1A1712;--paper:#EFE5D3;--sand:#E3D6BE;--card:#F6EFE2;--line:#D6C9B2;--line2:#C9BDA8;--rust:#9C4527;--mute:#4A443B;--mute2:#5F5849;--mute3:#6B6456;--green:#2F6B4F;--amber:#8A5214}
 *{box-sizing:border-box}
 html{background:var(--sand)}
 body{margin:0;background:var(--sand);font-family:'Archivo',system-ui,sans-serif;color:var(--ink)}
@@ -868,3 +868,41 @@ html:has(#vp-a:checked) .vp-onlyB,html:has(#vp-b:checked) .vp-onlyA{display:none
 .kpts{list-style:none;margin:4px 0 0;padding:0;display:grid;gap:6px;font-size:14px}
 .kpts li{display:flex;gap:8px;align-items:flex-start}
 .kpts svg{flex-shrink:0;margin-top:3px;color:#3F6B3A}
+
+/* ===== v4.6 (HCP-505): round-2 client feedback, on the UAT build of 8 Oct 2026 ===== */
+/* 1. Darker ground (Ben, 8 Oct 2026): surfaces one step deeper (see :root); no page spotlight; the header fades stay.
+   Product cards: no border, clear cream gaps, and each card is its own glow, white under the photo easing to the card tone at its own edges. The photo's light background is blended into the card; the product itself keeps its colours */
+.card{background:#FFFFFF}
+.card-img{background:#FFFFFF}
+/* Category pages (Ben, 8 Oct 2026): no page spotlight behind product listings. Home and every other page keep it */
+.page[data-screen-label="Category"]{background:var(--paper)}
+/* 2. Home hero: several images (data-iw-hero-images), 7 s each; the new one shrinks into place over the old. First image shows without the script */
+.hero-art .blob{position:relative;z-index:0}
+.hero-art .badge{z-index:3}
+.hero-art .blob img{position:absolute;inset:0}
+.hero-art .blob img:not(:first-child){opacity:0}
+.hero-art .blob.js-rot img{opacity:0;z-index:1;transform:scale(1.14);transition:opacity .9s ease,transform 1.8s cubic-bezier(.2,.7,.2,1)}
+.hero-art .blob.js-rot img.is-on{opacity:1;z-index:2;transform:scale(1)}
+/* "Why buy from Splendid": one image per message, changing with the text (Ben, 8 Oct 2026). Without the script the images follow the same 24 s cycle as the text */
+.why .img{position:relative}
+.why .img img{position:absolute;inset:0;opacity:0;animation:whyfade 24s infinite both}
+.why .img img:nth-child(2){animation-delay:6s}
+.why .img img:nth-child(3){animation-delay:12s}
+.why .img img:nth-child(4){animation-delay:18s}
+.why:hover .img img{animation-play-state:paused}
+.js-car .img img{animation:none;opacity:0;transition:opacity .7s ease}
+.js-car .img img.is-on{opacity:1}
+@media (prefers-reduced-motion:reduce){.why .img img{animation:none}.why .img img:first-child{opacity:1}}
+/* 3. Anyone can request a quote: product buy box, log in / register strip, empty basket, logged-out account */
+.qline{display:flex;align-items:flex-start;gap:9px;font-size:13px;line-height:1.45;color:var(--mute)}
+.qline .icon{flex-shrink:0;stroke:var(--green);margin-top:2px}
+.qstrip{margin:0 48px 32px;display:flex;align-items:center;gap:20px;padding:16px 20px;border:1px solid var(--line2);background:var(--card)}
+.qstrip .icon{flex-shrink:0;stroke:var(--green)}
+.qstrip .qt{flex:1;display:flex;flex-direction:column;gap:3px;min-width:0}
+.qstrip b{font-size:15px;font-weight:700}
+.qstrip span{font-size:13.5px;line-height:1.45;color:var(--mute)}
+.qstrip .btn{flex-shrink:0}
+/* 4. Department pebbles: a soft white glow around each pebble (Ben, 8 Oct 2026) */
+.dept .peb,.subtile .im{box-shadow:0 0 28px 10px rgba(255,255,255,0);transition:box-shadow .35s ease}
+.dept:hover .peb,.subtile:hover .im{box-shadow:0 0 28px 10px #FFFFFF}
+@media (max-width:1023px){.qstrip{margin:0 20px 24px;flex-wrap:wrap}}

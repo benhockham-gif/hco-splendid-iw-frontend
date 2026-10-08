@@ -133,6 +133,7 @@
     var go = function (k, user) {
       i = (k + slides.length) % slides.length;
       slides.forEach(function (s, n) { s.classList.toggle('is-on', n === i); s.setAttribute('aria-hidden', n === i ? 'false' : 'true'); });
+      $$('.img img', why).forEach(function (p, n) { p.classList.toggle('is-on', n === i); }); /* v4.6: picture follows the message */
       $$('button', dots).forEach(function (b, n) { b.classList.toggle('is-on', n === i); b.setAttribute('aria-current', n === i ? 'true' : 'false'); });
       if (user) start();
     };
@@ -173,6 +174,14 @@
       var cols = getComputedStyle(g).gridTemplateColumns.split(' ').length || 1;
       Array.prototype.slice.call(g.children).forEach(function (li, k) { prep(li, (k % cols) * 90); });
     });
+  }
+
+  /* 9. Home hero (v4.6): the images in data-iw-hero-images take turns, 7 s each; the new one shrinks into place over the old. One image, or reduced motion: the first stays */
+  var heroBox = $('[data-iw-hero-images]'), pics = heroBox ? $$('img', heroBox) : [];
+  if (pics.length > 1 && !reduce) {
+    heroBox.classList.add('js-rot');
+    var hi = 0; pics[0].classList.add('is-on');
+    setInterval(function () { pics[hi].classList.remove('is-on'); hi = (hi + 1) % pics.length; pics[hi].classList.add('is-on'); }, 7000);
   }
 
   /* 8. Gaps: list the blocks hidden until their slot is wired (data-iw-pending) in the console */
