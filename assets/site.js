@@ -194,6 +194,6 @@
 })();
 
 /* HCP-563: subcategory tile images supplied by Ben (front-end assets), by category slug. */
-(function(){var D=["beer","bottles-jars","brandy-fortified-wine","champagne","cocktails","crystal-glassware","hiballs-tumblers","hot-drinks","jugs-pitchers-carafes","rocks","shot-glasses","speciality","tumblers","wine"];
+(function(){var D=["bar-top-accessories","beer","bottles-jars","brandy-fortified-wine","champagne","cocktails","crystal-glassware","dash-bottles","hiballs-tumblers","hot-drinks","ice-champagne","jugs-pitchers-carafes","measures-pourers","metal-drinkware","openers","rocks","shake","shot-glasses","skewers","soda-siphons-cream-whippers","speciality","speed-rails","stir","strain","straws","trays","tumblers","wine"];
 function run(){document.querySelectorAll('a.subtile[href^="/category/"]').forEach(function(a){var s=a.getAttribute("href").split("/")[2].split("?")[0];if(D.indexOf(s)<0)return;var i=a.querySelector("img");if(i){i.src="/assets/dept/"+s+".jpg";i.removeAttribute("srcset");}});}
 if(document.readyState==="loading")document.addEventListener("DOMContentLoaded",run);else run();})();
