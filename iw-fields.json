@@ -80,5 +80,21 @@
     "soda-siphons-cream-whippers": ["capacity"],
     "ice-cream-containers":        ["capacity"],
     "gastronorms":                 ["capacity"]
+  },
+  "filters": {
+    "type":     { "key": "product_type" },
+    "style":    { "key": "style" },
+    "material": { "key": "material", "last": ">" },
+    "colour":   { "key": "colour", "split": ";" },
+    "size":     { "keySize": ["Diameter", "Length", "Size"], "bands": [[15, "Under 15 cm (6″)"], [20, "15–20 cm (6–8″)"], [25, "20–25 cm (8–10″)"], [30, "25–30 cm (10–12″)"], [null, "30 cm and over (12″+)"]] },
+    "capacity": { "keySize": ["Capacity"], "bands": [[10, "Under 10cl"], [25, "10–25cl"], [40, "25–40cl"], [60, "40–60cl"], [null, "60cl and over"]] },
+    "care":     { "yes": {
+      "dishwasher_safe": "Dishwasher safe", "microwave_safe": "Microwave safe", "oven_safe": "Oven safe", "freezer_safe": "Freezer safe",
+      "microwave_freezer_safe": "Microwave and freezer safe", "grill_safe": "Grill safe", "handwash_only": "Hand wash only", "stackable": "Stackable",
+      "thermal_shock_resistant": "Thermal shock resistant", "toughened": "Toughened", "toughened_rim": "Toughened rim", "tempered": "Tempered",
+      "nucleated": "Nucleated", "lined": "Lined", "laser_cut_rim": "Laser-cut rim", "recycled": "Recycled", "titanium_reinforced": "Titanium reinforced",
+      "edge_chip_warranty_lifetime": "Lifetime edge-chip warranty", "edge_chip_warranty_5_years": "5-year edge-chip warranty", "edge_chip_warranty_1_year": "1-year edge-chip warranty"
+    } },
+    "price":    { "price": true, "bands": [[5, "Under £5"], [10, "£5–£10"], [20, "£10–£20"], [50, "£20–£50"], [null, "£50 and over"]] }
   }
 }
