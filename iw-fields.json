@@ -18,5 +18,26 @@
     "outer-barcode": { "parts": [{ "key": "outer_barcode" }] },
     "gtin":          { "parts": [{ "key": "gtin", "unlessSame": "outer_barcode" }] },
     "waste":         { "parts": [{ "key": "waste_pack_paper_kg", "weight": true, "before": "Paper " }, { "key": "waste_pack_plastic_kg", "weight": true, "before": "Plastic " }], "sep": " · " }
+  },
+  "brands": {
+    "SOLA": "Sola",
+    "WALCO HW/BUFFET": "Walco",
+    "2400 Series": {"brand": "Rockingham Forge", "range": "2400 Series"},
+    "9100 Series": {"brand": "Rockingham Forge", "range": "9100 Series"},
+    "Hepp Fw": "Hepp",
+    "Hepp Hw/Buffet": "Hepp",
+    "Varick FW": "Varick",
+    "Varick DW": "Varick",
+    "Folio By Steelite": "Folio",
+    "Folio Flatware": "Folio",
+    "Folio Serv Pcs": "Folio",
+    "Folio Alpha Ceram": "Folio",
+    "Folio Cookware": "Folio",
+    "Creations Buffet": "Creations",
+    "Creations Glass": "Creations",
+    "Creations Wood": "Creations",
+    "Creations Melamine": "Creations",
+    "Creations Polycrystal": "Creations",
+    "Creations Metal": "Creations"
   }
 }
