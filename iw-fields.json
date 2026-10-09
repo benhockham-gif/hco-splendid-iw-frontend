@@ -96,5 +96,24 @@
       "edge_chip_warranty_lifetime": "Lifetime edge-chip warranty", "edge_chip_warranty_5_years": "5-year edge-chip warranty", "edge_chip_warranty_1_year": "1-year edge-chip warranty"
     } },
     "price":    { "label": "Price (each, ex VAT)", "price": true, "bands": [[5, "Under £5"], [10, "£5–£10"], [20, "£10–£20"], [50, "£20–£50"], [null, "£50 and over"]] }
+  },
+  "variants": {
+    "colour": "colour",
+    "colourHeading": "Colours in this range",
+    "colours": [
+      "Agate Grey", "Alpine", "Amber", "Andorra Green", "Antique Taupe", "Aquamarine", "Ash Black", "Azure", "Barley White", "Bayou",
+      "Berry Red", "Black", "Black Granite", "Blue", "Blueberry", "Breeze", "Bronze", "Brown", "Burnished Green", "Carbon",
+      "Chalk White", "Champagne", "Charcoal Black", "Chrome", "Cinnamon", "Cinnamon Brown", "Clear", "Coast", "Coastal Sand", "Cobalt Blue",
+      "Copper", "Coral", "Cornflower Blue", "Deep Purple", "Distressed Wood", "Duck Egg Blue", "Dune", "Dusk", "Fern", "Fjord",
+      "Flint", "Flint Grey", "Garnet Orange", "Gold", "Granite", "Green", "Grey", "Gunmetal", "Ice", "Indigo",
+      "Indigo Blue", "Ink", "Iron Black", "Jade Green", "Jasper Grey", "Java Blue", "Jet", "Lagoon", "Lavender", "Limestone",
+      "Linen", "Marine", "Mint", "Mist", "Mist Blue", "Mustard", "Mustard Seed Yellow", "Natural", "Nutmeg Cream", "Ocean Blue",
+      "Olive", "Onyx", "Orange", "Oslo Blue", "Paprika", "Pearl", "Pearl Grey", "Peppercorn Grey", "Petal Pink", "Petra Sand",
+      "Pink", "Plum", "Quartz Black", "Red", "Red Rust", "Rose Quartz Pink", "Rustic Teal", "Sage Green", "Samphire Green", "Sandstone",
+      "Sapphire", "Sapphire Blue", "Seattle Grey", "Shale Grey", "Siena Barley White", "Siena Brown", "Siena Duck Egg", "Silver", "Simmer Black", "Simmer Brown",
+      "Smoke", "Smoke Grey", "Sorrel Green", "Speckled Green", "Speckled White", "Spiced Orange", "Stainless Steel", "Stone Grey", "Stonecast Truffle", "Tangerine",
+      "Taupe", "Teal", "Terracotta", "Tokyo Black", "Tokyo Blue", "Topaz Blue", "Truffle", "Turquoise", "Twilight", "Ultramarine",
+      "Vintage Copper", "White", "Yellow"
+    ]
   }
 }
