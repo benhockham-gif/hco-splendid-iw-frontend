@@ -43,7 +43,6 @@
   "sizes": {
     "*":                           ["size"],
     "speciality":                  ["capacity", "size"],
-    "tableware-crockery":          ["diameter", "capacity"],
     "crockery":                    ["diameter", "capacity"],
     "fine-bone-china":             ["diameter", "capacity"],
     "pizza-service":               ["diameter"],
@@ -56,7 +55,6 @@
     "stir":                        ["length"],
     "straws":                      ["length"],
     "speed-rails":                 ["length"],
-    "glassware":                   ["capacity"],
     "beer":                        ["capacity"],
     "champagne":                   ["capacity"],
     "wine":                        ["capacity"],
