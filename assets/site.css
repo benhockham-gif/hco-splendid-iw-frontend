@@ -875,7 +875,7 @@ html:has(#vp-a:checked) .vp-onlyB,html:has(#vp-b:checked) .vp-onlyA{display:none
 .card{background:#FFFFFF}
 .card-img{background:#FFFFFF}
 /* Category pages (Ben, 8 Oct 2026): no page spotlight behind product listings. Home and every other page keep it */
-.page[data-screen-label="Category"]{background:var(--paper)}
+.page[data-screen-label="Category"],.page[data-screen-label="Department"]{background:var(--paper)}
 /* 2. Home hero: several images (data-iw-hero-images), 7 s each; the new one shrinks into place over the old. First image shows without the script */
 .hero-art .blob{position:relative;z-index:0}
 .hero-art .badge{z-index:3}
@@ -903,6 +903,4 @@ html:has(#vp-a:checked) .vp-onlyB,html:has(#vp-b:checked) .vp-onlyA{display:none
 .qstrip span{font-size:13.5px;line-height:1.45;color:var(--mute)}
 .qstrip .btn{flex-shrink:0}
 /* 4. Department pebbles: a soft white glow around each pebble (Ben, 8 Oct 2026) */
-.dept .peb,.subtile .im{box-shadow:0 0 28px 10px rgba(255,255,255,0);transition:box-shadow .35s ease}
-.dept:hover .peb,.subtile:hover .im{box-shadow:0 0 28px 10px #FFFFFF}
 @media (max-width:1023px){.qstrip{margin:0 20px 24px;flex-wrap:wrap}}

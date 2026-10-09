@@ -192,3 +192,8 @@
     console.warn('Splendid: ' + Object.keys(c).length + ' kinds of block are hidden until their slot is wired (data-iw-pending). Add ?gaps to the URL to see them. See HANDOVER.md, "Hidden until wired".', c);
   }
 })();
+
+/* HCP-563: subcategory tile images supplied by Ben (front-end assets), by category slug. */
+(function(){var D=["beer","bottles-jars","brandy-fortified-wine","champagne","cocktails","crystal-glassware","hiballs-tumblers","hot-drinks","jugs-pitchers-carafes","rocks","shot-glasses","speciality","tumblers","wine"];
+function run(){document.querySelectorAll('a.subtile[href^="/category/"]').forEach(function(a){var s=a.getAttribute("href").split("/")[2].split("?")[0];if(D.indexOf(s)<0)return;var i=a.querySelector("img");if(i){i.src="/assets/dept/"+s+".png";i.removeAttribute("srcset");}});}
+if(document.readyState==="loading")document.addEventListener("DOMContentLoaded",run);else run();})();
