@@ -1,0 +1,22 @@
+{
+  "spec": {
+    "type":       { "parts": [{ "key": "product_type" }] },
+    "style":      { "parts": [{ "key": "style" }] },
+    "material":   { "parts": [{ "key": "material", "last": ">" }] },
+    "colour":     { "parts": [{ "key": "colour" }] },
+    "capacity":   { "parts": [{ "key": "capacity_cl", "num": true, "after": "cl" }, { "key": "capacity_oz", "num": true, "after": "oz" }], "sep": " / " },
+    "dimensions": { "parts": [{ "key": "length_mm", "num": true, "decimals": 1, "before": "L " }, { "key": "width_mm", "num": true, "decimals": 1, "before": "W " }, { "key": "diameter_mm", "num": true, "decimals": 1, "before": "Ø " }, { "key": "height_mm", "num": true, "decimals": 1, "before": "H " }], "sep": " × ", "after": " mm" },
+    "weight":     { "parts": [{ "key": "weight_kg", "weight": true }] },
+    "origin":     { "parts": [{ "key": "country_of_origin" }] }
+  },
+  "ship": {
+    "soldin":        { "parts": [{ "key": "pack_spec" }] },
+    "boxsize":       { "parts": [{ "key": "sales_box_length_mm", "num": true, "decimals": 1 }, { "key": "sales_box_width_mm", "num": true, "decimals": 1 }, { "key": "sales_box_height_mm", "num": true, "decimals": 1 }], "sep": " × ", "after": " mm" },
+    "boxweight":     { "parts": [{ "key": "sales_box_weight_kg", "weight": true }] },
+    "pallet":        { "parts": [{ "key": "pallet_qty", "num": true, "decimals": 0 }] },
+    "layer":         { "parts": [{ "key": "uk_pallet_outers_per_layer", "num": true, "decimals": 0, "before": "UK " }, { "key": "euro_pallet_outers_per_layer", "num": true, "decimals": 0, "before": "Euro " }], "sep": " · " },
+    "outer-barcode": { "parts": [{ "key": "outer_barcode" }] },
+    "gtin":          { "parts": [{ "key": "gtin", "unlessSame": "outer_barcode" }] },
+    "waste":         { "parts": [{ "key": "waste_pack_paper_kg", "weight": true, "before": "Paper " }, { "key": "waste_pack_plastic_kg", "weight": true, "before": "Plastic " }], "sep": " · " }
+  }
+}
