@@ -115,5 +115,6 @@
       "Taupe", "Teal", "Terracotta", "Tokyo Black", "Tokyo Blue", "Topaz Blue", "Truffle", "Turquoise", "Twilight", "Ultramarine",
       "Vintage Copper", "White", "Yellow"
     ]
-  }
+  },
+  "boxes": { "suppliers": ["steelite"] }
 }
