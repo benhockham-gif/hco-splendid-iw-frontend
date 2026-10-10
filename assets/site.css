@@ -907,8 +907,3 @@ html:has(#vp-a:checked) .vp-onlyB,html:has(#vp-b:checked) .vp-onlyA{display:none
 /* 4. Department pebbles: a soft white glow around each pebble (Ben, 8 Oct 2026) */
 @media (max-width:1023px){.qstrip{margin:0 20px 24px;flex-wrap:wrap}}
 
-/* Ben 10 Oct: brand page ranges as a list of name boxes (no images) */
-.rangetiles{grid-template-columns:repeat(4,minmax(0,1fr));gap:10px}
-.rangetiles .subtile{padding:14px 16px}
-@media (max-width:900px){.rangetiles{grid-template-columns:repeat(2,minmax(0,1fr))}}
-@media (max-width:520px){.rangetiles{grid-template-columns:minmax(0,1fr)}}
