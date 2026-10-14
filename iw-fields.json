@@ -1,30 +1,201 @@
 {
   "spec": {
-    "type":       { "parts": [{ "key": "product_type" }] },
-    "style":      { "parts": [{ "key": "style" }] },
-    "material":   { "parts": [{ "key": "material", "last": ">" }] },
-    "colour":     { "parts": [{ "key": "colour" }] },
-    "capacity":   { "parts": [{ "key": "capacity_cl", "num": true, "after": "cl" }, { "key": "capacity_oz", "num": true, "after": "oz" }], "sep": " / " },
-    "dimensions": { "parts": [{ "key": "length_mm", "num": true, "decimals": 1, "before": "L " }, { "key": "width_mm", "num": true, "decimals": 1, "before": "W " }, { "key": "diameter_mm", "num": true, "decimals": 1, "before": "Ø " }, { "key": "height_mm", "num": true, "decimals": 1, "before": "H " }], "sep": " × ", "after": " mm" },
-    "weight":     { "parts": [{ "key": "weight_kg", "weight": true }] },
-    "origin":     { "parts": [{ "key": "country_of_origin" }] }
+    "type": {
+      "parts": [
+        {
+          "key": "product_type"
+        }
+      ]
+    },
+    "style": {
+      "parts": [
+        {
+          "key": "style"
+        }
+      ]
+    },
+    "material": {
+      "parts": [
+        {
+          "key": "material",
+          "last": ">"
+        }
+      ]
+    },
+    "colour": {
+      "parts": [
+        {
+          "key": "colour"
+        }
+      ]
+    },
+    "capacity": {
+      "parts": [
+        {
+          "key": "capacity_cl",
+          "num": true,
+          "after": "cl"
+        },
+        {
+          "key": "capacity_oz",
+          "num": true,
+          "after": "oz"
+        }
+      ],
+      "sep": " / "
+    },
+    "dimensions": {
+      "parts": [
+        {
+          "key": "length_mm",
+          "num": true,
+          "decimals": 1,
+          "before": "L "
+        },
+        {
+          "key": "width_mm",
+          "num": true,
+          "decimals": 1,
+          "before": "W "
+        },
+        {
+          "key": "diameter_mm",
+          "num": true,
+          "decimals": 1,
+          "before": "Ø "
+        },
+        {
+          "key": "height_mm",
+          "num": true,
+          "decimals": 1,
+          "before": "H "
+        }
+      ],
+      "sep": " × ",
+      "after": " mm"
+    },
+    "weight": {
+      "parts": [
+        {
+          "key": "weight_kg",
+          "weight": true
+        }
+      ]
+    },
+    "origin": {
+      "parts": [
+        {
+          "key": "country_of_origin"
+        }
+      ]
+    }
   },
   "ship": {
-    "soldin":        { "parts": [{ "key": "pack_spec" }] },
-    "boxsize":       { "parts": [{ "key": "sales_box_length_mm", "num": true, "decimals": 1 }, { "key": "sales_box_width_mm", "num": true, "decimals": 1 }, { "key": "sales_box_height_mm", "num": true, "decimals": 1 }], "sep": " × ", "after": " mm" },
-    "boxweight":     { "parts": [{ "key": "sales_box_weight_kg", "weight": true }] },
-    "pallet":        { "parts": [{ "key": "pallet_qty", "num": true, "decimals": 0 }] },
-    "layer":         { "parts": [{ "key": "uk_pallet_outers_per_layer", "num": true, "decimals": 0, "before": "UK " }, { "key": "euro_pallet_outers_per_layer", "num": true, "decimals": 0, "before": "Euro " }], "sep": " · " },
-    "outer-barcode": { "parts": [{ "key": "outer_barcode" }] },
-    "gtin":          { "parts": [{ "key": "gtin", "unlessSame": "outer_barcode" }] },
-    "waste":         { "parts": [{ "key": "waste_pack_paper_kg", "weight": true, "before": "Paper " }, { "key": "waste_pack_plastic_kg", "weight": true, "before": "Plastic " }], "sep": " · " }
+    "soldin": {
+      "parts": [
+        {
+          "key": "pack_spec"
+        }
+      ]
+    },
+    "boxsize": {
+      "parts": [
+        {
+          "key": "sales_box_length_mm",
+          "num": true,
+          "decimals": 1
+        },
+        {
+          "key": "sales_box_width_mm",
+          "num": true,
+          "decimals": 1
+        },
+        {
+          "key": "sales_box_height_mm",
+          "num": true,
+          "decimals": 1
+        }
+      ],
+      "sep": " × ",
+      "after": " mm"
+    },
+    "boxweight": {
+      "parts": [
+        {
+          "key": "sales_box_weight_kg",
+          "weight": true
+        }
+      ]
+    },
+    "pallet": {
+      "parts": [
+        {
+          "key": "pallet_qty",
+          "num": true,
+          "decimals": 0
+        }
+      ]
+    },
+    "layer": {
+      "parts": [
+        {
+          "key": "uk_pallet_outers_per_layer",
+          "num": true,
+          "decimals": 0,
+          "before": "UK "
+        },
+        {
+          "key": "euro_pallet_outers_per_layer",
+          "num": true,
+          "decimals": 0,
+          "before": "Euro "
+        }
+      ],
+      "sep": " · "
+    },
+    "outer-barcode": {
+      "parts": [
+        {
+          "key": "outer_barcode"
+        }
+      ]
+    },
+    "gtin": {
+      "parts": [
+        {
+          "key": "gtin",
+          "unlessSame": "outer_barcode"
+        }
+      ]
+    },
+    "waste": {
+      "parts": [
+        {
+          "key": "waste_pack_paper_kg",
+          "weight": true,
+          "before": "Paper "
+        },
+        {
+          "key": "waste_pack_plastic_kg",
+          "weight": true,
+          "before": "Plastic "
+        }
+      ],
+      "sep": " · "
+    }
   },
   "brands": {
     "SOLA": "Sola",
     "C&S": "Chef & Sommelier",
     "WALCO HW/BUFFET": "Walco",
-    "2400 Series": {"brand": "Rockingham Forge", "range": "2400 Series"},
-    "9100 Series": {"brand": "Rockingham Forge", "range": "9100 Series"},
+    "2400 Series": {
+      "brand": "Rockingham Forge",
+      "range": "2400 Series"
+    },
+    "9100 Series": {
+      "brand": "Rockingham Forge",
+      "range": "9100 Series"
+    },
     "Hepp Fw": "Hepp",
     "Hepp Hw/Buffet": "Hepp",
     "Varick FW": "Varick",
@@ -40,247 +211,1202 @@
     "Creations Melamine": "Creations",
     "Creations Polycrystal": "Creations",
     "Creations Metal": "Creations",
-    "Antigo Tableware / Porcelain Cinza": {"brand": "Antigo Tableware", "range": "Porcelain Cinza", "colour": "Grey"},
-    "Antigo Tableware / Stoneware": {"brand": "Antigo Tableware", "range": "Stoneware", "colour": "Grey"},
-    "Antigo Tableware / Stoneware Barley": {"brand": "Antigo Tableware", "range": "Stoneware Barley", "colour": "Cream;White"},
-    "Bonna / Arctic": {"brand": "Bonna", "range": "Arctic", "colour": "Grey;Blue"},
-    "Bonna / Cresta Adelfa": {"brand": "Bonna", "range": "Cresta Adelfa", "colour": "Pink;Terracotta;Cream"},
-    "Bonna / Cresta Sahara": {"brand": "Bonna", "range": "Cresta Sahara", "colour": "Cream;Brown"},
-    "Bonna / Galata": {"brand": "Bonna", "range": "Galata", "colour": "White;Blue;Brown"},
-    "Bonna / Harena": {"brand": "Bonna", "range": "Harena", "colour": "Blue;Cream"},
-    "Bonna / Knidos": {"brand": "Bonna", "range": "Knidos", "colour": "Pink;Purple;Blue"},
-    "Bonna / Luca Ocean": {"brand": "Bonna", "range": "Luca Ocean", "colour": "Blue;Green"},
-    "Bonna / Lunar Ocean": {"brand": "Bonna", "range": "Lunar Ocean", "colour": "Blue;Green"},
-    "Bonna / Lunar White": {"brand": "Bonna", "range": "Lunar White", "colour": "White"},
-    "Bonna / Luz": {"brand": "Bonna", "range": "Luz", "colour": "Brown;Terracotta;Cream"},
-    "Bonna / Ore Mar": {"brand": "Bonna", "range": "Ore Mar", "colour": "Blue;Green;Grey"},
-    "Bonna / Other": {"brand": "Bonna", "range": "Other"},
-    "Bonna / Stage": {"brand": "Bonna", "range": "Stage", "colour": "White;Black"},
-    "Bonna / Sway": {"brand": "Bonna", "range": "Sway", "colour": "White;Cream;Grey"},
-    "Bonna / Tone Adelfa": {"brand": "Bonna", "range": "Tone Adelfa", "colour": "Pink;Terracotta;Cream"},
-    "Bonna / Tone Sahara": {"brand": "Bonna", "range": "Tone Sahara", "colour": "Cream;Brown"},
-    "Bonna / Vega": {"brand": "Bonna", "range": "Vega", "colour": "Blue"},
-    "Incise Porcelain / Lavara": {"brand": "Incise Porcelain", "range": "Lavara", "colour": "White;Grey;Black"},
-    "Incise Porcelain / Lucine": {"brand": "Incise Porcelain", "range": "Lucine", "colour": "White"},
-    "Incise Porcelain / Lustre": {"brand": "Incise Porcelain", "range": "Lustre", "colour": "White"},
-    "Incise Porcelain / Scalloped": {"brand": "Incise Porcelain", "range": "Scalloped", "colour": "White;Cream"},
-    "Incise Porcelain / Solara": {"brand": "Incise Porcelain", "range": "Solara", "colour": "White;Cream"},
-    "Incise Porcelain / Soma": {"brand": "Incise Porcelain", "range": "Soma", "colour": "White;Grey;Black"},
-    "Kozo Porcelain / Midori": {"brand": "Kozo Porcelain", "range": "Midori", "colour": "Green;Grey"},
-    "Kozo Porcelain / Shiro": {"brand": "Kozo Porcelain", "range": "Shiro", "colour": "White;Cream"},
-    "Roko Porcelain / Black": {"brand": "Roko Porcelain", "range": "Black", "colour": "Black"},
-    "Roko Porcelain / Sand": {"brand": "Roko Porcelain", "range": "Sand", "colour": "Yellow;Cream"},
-    "Sabrosa Tableware / Fresco": {"brand": "Sabrosa Tableware", "range": "Fresco", "colour": "Terracotta"},
-    "Sabrosa Tableware / Luna": {"brand": "Sabrosa Tableware", "range": "Luna", "colour": "Terracotta;White;Cream"},
-    "Sabrosa Tableware / Other": {"brand": "Sabrosa Tableware", "range": "Other"},
-    "Sabrosa Tableware / Sky": {"brand": "Sabrosa Tableware", "range": "Sky", "colour": "Blue;Terracotta"},
-    "Sabrosa Tableware / Sol": {"brand": "Sabrosa Tableware", "range": "Sol", "colour": "Yellow;Orange;Terracotta"},
-    "Sabrosa Tableware / Stone": {"brand": "Sabrosa Tableware", "range": "Stone", "colour": "Grey;Cream;Terracotta"},
-    "Sereno Tableware / Other": {"brand": "Sereno Tableware", "range": "Other"},
-    "Sereno Tableware / Porcelain Alto": {"brand": "Sereno Tableware", "range": "Porcelain Alto", "colour": "White;Grey"},
-    "Sereno Tableware / Porcelain Cirrus": {"brand": "Sereno Tableware", "range": "Porcelain Cirrus", "colour": "White;Grey"},
-    "Sereno Tableware / Porcelain Strato": {"brand": "Sereno Tableware", "range": "Porcelain Strato", "colour": "White"},
-    "Sereno Tableware / Stoneware Grey": {"brand": "Sereno Tableware", "range": "Stoneware Grey", "colour": "White;Cream;Grey"},
-    "Terra Porcelain / Aqua Blue": {"brand": "Terra Porcelain", "range": "Aqua Blue", "colour": "Blue"},
-    "Terra Porcelain / Aqua Green": {"brand": "Terra Porcelain", "range": "Aqua Green", "colour": "Green"},
-    "Terra Porcelain / Cinder Black": {"brand": "Terra Porcelain", "range": "Cinder Black", "colour": "Black"},
-    "Terra Porcelain / Matt Grey": {"brand": "Terra Porcelain", "range": "Matt Grey", "colour": "Grey"},
-    "Terra Porcelain / Other": {"brand": "Terra Porcelain", "range": "Other"},
-    "Terra Porcelain / Pearl": {"brand": "Terra Porcelain", "range": "Pearl", "colour": "White;Green;Blue"},
-    "Terra Porcelain / Rose Pink": {"brand": "Terra Porcelain", "range": "Rose Pink", "colour": "Pink"},
-    "Terra Porcelain / Rustic Copper": {"brand": "Terra Porcelain", "range": "Rustic Copper", "colour": "Copper;Brown"},
-    "Terra Porcelain / Seafoam": {"brand": "Terra Porcelain", "range": "Seafoam", "colour": "Green;Blue"},
-    "Terra Porcelain / Smoke Grey": {"brand": "Terra Porcelain", "range": "Smoke Grey", "colour": "Grey"},
-    "APS / APS Gastronorms": {"brand": "APS", "range": "APS Gastronorms"},
-    "APS / Baskets": {"brand": "APS", "range": "Baskets"},
-    "APS / Buffet and Display": {"brand": "APS", "range": "Buffet and Display"},
-    "APS / Kitchen and Serving Tools": {"brand": "APS", "range": "Kitchen and Serving Tools"},
-    "APS / Tableware and Table Presentation": {"brand": "APS", "range": "Tableware and Table Presentation"},
-    "Academy / Botanical": {"brand": "Academy", "range": "Botanical"},
-    "Academy / Classic": {"brand": "Academy", "range": "Classic"},
-    "Academy / Curve": {"brand": "Academy", "range": "Curve"},
-    "Academy / Elation": {"brand": "Academy", "range": "Elation"},
-    "Academy / Event": {"brand": "Academy", "range": "Event"},
-    "Academy / Event Gold Band": {"brand": "Academy", "range": "Event Gold Band", "colour": "Gold"},
-    "Academy / Line": {"brand": "Academy", "range": "Line"},
-    "Academy / Line Gold Band": {"brand": "Academy", "range": "Line Gold Band", "colour": "Gold"},
-    "Academy / Other": {"brand": "Academy", "range": "Other"},
-    "Academy Fusion / Canvas": {"brand": "Academy Fusion", "range": "Canvas"},
-    "Academy Fusion / Ebony": {"brand": "Academy Fusion", "range": "Ebony", "colour": "Black"},
-    "Academy Fusion / Eden": {"brand": "Academy Fusion", "range": "Eden"},
-    "Academy Fusion / Flint": {"brand": "Academy Fusion", "range": "Flint", "colour": "Grey"},
-    "Academy Fusion / Forno": {"brand": "Academy Fusion", "range": "Forno"},
-    "Academy Fusion / Linear": {"brand": "Academy Fusion", "range": "Linear"},
-    "Academy Fusion / Meadow": {"brand": "Academy Fusion", "range": "Meadow"},
-    "Academy Fusion / Modern Classics": {"brand": "Academy Fusion", "range": "Modern Classics"},
-    "Academy Fusion / Mosaic": {"brand": "Academy Fusion", "range": "Mosaic"},
-    "Academy Fusion / Other": {"brand": "Academy Fusion", "range": "Other"},
-    "Academy Fusion / Palette": {"brand": "Academy Fusion", "range": "Palette"},
-    "Academy Fusion / Scorched": {"brand": "Academy Fusion", "range": "Scorched"},
-    "Academy Fusion / Serenity": {"brand": "Academy Fusion", "range": "Serenity"},
-    "Academy Fusion / Stellar": {"brand": "Academy Fusion", "range": "Stellar"},
-    "Academy Fusion / Surf": {"brand": "Academy Fusion", "range": "Surf"},
-    "Academy Fusion / Tundra": {"brand": "Academy Fusion", "range": "Tundra"},
-    "Academy Fusion / Venecia": {"brand": "Academy Fusion", "range": "Venecia"},
-    "Aura By Porcelite / Flare": {"brand": "Aura By Porcelite", "range": "Flare"},
-    "Aura By Porcelite / Glacier": {"brand": "Aura By Porcelite", "range": "Glacier"},
-    "Borgonovo / Borgonovo Stem Collections": {"brand": "Borgonovo", "range": "Borgonovo Stem Collections"},
-    "Borgonovo / Bowls": {"brand": "Borgonovo", "range": "Bowls"},
-    "Borgonovo / Hot Drinks": {"brand": "Borgonovo", "range": "Hot Drinks"},
-    "Borgonovo / Ice Cream": {"brand": "Borgonovo", "range": "Ice Cream"},
-    "Borgonovo / Jugs, Carafes and Bottles": {"brand": "Borgonovo", "range": "Jugs, Carafes and Bottles"},
-    "Borgonovo / Other": {"brand": "Borgonovo", "range": "Other"},
-    "Borgonovo / Shot Glasses": {"brand": "Borgonovo", "range": "Shot Glasses"},
-    "Borgonovo / Speciality": {"brand": "Borgonovo", "range": "Speciality"},
-    "Borgonovo / Tumblers": {"brand": "Borgonovo", "range": "Tumblers"},
-    "Costaverde / Nordika": {"brand": "Costaverde", "range": "Nordika"},
-    "Costaverde / Raio": {"brand": "Costaverde", "range": "Raio"},
-    "Costaverde / Tense": {"brand": "Costaverde", "range": "Tense"},
-    "Costaverde / Terra Black": {"brand": "Costaverde", "range": "Terra Black", "colour": "Black"},
-    "Costaverde / Terra White": {"brand": "Costaverde", "range": "Terra White", "colour": "White"},
-    "Costaverde / Universal": {"brand": "Costaverde", "range": "Universal"},
-    "Enigma / Drift": {"brand": "Enigma", "range": "Drift"},
-    "Enigma / Reef": {"brand": "Enigma", "range": "Reef"},
-    "Enigma / Swirl": {"brand": "Enigma", "range": "Swirl"},
-    "ID Academy / Contour": {"brand": "ID Academy", "range": "Contour"},
-    "ID Academy / Orbit": {"brand": "ID Academy", "range": "Orbit"},
-    "ID Academy / Organic": {"brand": "ID Academy", "range": "Organic"},
-    "ID Academy / Other": {"brand": "ID Academy", "range": "Other"},
-    "ID Academy / Prism": {"brand": "ID Academy", "range": "Prism"},
-    "ID Academy / Quartz": {"brand": "ID Academy", "range": "Quartz"},
-    "Modest / Modest Black": {"brand": "Modest", "range": "Modest Black", "colour": "Black"},
-    "Modest / Modest Brown": {"brand": "Modest", "range": "Modest Brown", "colour": "Brown"},
-    "Modest / Modest Green": {"brand": "Modest", "range": "Modest Green", "colour": "Green"},
-    "Modest / Modest Maroon": {"brand": "Modest", "range": "Modest Maroon", "colour": "Red"},
-    "Modest / Modest Navy": {"brand": "Modest", "range": "Modest Navy", "colour": "Blue"},
-    "Ocean Glass / Cocktail Collections": {"brand": "Ocean Glass", "range": "Cocktail Collections"},
-    "Ocean Glass / Hot Drinks": {"brand": "Ocean Glass", "range": "Hot Drinks"},
-    "Ocean Glass / Ice Cream": {"brand": "Ocean Glass", "range": "Ice Cream"},
-    "Ocean Glass / Other": {"brand": "Ocean Glass", "range": "Other"},
-    "Ocean Glass / Stem Collections": {"brand": "Ocean Glass", "range": "Stem Collections"},
-    "Ocean Glass / Tumblers": {"brand": "Ocean Glass", "range": "Tumblers"},
-    "Porcelite / Cast Iron Effect": {"brand": "Porcelite", "range": "Cast Iron Effect", "colour": "Black"},
-    "Porcelite / Other": {"brand": "Porcelite", "range": "Other"},
-    "Porcelite / Oven and Bakeware": {"brand": "Porcelite", "range": "Oven and Bakeware"},
-    "Porcelite / Oven to Tableware": {"brand": "Porcelite", "range": "Oven to Tableware"},
-    "Porcelite / Prestige": {"brand": "Porcelite", "range": "Prestige"},
-    "Porcelite / Rustic Brown": {"brand": "Porcelite", "range": "Rustic Brown", "colour": "Brown"},
-    "Porcelite / Standard": {"brand": "Porcelite", "range": "Standard"},
-    "Roots Stoneware / Cameo": {"brand": "Roots Stoneware", "range": "Cameo"},
-    "Roots Stoneware / Coastal": {"brand": "Roots Stoneware", "range": "Coastal"},
-    "Roots Stoneware / Kasbah": {"brand": "Roots Stoneware", "range": "Kasbah"},
-    "Roots Stoneware / Olive": {"brand": "Roots Stoneware", "range": "Olive", "colour": "Green"},
-    "Roots Stoneware / Rune": {"brand": "Roots Stoneware", "range": "Rune"},
-    "Rustico Premium Stoneware / Dusk": {"brand": "Rustico Premium Stoneware", "range": "Dusk"},
-    "Rustico Premium Stoneware / Fauna": {"brand": "Rustico Premium Stoneware", "range": "Fauna"},
-    "Rustico Premium Stoneware / Ivory": {"brand": "Rustico Premium Stoneware", "range": "Ivory", "colour": "Cream"},
-    "Rustico Premium Stoneware / Nude": {"brand": "Rustico Premium Stoneware", "range": "Nude"},
-    "Rustico Stoneware / Aztec": {"brand": "Rustico Stoneware", "range": "Aztec"},
-    "Rustico Stoneware / Azul": {"brand": "Rustico Stoneware", "range": "Azul", "colour": "Blue"},
-    "Rustico Stoneware / Carbon": {"brand": "Rustico Stoneware", "range": "Carbon", "colour": "Black"},
-    "Rustico Stoneware / Fawn": {"brand": "Rustico Stoneware", "range": "Fawn", "colour": "Brown"},
-    "Rustico Stoneware / Flame": {"brand": "Rustico Stoneware", "range": "Flame"},
-    "Rustico Stoneware / Ironstone": {"brand": "Rustico Stoneware", "range": "Ironstone"},
-    "Rustico Stoneware / Lava": {"brand": "Rustico Stoneware", "range": "Lava"},
-    "Rustico Stoneware / Natura": {"brand": "Rustico Stoneware", "range": "Natura"},
-    "Rustico Stoneware / Oxide": {"brand": "Rustico Stoneware", "range": "Oxide"},
-    "Rustico Stoneware / Oyster": {"brand": "Rustico Stoneware", "range": "Oyster"},
-    "Rustico Stoneware / Pistachio": {"brand": "Rustico Stoneware", "range": "Pistachio", "colour": "Green"},
-    "Rustico Stoneware / Selene": {"brand": "Rustico Stoneware", "range": "Selene"},
-    "Rustico Stoneware / Vintage": {"brand": "Rustico Stoneware", "range": "Vintage"},
-    "Seasons By Porcelite / Graphite": {"brand": "Seasons By Porcelite", "range": "Graphite", "colour": "Grey"},
-    "Seasons By Porcelite / Oatmeal": {"brand": "Seasons By Porcelite", "range": "Oatmeal", "colour": "Cream"},
-    "Seasons By Porcelite / Sea Spray": {"brand": "Seasons By Porcelite", "range": "Sea Spray"},
-    "Seasons By Porcelite / Stone": {"brand": "Seasons By Porcelite", "range": "Stone"},
-    "Seasons By Porcelite / Storm": {"brand": "Seasons By Porcelite", "range": "Storm"},
-    "Stölzle Lausitz / Other": {"brand": "Stölzle Lausitz", "range": "Other"},
-    "Stölzle Lausitz / Stölzle Speciality Collections": {"brand": "Stölzle Lausitz", "range": "Stölzle Speciality Collections"},
-    "Stölzle Lausitz / Stölzle Stem Collections": {"brand": "Stölzle Lausitz", "range": "Stölzle Stem Collections"},
-    "Stölzle Lausitz / Stölzle Tumblers": {"brand": "Stölzle Lausitz", "range": "Stölzle Tumblers"},
-    "Tramontina / Natural Wood": {"brand": "Tramontina", "range": "Natural Wood", "colour": "Brown"},
-    "Tramontina / Other": {"brand": "Tramontina", "range": "Other"},
-    "Tramontina / Pizza Knives and Utensils": {"brand": "Tramontina", "range": "Pizza Knives and Utensils"},
-    "Tramontina / Polypropylene": {"brand": "Tramontina", "range": "Polypropylene"},
-    "Tramontina / Polywood Brown": {"brand": "Tramontina", "range": "Polywood Brown", "colour": "Brown"},
-    "Tramontina / Polywood Red": {"brand": "Tramontina", "range": "Polywood Red", "colour": "Red"},
-    "Tramontina / Tramontina Cast Iron": {"brand": "Tramontina", "range": "Tramontina Cast Iron"},
-    "Tramontina / Tramontina Wooden Boards": {"brand": "Tramontina", "range": "Tramontina Wooden Boards"}
+    "Antigo Tableware / Porcelain Cinza": {
+      "brand": "Antigo Tableware",
+      "range": "Porcelain Cinza",
+      "colour": "Grey"
+    },
+    "Antigo Tableware / Stoneware": {
+      "brand": "Antigo Tableware",
+      "range": "Stoneware",
+      "colour": "Grey"
+    },
+    "Antigo Tableware / Stoneware Barley": {
+      "brand": "Antigo Tableware",
+      "range": "Stoneware Barley",
+      "colour": "Cream;White"
+    },
+    "Bonna / Arctic": {
+      "brand": "Bonna",
+      "range": "Arctic",
+      "colour": "Grey;Blue"
+    },
+    "Bonna / Cresta Adelfa": {
+      "brand": "Bonna",
+      "range": "Cresta Adelfa",
+      "colour": "Pink;Terracotta;Cream"
+    },
+    "Bonna / Cresta Sahara": {
+      "brand": "Bonna",
+      "range": "Cresta Sahara",
+      "colour": "Cream;Brown"
+    },
+    "Bonna / Galata": {
+      "brand": "Bonna",
+      "range": "Galata",
+      "colour": "White;Blue;Brown"
+    },
+    "Bonna / Harena": {
+      "brand": "Bonna",
+      "range": "Harena",
+      "colour": "Blue;Cream"
+    },
+    "Bonna / Knidos": {
+      "brand": "Bonna",
+      "range": "Knidos",
+      "colour": "Pink;Purple;Blue"
+    },
+    "Bonna / Luca Ocean": {
+      "brand": "Bonna",
+      "range": "Luca Ocean",
+      "colour": "Blue;Green"
+    },
+    "Bonna / Lunar Ocean": {
+      "brand": "Bonna",
+      "range": "Lunar Ocean",
+      "colour": "Blue;Green"
+    },
+    "Bonna / Lunar White": {
+      "brand": "Bonna",
+      "range": "Lunar White",
+      "colour": "White"
+    },
+    "Bonna / Luz": {
+      "brand": "Bonna",
+      "range": "Luz",
+      "colour": "Brown;Terracotta;Cream"
+    },
+    "Bonna / Ore Mar": {
+      "brand": "Bonna",
+      "range": "Ore Mar",
+      "colour": "Blue;Green;Grey"
+    },
+    "Bonna / Other": {
+      "brand": "Bonna",
+      "range": "Other"
+    },
+    "Bonna / Stage": {
+      "brand": "Bonna",
+      "range": "Stage",
+      "colour": "White;Black"
+    },
+    "Bonna / Sway": {
+      "brand": "Bonna",
+      "range": "Sway",
+      "colour": "White;Cream;Grey"
+    },
+    "Bonna / Tone Adelfa": {
+      "brand": "Bonna",
+      "range": "Tone Adelfa",
+      "colour": "Pink;Terracotta;Cream"
+    },
+    "Bonna / Tone Sahara": {
+      "brand": "Bonna",
+      "range": "Tone Sahara",
+      "colour": "Cream;Brown"
+    },
+    "Bonna / Vega": {
+      "brand": "Bonna",
+      "range": "Vega",
+      "colour": "Blue"
+    },
+    "Incise Porcelain / Lavara": {
+      "brand": "Incise Porcelain",
+      "range": "Lavara",
+      "colour": "White;Grey;Black"
+    },
+    "Incise Porcelain / Lucine": {
+      "brand": "Incise Porcelain",
+      "range": "Lucine",
+      "colour": "White"
+    },
+    "Incise Porcelain / Lustre": {
+      "brand": "Incise Porcelain",
+      "range": "Lustre",
+      "colour": "White"
+    },
+    "Incise Porcelain / Scalloped": {
+      "brand": "Incise Porcelain",
+      "range": "Scalloped",
+      "colour": "White;Cream"
+    },
+    "Incise Porcelain / Solara": {
+      "brand": "Incise Porcelain",
+      "range": "Solara",
+      "colour": "White;Cream"
+    },
+    "Incise Porcelain / Soma": {
+      "brand": "Incise Porcelain",
+      "range": "Soma",
+      "colour": "White;Grey;Black"
+    },
+    "Kozo Porcelain / Midori": {
+      "brand": "Kozo Porcelain",
+      "range": "Midori",
+      "colour": "Green;Grey"
+    },
+    "Kozo Porcelain / Shiro": {
+      "brand": "Kozo Porcelain",
+      "range": "Shiro",
+      "colour": "White;Cream"
+    },
+    "Roko Porcelain / Black": {
+      "brand": "Roko Porcelain",
+      "range": "Black",
+      "colour": "Black"
+    },
+    "Roko Porcelain / Sand": {
+      "brand": "Roko Porcelain",
+      "range": "Sand",
+      "colour": "Yellow;Cream"
+    },
+    "Sabrosa Tableware / Fresco": {
+      "brand": "Sabrosa Tableware",
+      "range": "Fresco",
+      "colour": "Terracotta"
+    },
+    "Sabrosa Tableware / Luna": {
+      "brand": "Sabrosa Tableware",
+      "range": "Luna",
+      "colour": "Terracotta;White;Cream"
+    },
+    "Sabrosa Tableware / Other": {
+      "brand": "Sabrosa Tableware",
+      "range": "Other"
+    },
+    "Sabrosa Tableware / Sky": {
+      "brand": "Sabrosa Tableware",
+      "range": "Sky",
+      "colour": "Blue;Terracotta"
+    },
+    "Sabrosa Tableware / Sol": {
+      "brand": "Sabrosa Tableware",
+      "range": "Sol",
+      "colour": "Yellow;Orange;Terracotta"
+    },
+    "Sabrosa Tableware / Stone": {
+      "brand": "Sabrosa Tableware",
+      "range": "Stone",
+      "colour": "Grey;Cream;Terracotta"
+    },
+    "Sereno Tableware / Other": {
+      "brand": "Sereno Tableware",
+      "range": "Other"
+    },
+    "Sereno Tableware / Porcelain Alto": {
+      "brand": "Sereno Tableware",
+      "range": "Porcelain Alto",
+      "colour": "White;Grey"
+    },
+    "Sereno Tableware / Porcelain Cirrus": {
+      "brand": "Sereno Tableware",
+      "range": "Porcelain Cirrus",
+      "colour": "White;Grey"
+    },
+    "Sereno Tableware / Porcelain Strato": {
+      "brand": "Sereno Tableware",
+      "range": "Porcelain Strato",
+      "colour": "White"
+    },
+    "Sereno Tableware / Stoneware Grey": {
+      "brand": "Sereno Tableware",
+      "range": "Stoneware Grey",
+      "colour": "White;Cream;Grey"
+    },
+    "Terra Porcelain / Aqua Blue": {
+      "brand": "Terra Porcelain",
+      "range": "Aqua Blue",
+      "colour": "Blue"
+    },
+    "Terra Porcelain / Aqua Green": {
+      "brand": "Terra Porcelain",
+      "range": "Aqua Green",
+      "colour": "Green"
+    },
+    "Terra Porcelain / Cinder Black": {
+      "brand": "Terra Porcelain",
+      "range": "Cinder Black",
+      "colour": "Black"
+    },
+    "Terra Porcelain / Matt Grey": {
+      "brand": "Terra Porcelain",
+      "range": "Matt Grey",
+      "colour": "Grey"
+    },
+    "Terra Porcelain / Other": {
+      "brand": "Terra Porcelain",
+      "range": "Other"
+    },
+    "Terra Porcelain / Pearl": {
+      "brand": "Terra Porcelain",
+      "range": "Pearl",
+      "colour": "White;Green;Blue"
+    },
+    "Terra Porcelain / Rose Pink": {
+      "brand": "Terra Porcelain",
+      "range": "Rose Pink",
+      "colour": "Pink"
+    },
+    "Terra Porcelain / Rustic Copper": {
+      "brand": "Terra Porcelain",
+      "range": "Rustic Copper",
+      "colour": "Copper;Brown"
+    },
+    "Terra Porcelain / Seafoam": {
+      "brand": "Terra Porcelain",
+      "range": "Seafoam",
+      "colour": "Green;Blue"
+    },
+    "Terra Porcelain / Smoke Grey": {
+      "brand": "Terra Porcelain",
+      "range": "Smoke Grey",
+      "colour": "Grey"
+    },
+    "APS / APS Gastronorms": {
+      "brand": "APS",
+      "range": "APS Gastronorms"
+    },
+    "APS / Baskets": {
+      "brand": "APS",
+      "range": "Baskets"
+    },
+    "APS / Buffet and Display": {
+      "brand": "APS",
+      "range": "Buffet and Display"
+    },
+    "APS / Kitchen and Serving Tools": {
+      "brand": "APS",
+      "range": "Kitchen and Serving Tools"
+    },
+    "APS / Tableware and Table Presentation": {
+      "brand": "APS",
+      "range": "Tableware and Table Presentation"
+    },
+    "Academy / Botanical": {
+      "brand": "Academy",
+      "range": "Botanical"
+    },
+    "Academy / Classic": {
+      "brand": "Academy",
+      "range": "Classic"
+    },
+    "Academy / Curve": {
+      "brand": "Academy",
+      "range": "Curve"
+    },
+    "Academy / Elation": {
+      "brand": "Academy",
+      "range": "Elation"
+    },
+    "Academy / Event": {
+      "brand": "Academy",
+      "range": "Event"
+    },
+    "Academy / Event Gold Band": {
+      "brand": "Academy",
+      "range": "Event Gold Band",
+      "colour": "Gold"
+    },
+    "Academy / Line": {
+      "brand": "Academy",
+      "range": "Line"
+    },
+    "Academy / Line Gold Band": {
+      "brand": "Academy",
+      "range": "Line Gold Band",
+      "colour": "Gold"
+    },
+    "Academy / Other": {
+      "brand": "Academy",
+      "range": "Other"
+    },
+    "Academy Fusion / Canvas": {
+      "brand": "Academy Fusion",
+      "range": "Canvas"
+    },
+    "Academy Fusion / Ebony": {
+      "brand": "Academy Fusion",
+      "range": "Ebony",
+      "colour": "Black"
+    },
+    "Academy Fusion / Eden": {
+      "brand": "Academy Fusion",
+      "range": "Eden"
+    },
+    "Academy Fusion / Flint": {
+      "brand": "Academy Fusion",
+      "range": "Flint",
+      "colour": "Grey"
+    },
+    "Academy Fusion / Forno": {
+      "brand": "Academy Fusion",
+      "range": "Forno"
+    },
+    "Academy Fusion / Linear": {
+      "brand": "Academy Fusion",
+      "range": "Linear"
+    },
+    "Academy Fusion / Meadow": {
+      "brand": "Academy Fusion",
+      "range": "Meadow"
+    },
+    "Academy Fusion / Modern Classics": {
+      "brand": "Academy Fusion",
+      "range": "Modern Classics"
+    },
+    "Academy Fusion / Mosaic": {
+      "brand": "Academy Fusion",
+      "range": "Mosaic"
+    },
+    "Academy Fusion / Other": {
+      "brand": "Academy Fusion",
+      "range": "Other"
+    },
+    "Academy Fusion / Palette": {
+      "brand": "Academy Fusion",
+      "range": "Palette"
+    },
+    "Academy Fusion / Scorched": {
+      "brand": "Academy Fusion",
+      "range": "Scorched"
+    },
+    "Academy Fusion / Serenity": {
+      "brand": "Academy Fusion",
+      "range": "Serenity"
+    },
+    "Academy Fusion / Stellar": {
+      "brand": "Academy Fusion",
+      "range": "Stellar"
+    },
+    "Academy Fusion / Surf": {
+      "brand": "Academy Fusion",
+      "range": "Surf"
+    },
+    "Academy Fusion / Tundra": {
+      "brand": "Academy Fusion",
+      "range": "Tundra"
+    },
+    "Academy Fusion / Venecia": {
+      "brand": "Academy Fusion",
+      "range": "Venecia"
+    },
+    "Aura By Porcelite / Flare": {
+      "brand": "Aura By Porcelite",
+      "range": "Flare"
+    },
+    "Aura By Porcelite / Glacier": {
+      "brand": "Aura By Porcelite",
+      "range": "Glacier"
+    },
+    "Borgonovo / Borgonovo Stem Collections": {
+      "brand": "Borgonovo",
+      "range": "Borgonovo Stem Collections"
+    },
+    "Borgonovo / Bowls": {
+      "brand": "Borgonovo",
+      "range": "Bowls"
+    },
+    "Borgonovo / Hot Drinks": {
+      "brand": "Borgonovo",
+      "range": "Hot Drinks"
+    },
+    "Borgonovo / Ice Cream": {
+      "brand": "Borgonovo",
+      "range": "Ice Cream"
+    },
+    "Borgonovo / Jugs, Carafes and Bottles": {
+      "brand": "Borgonovo",
+      "range": "Jugs, Carafes and Bottles"
+    },
+    "Borgonovo / Other": {
+      "brand": "Borgonovo",
+      "range": "Other"
+    },
+    "Borgonovo / Shot Glasses": {
+      "brand": "Borgonovo",
+      "range": "Shot Glasses"
+    },
+    "Borgonovo / Speciality": {
+      "brand": "Borgonovo",
+      "range": "Speciality"
+    },
+    "Borgonovo / Tumblers": {
+      "brand": "Borgonovo",
+      "range": "Tumblers"
+    },
+    "Costaverde / Nordika": {
+      "brand": "Costaverde",
+      "range": "Nordika"
+    },
+    "Costaverde / Raio": {
+      "brand": "Costaverde",
+      "range": "Raio"
+    },
+    "Costaverde / Tense": {
+      "brand": "Costaverde",
+      "range": "Tense"
+    },
+    "Costaverde / Terra Black": {
+      "brand": "Costaverde",
+      "range": "Terra Black",
+      "colour": "Black"
+    },
+    "Costaverde / Terra White": {
+      "brand": "Costaverde",
+      "range": "Terra White",
+      "colour": "White"
+    },
+    "Costaverde / Universal": {
+      "brand": "Costaverde",
+      "range": "Universal"
+    },
+    "Enigma / Drift": {
+      "brand": "Enigma",
+      "range": "Drift"
+    },
+    "Enigma / Reef": {
+      "brand": "Enigma",
+      "range": "Reef"
+    },
+    "Enigma / Swirl": {
+      "brand": "Enigma",
+      "range": "Swirl"
+    },
+    "ID Academy / Contour": {
+      "brand": "ID Academy",
+      "range": "Contour"
+    },
+    "ID Academy / Orbit": {
+      "brand": "ID Academy",
+      "range": "Orbit"
+    },
+    "ID Academy / Organic": {
+      "brand": "ID Academy",
+      "range": "Organic"
+    },
+    "ID Academy / Other": {
+      "brand": "ID Academy",
+      "range": "Other"
+    },
+    "ID Academy / Prism": {
+      "brand": "ID Academy",
+      "range": "Prism"
+    },
+    "ID Academy / Quartz": {
+      "brand": "ID Academy",
+      "range": "Quartz"
+    },
+    "Modest / Modest Black": {
+      "brand": "Modest",
+      "range": "Modest Black",
+      "colour": "Black"
+    },
+    "Modest / Modest Brown": {
+      "brand": "Modest",
+      "range": "Modest Brown",
+      "colour": "Brown"
+    },
+    "Modest / Modest Green": {
+      "brand": "Modest",
+      "range": "Modest Green",
+      "colour": "Green"
+    },
+    "Modest / Modest Maroon": {
+      "brand": "Modest",
+      "range": "Modest Maroon",
+      "colour": "Red"
+    },
+    "Modest / Modest Navy": {
+      "brand": "Modest",
+      "range": "Modest Navy",
+      "colour": "Blue"
+    },
+    "Ocean Glass / Cocktail Collections": {
+      "brand": "Ocean Glass",
+      "range": "Cocktail Collections"
+    },
+    "Ocean Glass / Hot Drinks": {
+      "brand": "Ocean Glass",
+      "range": "Hot Drinks"
+    },
+    "Ocean Glass / Ice Cream": {
+      "brand": "Ocean Glass",
+      "range": "Ice Cream"
+    },
+    "Ocean Glass / Other": {
+      "brand": "Ocean Glass",
+      "range": "Other"
+    },
+    "Ocean Glass / Stem Collections": {
+      "brand": "Ocean Glass",
+      "range": "Stem Collections"
+    },
+    "Ocean Glass / Tumblers": {
+      "brand": "Ocean Glass",
+      "range": "Tumblers"
+    },
+    "Porcelite / Cast Iron Effect": {
+      "brand": "Porcelite",
+      "range": "Cast Iron Effect",
+      "colour": "Black"
+    },
+    "Porcelite / Other": {
+      "brand": "Porcelite",
+      "range": "Other"
+    },
+    "Porcelite / Oven and Bakeware": {
+      "brand": "Porcelite",
+      "range": "Oven and Bakeware"
+    },
+    "Porcelite / Oven to Tableware": {
+      "brand": "Porcelite",
+      "range": "Oven to Tableware"
+    },
+    "Porcelite / Prestige": {
+      "brand": "Porcelite",
+      "range": "Prestige"
+    },
+    "Porcelite / Rustic Brown": {
+      "brand": "Porcelite",
+      "range": "Rustic Brown",
+      "colour": "Brown"
+    },
+    "Porcelite / Standard": {
+      "brand": "Porcelite",
+      "range": "Standard"
+    },
+    "Roots Stoneware / Cameo": {
+      "brand": "Roots Stoneware",
+      "range": "Cameo"
+    },
+    "Roots Stoneware / Coastal": {
+      "brand": "Roots Stoneware",
+      "range": "Coastal"
+    },
+    "Roots Stoneware / Kasbah": {
+      "brand": "Roots Stoneware",
+      "range": "Kasbah"
+    },
+    "Roots Stoneware / Olive": {
+      "brand": "Roots Stoneware",
+      "range": "Olive",
+      "colour": "Green"
+    },
+    "Roots Stoneware / Rune": {
+      "brand": "Roots Stoneware",
+      "range": "Rune"
+    },
+    "Rustico Premium Stoneware / Dusk": {
+      "brand": "Rustico Premium Stoneware",
+      "range": "Dusk"
+    },
+    "Rustico Premium Stoneware / Fauna": {
+      "brand": "Rustico Premium Stoneware",
+      "range": "Fauna"
+    },
+    "Rustico Premium Stoneware / Ivory": {
+      "brand": "Rustico Premium Stoneware",
+      "range": "Ivory",
+      "colour": "Cream"
+    },
+    "Rustico Premium Stoneware / Nude": {
+      "brand": "Rustico Premium Stoneware",
+      "range": "Nude"
+    },
+    "Rustico Stoneware / Aztec": {
+      "brand": "Rustico Stoneware",
+      "range": "Aztec"
+    },
+    "Rustico Stoneware / Azul": {
+      "brand": "Rustico Stoneware",
+      "range": "Azul",
+      "colour": "Blue"
+    },
+    "Rustico Stoneware / Carbon": {
+      "brand": "Rustico Stoneware",
+      "range": "Carbon",
+      "colour": "Black"
+    },
+    "Rustico Stoneware / Fawn": {
+      "brand": "Rustico Stoneware",
+      "range": "Fawn",
+      "colour": "Brown"
+    },
+    "Rustico Stoneware / Flame": {
+      "brand": "Rustico Stoneware",
+      "range": "Flame"
+    },
+    "Rustico Stoneware / Ironstone": {
+      "brand": "Rustico Stoneware",
+      "range": "Ironstone"
+    },
+    "Rustico Stoneware / Lava": {
+      "brand": "Rustico Stoneware",
+      "range": "Lava"
+    },
+    "Rustico Stoneware / Natura": {
+      "brand": "Rustico Stoneware",
+      "range": "Natura"
+    },
+    "Rustico Stoneware / Oxide": {
+      "brand": "Rustico Stoneware",
+      "range": "Oxide"
+    },
+    "Rustico Stoneware / Oyster": {
+      "brand": "Rustico Stoneware",
+      "range": "Oyster"
+    },
+    "Rustico Stoneware / Pistachio": {
+      "brand": "Rustico Stoneware",
+      "range": "Pistachio",
+      "colour": "Green"
+    },
+    "Rustico Stoneware / Selene": {
+      "brand": "Rustico Stoneware",
+      "range": "Selene"
+    },
+    "Rustico Stoneware / Vintage": {
+      "brand": "Rustico Stoneware",
+      "range": "Vintage"
+    },
+    "Seasons By Porcelite / Graphite": {
+      "brand": "Seasons By Porcelite",
+      "range": "Graphite",
+      "colour": "Grey"
+    },
+    "Seasons By Porcelite / Oatmeal": {
+      "brand": "Seasons By Porcelite",
+      "range": "Oatmeal",
+      "colour": "Cream"
+    },
+    "Seasons By Porcelite / Sea Spray": {
+      "brand": "Seasons By Porcelite",
+      "range": "Sea Spray"
+    },
+    "Seasons By Porcelite / Stone": {
+      "brand": "Seasons By Porcelite",
+      "range": "Stone"
+    },
+    "Seasons By Porcelite / Storm": {
+      "brand": "Seasons By Porcelite",
+      "range": "Storm"
+    },
+    "Stölzle Lausitz / Other": {
+      "brand": "Stölzle Lausitz",
+      "range": "Other"
+    },
+    "Stölzle Lausitz / Stölzle Speciality Collections": {
+      "brand": "Stölzle Lausitz",
+      "range": "Stölzle Speciality Collections"
+    },
+    "Stölzle Lausitz / Stölzle Stem Collections": {
+      "brand": "Stölzle Lausitz",
+      "range": "Stölzle Stem Collections"
+    },
+    "Stölzle Lausitz / Stölzle Tumblers": {
+      "brand": "Stölzle Lausitz",
+      "range": "Stölzle Tumblers"
+    },
+    "Tramontina / Natural Wood": {
+      "brand": "Tramontina",
+      "range": "Natural Wood",
+      "colour": "Brown"
+    },
+    "Tramontina / Other": {
+      "brand": "Tramontina",
+      "range": "Other"
+    },
+    "Tramontina / Pizza Knives and Utensils": {
+      "brand": "Tramontina",
+      "range": "Pizza Knives and Utensils"
+    },
+    "Tramontina / Polypropylene": {
+      "brand": "Tramontina",
+      "range": "Polypropylene"
+    },
+    "Tramontina / Polywood Brown": {
+      "brand": "Tramontina",
+      "range": "Polywood Brown",
+      "colour": "Brown"
+    },
+    "Tramontina / Polywood Red": {
+      "brand": "Tramontina",
+      "range": "Polywood Red",
+      "colour": "Red"
+    },
+    "Tramontina / Tramontina Cast Iron": {
+      "brand": "Tramontina",
+      "range": "Tramontina Cast Iron"
+    },
+    "Tramontina / Tramontina Wooden Boards": {
+      "brand": "Tramontina",
+      "range": "Tramontina Wooden Boards"
+    }
   },
   "sizes": {
-    "*":                           ["size"],
-    "speciality":                  ["capacity", "size"],
-    "crockery":                    ["diameter", "capacity"],
-    "fine-bone-china":             ["diameter", "capacity"],
-    "pizza-service":               ["diameter"],
-    "beverage-service":            ["capacity", "diameter"],
-    "cutlery":                     ["length"],
-    "utensils-tools":              ["length"],
-    "knives-cutting-boards":       ["length"],
-    "trays":                       ["length"],
-    "skewers":                     ["length"],
-    "stir":                        ["length"],
-    "straws":                      ["length"],
-    "speed-rails":                 ["length"],
-    "beer":                        ["capacity"],
-    "champagne":                   ["capacity"],
-    "wine":                        ["capacity"],
-    "cocktails":                   ["capacity"],
-    "rocks":                       ["capacity"],
-    "tumblers":                    ["capacity"],
-    "hiballs-tumblers":            ["capacity"],
-    "shot-glasses":                ["capacity"],
-    "crystal-glassware":           ["capacity"],
-    "brandy-fortified-wine":       ["capacity"],
-    "metal-drinkware":             ["capacity"],
-    "plastic-drinkware":           ["capacity"],
-    "polycarbonates":              ["capacity"],
-    "jugs-pitchers-carafes":       ["capacity"],
-    "hot-drinks":                  ["capacity"],
-    "coffee-cups":                 ["capacity"],
-    "ice-champagne":               ["capacity"],
-    "bottles-jars":                ["capacity"],
-    "storage-containers":          ["capacity"],
-    "measures-pourers":            ["capacity"],
-    "shake":                       ["capacity"],
-    "dash-bottles":                ["capacity"],
-    "soda-siphons-cream-whippers": ["capacity"],
-    "ice-cream-containers":        ["capacity"],
-    "gastronorms":                 ["capacity"]
+    "*": [
+      "size"
+    ],
+    "speciality": [
+      "capacity",
+      "size"
+    ],
+    "crockery": [
+      "diameter",
+      "capacity"
+    ],
+    "fine-bone-china": [
+      "diameter",
+      "capacity"
+    ],
+    "pizza-service": [
+      "diameter"
+    ],
+    "beverage-service": [
+      "capacity",
+      "diameter"
+    ],
+    "cutlery": [
+      "length"
+    ],
+    "utensils-tools": [
+      "length"
+    ],
+    "knives-cutting-boards": [
+      "length"
+    ],
+    "trays": [
+      "length"
+    ],
+    "skewers": [
+      "length"
+    ],
+    "stir": [
+      "length"
+    ],
+    "straws": [
+      "length"
+    ],
+    "speed-rails": [
+      "length"
+    ],
+    "beer": [
+      "capacity"
+    ],
+    "champagne": [
+      "capacity"
+    ],
+    "wine": [
+      "capacity"
+    ],
+    "cocktails": [
+      "capacity"
+    ],
+    "rocks": [
+      "capacity"
+    ],
+    "tumblers": [
+      "capacity"
+    ],
+    "hiballs-tumblers": [
+      "capacity"
+    ],
+    "shot-glasses": [
+      "capacity"
+    ],
+    "crystal-glassware": [
+      "capacity"
+    ],
+    "brandy-fortified-wine": [
+      "capacity"
+    ],
+    "metal-drinkware": [
+      "capacity"
+    ],
+    "plastic-drinkware": [
+      "capacity"
+    ],
+    "polycarbonates": [
+      "capacity"
+    ],
+    "jugs-pitchers-carafes": [
+      "capacity"
+    ],
+    "hot-drinks": [
+      "capacity"
+    ],
+    "coffee-cups": [
+      "capacity"
+    ],
+    "ice-champagne": [
+      "capacity"
+    ],
+    "bottles-jars": [
+      "capacity"
+    ],
+    "storage-containers": [
+      "capacity"
+    ],
+    "measures-pourers": [
+      "capacity"
+    ],
+    "shake": [
+      "capacity"
+    ],
+    "dash-bottles": [
+      "capacity"
+    ],
+    "soda-siphons-cream-whippers": [
+      "capacity"
+    ],
+    "ice-cream-containers": [
+      "capacity"
+    ],
+    "gastronorms": [
+      "capacity"
+    ]
   },
   "filters": {
-    "type":     { "key": "product_type" },
-    "style":    { "key": "style" },
-    "material": { "key": "material", "last": ">" },
-    "colour":   { "key": "colour", "split": ";" },
-    "size":     { "keySize": ["Diameter", "Length", "Size"], "bands": [[15, "Under 15 cm (6″)"], [20, "15–20 cm (6–8″)"], [25, "20–25 cm (8–10″)"], [30, "25–30 cm (10–12″)"], [null, "30 cm and over (12″+)"]] },
-    "capacity": { "keySize": ["Capacity"], "bands": [[10, "Under 10cl"], [25, "10–25cl"], [40, "25–40cl"], [60, "40–60cl"], [null, "60cl and over"]] },
-    "care":     { "label": "Care and features", "yes": {
-      "dishwasher_safe": "Dishwasher safe", "microwave_safe": "Microwave safe", "oven_safe": "Oven safe", "freezer_safe": "Freezer safe",
-      "microwave_freezer_safe": "Microwave and freezer safe", "grill_safe": "Grill safe", "handwash_only": "Hand wash only", "stackable": "Stackable",
-      "thermal_shock_resistant": "Thermal shock resistant", "toughened": "Toughened", "toughened_rim": "Toughened rim", "tempered": "Tempered",
-      "nucleated": "Nucleated", "lined": "Lined", "laser_cut_rim": "Laser-cut rim", "recycled": "Recycled", "titanium_reinforced": "Titanium reinforced",
-      "edge_chip_warranty_lifetime": "Lifetime edge-chip warranty", "edge_chip_warranty_5_years": "5-year edge-chip warranty", "edge_chip_warranty_1_year": "1-year edge-chip warranty"
-    } },
-    "price":    { "label": "Price (each, ex VAT)", "price": true, "bands": [[5, "Under £5"], [10, "£5–£10"], [20, "£10–£20"], [50, "£20–£50"], [null, "£50 and over"]] }
+    "type": {
+      "key": "product_type"
+    },
+    "style": {
+      "key": "style"
+    },
+    "material": {
+      "key": "material",
+      "last": ">"
+    },
+    "colour": {
+      "key": "colour",
+      "split": ";"
+    },
+    "size": {
+      "keySize": [
+        "Diameter",
+        "Length",
+        "Size"
+      ],
+      "bands": [
+        [
+          15,
+          "Under 15 cm (6″)"
+        ],
+        [
+          20,
+          "15–20 cm (6–8″)"
+        ],
+        [
+          25,
+          "20–25 cm (8–10″)"
+        ],
+        [
+          30,
+          "25–30 cm (10–12″)"
+        ],
+        [
+          null,
+          "30 cm and over (12″+)"
+        ]
+      ]
+    },
+    "capacity": {
+      "keySize": [
+        "Capacity"
+      ],
+      "bands": [
+        [
+          10,
+          "Under 10cl"
+        ],
+        [
+          25,
+          "10–25cl"
+        ],
+        [
+          40,
+          "25–40cl"
+        ],
+        [
+          60,
+          "40–60cl"
+        ],
+        [
+          null,
+          "60cl and over"
+        ]
+      ]
+    },
+    "care": {
+      "label": "Care and features",
+      "yes": {
+        "dishwasher_safe": "Dishwasher safe",
+        "microwave_safe": "Microwave safe",
+        "oven_safe": "Oven safe",
+        "freezer_safe": "Freezer safe",
+        "microwave_freezer_safe": "Microwave and freezer safe",
+        "grill_safe": "Grill safe",
+        "handwash_only": "Hand wash only",
+        "stackable": "Stackable",
+        "thermal_shock_resistant": "Thermal shock resistant",
+        "toughened": "Toughened",
+        "toughened_rim": "Toughened rim",
+        "tempered": "Tempered",
+        "nucleated": "Nucleated",
+        "lined": "Lined",
+        "laser_cut_rim": "Laser-cut rim",
+        "recycled": "Recycled",
+        "titanium_reinforced": "Titanium reinforced",
+        "edge_chip_warranty_lifetime": "Lifetime edge-chip warranty",
+        "edge_chip_warranty_5_years": "5-year edge-chip warranty",
+        "edge_chip_warranty_1_year": "1-year edge-chip warranty"
+      }
+    },
+    "price": {
+      "label": "Price (each, ex VAT)",
+      "price": true,
+      "bands": [
+        [
+          5,
+          "Under £5"
+        ],
+        [
+          10,
+          "£5–£10"
+        ],
+        [
+          20,
+          "£10–£20"
+        ],
+        [
+          50,
+          "£20–£50"
+        ],
+        [
+          null,
+          "£50 and over"
+        ]
+      ]
+    }
   },
   "variants": {
     "colour": "colour",
     "colourHeading": "Colours in this range",
     "colours": [
-      "Agate Grey", "Alpine", "Amber", "Andorra Green", "Antique Taupe", "Aquamarine", "Ash Black", "Azure", "Barley White", "Bayou",
-      "Berry Red", "Black", "Black Granite", "Blue", "Blueberry", "Breeze", "Bronze", "Brown", "Burnished Green", "Carbon",
-      "Chalk White", "Champagne", "Charcoal Black", "Chrome", "Cinnamon", "Cinnamon Brown", "Clear", "Coast", "Coastal Sand", "Cobalt Blue",
-      "Copper", "Coral", "Cornflower Blue", "Deep Purple", "Distressed Wood", "Duck Egg Blue", "Dune", "Dusk", "Fern", "Fjord",
-      "Flint", "Flint Grey", "Garnet Orange", "Gold", "Granite", "Green", "Grey", "Gunmetal", "Ice", "Indigo",
-      "Indigo Blue", "Ink", "Iron Black", "Jade Green", "Jasper Grey", "Java Blue", "Jet", "Lagoon", "Lavender", "Limestone",
-      "Linen", "Marine", "Mint", "Mist", "Mist Blue", "Mustard", "Mustard Seed Yellow", "Natural", "Nutmeg Cream", "Ocean Blue",
-      "Olive", "Onyx", "Orange", "Oslo Blue", "Paprika", "Pearl", "Pearl Grey", "Peppercorn Grey", "Petal Pink", "Petra Sand",
-      "Pink", "Plum", "Quartz Black", "Red", "Red Rust", "Rose Quartz Pink", "Rustic Teal", "Sage Green", "Samphire Green", "Sandstone",
-      "Sapphire", "Sapphire Blue", "Seattle Grey", "Shale Grey", "Siena Barley White", "Siena Brown", "Siena Duck Egg", "Silver", "Simmer Black", "Simmer Brown",
-      "Smoke", "Smoke Grey", "Sorrel Green", "Speckled Green", "Speckled White", "Spiced Orange", "Stainless Steel", "Stone Grey", "Stonecast Truffle", "Tangerine",
-      "Taupe", "Teal", "Terracotta", "Tokyo Black", "Tokyo Blue", "Topaz Blue", "Truffle", "Turquoise", "Twilight", "Ultramarine",
-      "Vintage Copper", "White", "Yellow"
+      "Agate Grey",
+      "Alpine",
+      "Amber",
+      "Andorra Green",
+      "Antique Taupe",
+      "Aquamarine",
+      "Ash Black",
+      "Azure",
+      "Barley White",
+      "Bayou",
+      "Berry Red",
+      "Black",
+      "Black Granite",
+      "Blue",
+      "Blueberry",
+      "Breeze",
+      "Bronze",
+      "Brown",
+      "Burnished Green",
+      "Carbon",
+      "Chalk White",
+      "Champagne",
+      "Charcoal Black",
+      "Chrome",
+      "Cinnamon",
+      "Cinnamon Brown",
+      "Clear",
+      "Coast",
+      "Coastal Sand",
+      "Cobalt Blue",
+      "Copper",
+      "Coral",
+      "Cornflower Blue",
+      "Deep Purple",
+      "Distressed Wood",
+      "Duck Egg Blue",
+      "Dune",
+      "Dusk",
+      "Fern",
+      "Fjord",
+      "Flint",
+      "Flint Grey",
+      "Garnet Orange",
+      "Gold",
+      "Granite",
+      "Green",
+      "Grey",
+      "Gunmetal",
+      "Ice",
+      "Indigo",
+      "Indigo Blue",
+      "Ink",
+      "Iron Black",
+      "Jade Green",
+      "Jasper Grey",
+      "Java Blue",
+      "Jet",
+      "Lagoon",
+      "Lavender",
+      "Limestone",
+      "Linen",
+      "Marine",
+      "Mint",
+      "Mist",
+      "Mist Blue",
+      "Mustard",
+      "Mustard Seed Yellow",
+      "Natural",
+      "Nutmeg Cream",
+      "Ocean Blue",
+      "Olive",
+      "Onyx",
+      "Orange",
+      "Oslo Blue",
+      "Paprika",
+      "Pearl",
+      "Pearl Grey",
+      "Peppercorn Grey",
+      "Petal Pink",
+      "Petra Sand",
+      "Pink",
+      "Plum",
+      "Quartz Black",
+      "Red",
+      "Red Rust",
+      "Rose Quartz Pink",
+      "Rustic Teal",
+      "Sage Green",
+      "Samphire Green",
+      "Sandstone",
+      "Sapphire",
+      "Sapphire Blue",
+      "Seattle Grey",
+      "Shale Grey",
+      "Siena Barley White",
+      "Siena Brown",
+      "Siena Duck Egg",
+      "Silver",
+      "Simmer Black",
+      "Simmer Brown",
+      "Smoke",
+      "Smoke Grey",
+      "Sorrel Green",
+      "Speckled Green",
+      "Speckled White",
+      "Spiced Orange",
+      "Stainless Steel",
+      "Stone Grey",
+      "Stonecast Truffle",
+      "Tangerine",
+      "Taupe",
+      "Teal",
+      "Terracotta",
+      "Tokyo Black",
+      "Tokyo Blue",
+      "Topaz Blue",
+      "Truffle",
+      "Turquoise",
+      "Twilight",
+      "Ultramarine",
+      "Vintage Copper",
+      "White",
+      "Yellow"
     ]
   },
-  "boxes": { "suppliers": ["steelite"] }
+  "boxes": {
+    "suppliers": [
+      "steelite"
+    ]
+  },
+  "features": [
+    {
+      "key": "dishwasher_safe",
+      "label": "Dishwasher safe"
+    },
+    {
+      "key": "microwave_safe",
+      "label": "Microwave safe"
+    },
+    {
+      "key": "microwave_freezer_safe",
+      "label": "Microwave / freezer safe"
+    },
+    {
+      "key": "oven_safe",
+      "label": "Oven safe"
+    },
+    {
+      "key": "freezer_safe",
+      "label": "Freezer safe"
+    },
+    {
+      "key": "grill_safe",
+      "label": "Grill safe"
+    },
+    {
+      "key": "stackable",
+      "label": "Stackable"
+    },
+    {
+      "key": "handwash_only",
+      "label": "Handwash only"
+    },
+    {
+      "key": "thermal_shock_resistant",
+      "label": "Thermal shock resistant"
+    },
+    {
+      "key": "toughened",
+      "label": "Toughened"
+    },
+    {
+      "key": "toughened_rim",
+      "label": "Toughened rim"
+    },
+    {
+      "key": "tempered",
+      "label": "Tempered"
+    },
+    {
+      "key": "titanium_reinforced",
+      "label": "Titanium reinforced"
+    },
+    {
+      "key": "laser_cut_rim",
+      "label": "Laser cut rim"
+    },
+    {
+      "key": "nucleated",
+      "label": "Nucleated"
+    },
+    {
+      "key": "lined",
+      "label": "Lined"
+    },
+    {
+      "key": "recycled",
+      "label": "Recycled"
+    },
+    {
+      "key": "edge_chip_warranty_lifetime",
+      "label": "Edge chip warranty · lifetime"
+    },
+    {
+      "key": "edge_chip_warranty_5_years",
+      "label": "Edge chip warranty · 5 years"
+    },
+    {
+      "key": "edge_chip_warranty_1_year",
+      "label": "Edge chip warranty · 1 year"
+    }
+  ],
+  "featureWins": {
+    "handwash_only": "dishwasher_safe"
+  },
+  "featuresShown": 6
 }
