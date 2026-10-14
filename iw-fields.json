@@ -1423,7 +1423,7 @@
         "Dishwasher safe",
         "Microwave safe",
         "Thermal shock resistant",
-        "Edge chip warranty on most lines"
+        "Chip warranty, most lines"
       ],
       "logo": {
         "src": "/assets/brands/churchill-super-vitrified/logo.svg",
@@ -1460,7 +1460,9 @@
             "text": "Most lines carry Churchill's edge chip warranty. Ask us which ones when you order."
           }
         ],
-        "note": "Planning a refit or a refresh? Talk it through with one of our buyers for free on 020 7684 0000."
+        "note": "Planning a refit or a refresh?",
+        "noteMore": "Talk it through with one of our buyers for free on",
+        "noteStrong": "020 7684 0000"
       },
       "labels": {
         "collections": "collections",

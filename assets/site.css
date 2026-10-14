@@ -916,8 +916,17 @@ html:has(#vp-a:checked) .vp-onlyB,html:has(#vp-b:checked) .vp-onlyA{display:none
 .kf-chips .kf-more:hover{border-color:var(--ink)}
 .kf-chips .kf-more button{all:inherit;cursor:pointer}
 
-/* Brand page content (Churchill Super Vitrified proposal v3): feature chips, why band, collection and department tiles; .btile is also the home page department tile */
+/* Brand page content (Design brand page proposal v3): feature chips, why band, collection and department tiles; .btile is also the home page department tile */
 .brand-copy .kf-chips{margin:0}
+/* brand head (Design v3 + Ben 14 Oct): title centred against the copy and logo; copy column 14px gaps; chips two equal columns; logo 150px in a 180px white box */
+.bhead{align-items:center}
+.bhead .h1{max-width:520px}
+.bhead .brand-copy{gap:14px}
+.bhead .kf-chips{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}
+.bhead .kf-chips li{white-space:nowrap}
+.bhead .brand-img{width:182px;display:flex;align-items:center;justify-content:center}
+.bhead .brand-img img{width:150px;height:auto;padding:0;object-fit:contain}
+.promo-cta{border:0}
 .bwhy{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.15fr);background:var(--ink);color:var(--paper)}
 .bwhy-img{position:relative;overflow:hidden;background:#2E2921;min-height:360px}
 .bwhy-img img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
@@ -930,6 +939,7 @@ html:has(#vp-a:checked) .vp-onlyB,html:has(#vp-b:checked) .vp-onlyA{display:none
 .bwhy-pts b{font-size:15.5px;font-weight:700}
 .bwhy-pts span{font-size:14px;line-height:1.5;color:var(--line2);text-wrap:pretty}
 .bwhy-note{margin:0;padding-top:16px;border-top:1px solid var(--mute3);font-size:15px;line-height:1.5}
+.bwhy-note b{font-weight:700}
 .btiles{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:28px 20px;align-items:start}
 .bcoll{display:flex;flex-direction:column;gap:12px}
 .btile{display:flex;flex-direction:column;gap:10px}
@@ -952,6 +962,9 @@ html:has(#vp-a:checked) .vp-onlyB,html:has(#vp-b:checked) .vp-onlyA{display:none
 .bt-other .brand-chip{padding:10px 16px;font-size:14px}
 @media (prefers-reduced-motion:reduce){.btile .im img{transition:none}.btile:hover .im img{transform:none}}
 @media (max-width:1023px){
+  .bhead{align-items:flex-start}
+  .bhead .brand-img{width:120px}
+  .bhead .brand-img img{width:100px}
   .bwhy{grid-template-columns:minmax(0,1fr)}
   .bwhy-img{min-height:220px}
   .bwhy-txt{padding:24px 20px}
@@ -960,6 +973,7 @@ html:has(#vp-a:checked) .vp-onlyB,html:has(#vp-b:checked) .vp-onlyA{display:none
   .btile .n{font-size:28px}
 }
 @media (max-width:639px){
+  .bhead .kf-chips{grid-template-columns:minmax(0,1fr)}
   .bwhy-pts{grid-template-columns:minmax(0,1fr)}
   .btiles{gap:22px 12px}
   .btile .n{font-size:22px;margin:-20px 0 0 8px}
