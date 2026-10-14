@@ -915,3 +915,52 @@ html:has(#vp-a:checked) .vp-onlyB,html:has(#vp-b:checked) .vp-onlyA{display:none
 .kf-chips .kf-more{border-style:dashed;border-color:var(--line2);background:transparent;font-weight:600;cursor:pointer}
 .kf-chips .kf-more:hover{border-color:var(--ink)}
 .kf-chips .kf-more button{all:inherit;cursor:pointer}
+
+/* Brand page content (Churchill Super Vitrified proposal v3): feature chips, why band, collection and department tiles */
+.brand-copy .kf-chips{margin:0}
+.bwhy{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.15fr);background:var(--ink);color:var(--paper)}
+.bwhy-img{position:relative;overflow:hidden;background:#2E2921;min-height:360px}
+.bwhy-img img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.bwhy-txt{padding:28px 40px 30px;display:flex;flex-direction:column;gap:22px;min-width:0}
+.bwhy-h{display:flex;flex-direction:column;gap:8px}
+.bwhy-ey{font-size:13px;font-weight:500;color:var(--line2)}
+.bwhy-t{font-size:32px;font-weight:500;letter-spacing:-0.018em;line-height:1.1}
+.bwhy-pts{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:1fr 1fr;gap:20px 28px}
+.bwhy-pts li{display:flex;flex-direction:column;gap:5px;border-top:1px solid var(--mute3);padding-top:12px}
+.bwhy-pts b{font-size:15.5px;font-weight:700}
+.bwhy-pts span{font-size:14px;line-height:1.5;color:var(--line2);text-wrap:pretty}
+.bwhy-note{margin:0;padding-top:16px;border-top:1px solid var(--mute3);font-size:15px;line-height:1.5}
+.btiles{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:28px 20px;align-items:start}
+.bcoll{display:flex;flex-direction:column;gap:12px}
+.btile{display:flex;flex-direction:column;gap:10px}
+.btile .im{display:block;aspect-ratio:1.5;overflow:hidden;border-radius:70% 30% 52% 48% / 62% 36% 64% 38%;background:repeating-linear-gradient(135deg,#E4D7C2 0 9px,#EDE3D2 9px 18px)}
+.btiles>:nth-child(4n+2) .im{border-radius:32% 68% 71% 29% / 44% 63% 37% 56%}
+.btiles>:nth-child(4n+3) .im{border-radius:66% 34% 28% 72% / 58% 32% 68% 42%}
+.btiles>:nth-child(4n+4) .im{border-radius:27% 73% 46% 54% / 67% 47% 53% 33%}
+.btile .im img{width:100%;height:100%;object-fit:cover;transition:transform .4s ease}
+.btile:hover .im img{transform:scale(1.06)}
+.btile .n{position:relative;z-index:1;margin:-30px 0 0 12px;font-size:34px;font-weight:600;line-height:1;letter-spacing:-0.025em;text-wrap:pretty;transition:color .2s;text-shadow:0 0 14px #FCF7EE,0 0 4px #FCF7EE}
+.btile:hover .n{color:var(--rust)}
+.btile .d{font-size:13.5px;line-height:1.5;color:var(--mute);text-wrap:pretty}
+.bt-ranges{display:flex;flex-direction:column;gap:8px;border-top:1px solid var(--line);padding-top:12px}
+.bt-l{font-size:12px;font-weight:500;color:var(--mute3)}
+.bt-chips{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:6px}
+.bt-chip{display:block;border:1px solid var(--line2);background:var(--card);padding:6px 10px;font-size:13px;font-weight:600;transition:background .15s,border-color .15s}
+.bt-chip:hover{border-color:var(--ink);background:#FFFFFF;color:var(--ink)}
+.bt-other{margin-top:36px;display:flex;flex-direction:column;gap:12px}
+.bt-other .brands{gap:8px}
+.bt-other .brand-chip{padding:10px 16px;font-size:14px}
+@media (prefers-reduced-motion:reduce){.btile .im img{transition:none}.btile:hover .im img{transform:none}}
+@media (max-width:1023px){
+  .bwhy{grid-template-columns:minmax(0,1fr)}
+  .bwhy-img{min-height:220px}
+  .bwhy-txt{padding:24px 20px}
+  .bwhy-t{font-size:26px}
+  .btiles{grid-template-columns:repeat(2,minmax(0,1fr));gap:28px 16px}
+  .btile .n{font-size:28px}
+}
+@media (max-width:639px){
+  .bwhy-pts{grid-template-columns:minmax(0,1fr)}
+  .btiles{gap:22px 12px}
+  .btile .n{font-size:22px;margin:-20px 0 0 8px}
+}

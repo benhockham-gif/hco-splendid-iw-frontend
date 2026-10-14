@@ -1411,5 +1411,154 @@
   "featuresShown": 6,
   "hidden": [
     "commodity_code"
-  ]
+  ],
+  "brandPages": {
+    "Churchill Super Vitrified": {
+      "seo": {
+        "title": "Churchill Super Vitrified Crockery | Splendid Trading",
+        "meta": "Churchill Super Vitrified crockery from Splendid Trading: dishwasher and microwave safe whiteware, Stonecast, Studio Prints and Inked for trade kitchens."
+      },
+      "intro": "Vitrified crockery built for the pace of a commercial kitchen. Plain whites, hand-finished glazes and printed patterns, all made to take daily service and the dishwasher, with matching shapes and sizes across the ranges.",
+      "features": [
+        "Dishwasher safe",
+        "Microwave safe",
+        "Thermal shock resistant",
+        "Edge chip warranty on most lines"
+      ],
+      "logo": {
+        "src": "/assets/brands/churchill-super-vitrified/logo.svg",
+        "alt": "Churchill Super Vitrified logo"
+      },
+      "promo": {
+        "image": "/assets/brands/churchill-super-vitrified/banner.jpg",
+        "alt": "Plated autumn dishes served on Churchill Stonecast and Studio Prints tableware",
+        "eyebrow": "Churchill Super Vitrified",
+        "title": "Built for the next sitting",
+        "text": "Hard-working whites, glazes and prints that go from the pass to the dishwasher and back, service after service.",
+        "cta": "Shop Churchill Super Vitrified"
+      },
+      "why": {
+        "eyebrow": "Why kitchens choose it",
+        "title": "Tableware that earns its place on the pass",
+        "image": "/assets/brands/churchill-super-vitrified/why.jpg",
+        "alt": "Churchill Stonecast plates and bowls in pastel glazes",
+        "points": [
+          {
+            "title": "Handles hot and cold",
+            "text": "Almost every piece is marked thermal shock resistant, so it copes with hot food, cold rinses and the wash-up."
+          },
+          {
+            "title": "Dishwasher and microwave safe",
+            "text": "All but a handful of pieces are dishwasher safe, and every ceramic piece is microwave safe, printed and glazed lines included."
+          },
+          {
+            "title": "Shapes that line up",
+            "text": "The same coupe plates and bowls run through Stonecast, Studio Prints and Inked, so colour sits easily alongside white."
+          },
+          {
+            "title": "Edge chip warranty",
+            "text": "Most lines carry Churchill's edge chip warranty. Ask us which ones when you order."
+          }
+        ],
+        "note": "Planning a refit or a refresh? Talk it through with one of our buyers for free on 020 7684 0000."
+      },
+      "labels": {
+        "collections": "collections",
+        "rangesIn": "Ranges in",
+        "otherRanges": "Other ranges"
+      },
+      "collections": [
+        {
+          "name": "Whiteware",
+          "text": "Plain and embossed whites in every core shape, from plates to teapots.",
+          "image": "/assets/brands/churchill-super-vitrified/whiteware.jpg",
+          "alt": "White Churchill teapots, jug, cups and saucers on a dark slate surface",
+          "ranges": [
+            "Bamboo",
+            "Bubble",
+            "Buckingham",
+            "Cafe",
+            "Chefs Plates",
+            "Classic",
+            "Compact",
+            "Counter Serve",
+            "Envisage Natural",
+            "Evolve",
+            "Isla",
+            "Latte",
+            "Lotus",
+            "Nova",
+            "Opal",
+            "Orb",
+            "Orbit",
+            "Profile",
+            "Snack Attack",
+            "Trace",
+            "Ultimo",
+            "Vellum",
+            "Viana",
+            "Voyager",
+            "White",
+            "White Holloware",
+            "Whiteware",
+            "X Squared"
+          ]
+        },
+        {
+          "name": "Stonecast",
+          "text": "Hand-finished speckled glazes, so no two pieces are quite the same.",
+          "image": "/assets/brands/churchill-super-vitrified/stonecast.jpg",
+          "alt": "Churchill Stonecast bowls and plates in green glazes",
+          "ranges": [
+            "Stonecast",
+            "Stonecast Accents",
+            "Stonecast Aqueous",
+            "Stonecast Canvas",
+            "Stonecast Hints",
+            "Stonecast Patina",
+            "Stonecast Plume",
+            "Stonecast Raw",
+            "Stonecast Spice",
+            "Counter Serve Hints"
+          ]
+        },
+        {
+          "name": "Studio Prints",
+          "text": "The look of hand-made pottery, printed under the glaze to last.",
+          "image": "/assets/brands/churchill-super-vitrified/studio-prints.jpg",
+          "alt": "Churchill Studio Prints Kintsugi and Homespun plates",
+          "ranges": [
+            "Studio Prints Astro",
+            "Studio Prints Fusion",
+            "Studio Prints Homespun",
+            "Studio Prints Homespun Accents",
+            "Studio Prints Homespun Chroma",
+            "Studio Prints Kintsugi",
+            "Studio Prints Kintsugi Accents",
+            "Studio Prints Kintsugi Reverse",
+            "Studio Prints Raku",
+            "Studio Prints Stone"
+          ]
+        },
+        {
+          "name": "Inked",
+          "text": "Bold, flowing patterns framed by plenty of white space.",
+          "image": "/assets/brands/churchill-super-vitrified/inked.jpg",
+          "alt": "Churchill Inked Tide plates alongside dark textured plates",
+          "ranges": [
+            "Inked Cascade",
+            "Inked Delta",
+            "Inked Elements",
+            "Inked Era",
+            "Inked Erosion",
+            "Inked Fresco",
+            "Inked Lumé",
+            "Inked Lyra",
+            "Inked Tide",
+            "Inked Tide Accents"
+          ]
+        }
+      ]
+    }
+  }
 }
