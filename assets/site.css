@@ -197,8 +197,10 @@ form{margin:0}
 /* product */
 .pdp{padding:24px 48px 64px;display:grid;grid-template-columns:minmax(0,1fr) 480px;gap:56px;align-items:stretch}
 .pdp-media{align-self:start;margin-left:100px;display:flex;flex-direction:column;gap:10px;min-width:0}
-.pdp-img{aspect-ratio:1;background:#FFFFFF;border:1px solid var(--line);overflow:hidden}
-.pdp-img img{width:100%;height:100%;object-fit:contain}
+.pdp-img{position:relative;aspect-ratio:1;background:#FFFFFF;border:1px solid var(--line);overflow:hidden}
+.pdp-img img{display:block;width:100%;height:100%;object-fit:contain}
+/* Image frame (SPLENDID-295/297): an image with measured focus values (--cx, --cy, --ext on the <img>) is zoomed so the product fills 72% of the box and sits centred; the file is never cropped or altered. No values: the whole file, as before. */
+.pdp-img img[style*="--ext"],.g-main img[style*="--ext"]{--fill:0.72;--region:calc(var(--ext) / var(--fill));position:absolute;width:calc(100% / var(--region));height:calc(100% / var(--region));left:calc((var(--region) / 2 - var(--cx)) / var(--region) * 100%);top:calc((var(--region) / 2 - var(--cy)) / var(--region) * 100%);object-fit:fill}
 .pdp-info{display:flex;flex-direction:column;gap:12px}
 .pdp-title{display:flex;flex-direction:column;gap:10px}
 .pdp-title .brand{font-size:13px;font-weight:500;color:var(--rust)}
@@ -425,9 +427,9 @@ button.search-go:hover{background:var(--rust)}
 
 /* product: gallery, in-basket line */
 .gallery{display:flex;flex-direction:column;gap:10px}
-.g-main{list-style:none;margin:0;padding:0;aspect-ratio:1;background:#FFFFFF;border:1px solid var(--line);display:grid;overflow:hidden}
+.g-main{list-style:none;margin:0;padding:0;position:relative;aspect-ratio:1;background:#FFFFFF;border:1px solid var(--line);display:grid;overflow:hidden}
 .g-main li{grid-area:1/1;display:none}
-.g-main img,.g-thumbs img{width:100%;height:100%;object-fit:contain}
+.g-main img,.g-thumbs img{display:block;width:100%;height:100%;object-fit:contain}
 .gallery:not(:has(input:checked)) .g-main li:first-child{display:block}
 .gallery:has(.g-thumbs li:nth-child(1) input:checked) .g-main li:nth-child(1),.gallery:has(.g-thumbs li:nth-child(2) input:checked) .g-main li:nth-child(2),.gallery:has(.g-thumbs li:nth-child(3) input:checked) .g-main li:nth-child(3),.gallery:has(.g-thumbs li:nth-child(4) input:checked) .g-main li:nth-child(4),.gallery:has(.g-thumbs li:nth-child(5) input:checked) .g-main li:nth-child(5),.gallery:has(.g-thumbs li:nth-child(6) input:checked) .g-main li:nth-child(6),.gallery:has(.g-thumbs li:nth-child(7) input:checked) .g-main li:nth-child(7),.gallery:has(.g-thumbs li:nth-child(8) input:checked) .g-main li:nth-child(8){display:block}
 .g-thumbs{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:8px}
