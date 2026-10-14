@@ -574,6 +574,7 @@ select.input{cursor:pointer}
   .fav{top:16px;right:16px}
   .card-add{flex-direction:column}
   .card-add .qty.sm{width:100%}
+  .card .card-add .btn{flex:none} /* stacked: keep the 40px button height (flex:1 squashed it to the text) */
   .pdp-info h1{font-size:30px}
   .buy .price .p{font-size:28px}
   .packbox{flex-wrap:wrap}
