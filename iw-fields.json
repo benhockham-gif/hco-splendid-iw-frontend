@@ -1408,5 +1408,8 @@
   "featureWins": {
     "handwash_only": "dishwasher_safe"
   },
-  "featuresShown": 6
+  "featuresShown": 6,
+  "hidden": [
+    "commodity_code"
+  ]
 }
