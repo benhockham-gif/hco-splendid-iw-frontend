@@ -1560,7 +1560,871 @@
             "Inked Tide Accents"
           ]
         }
-      ]
+      ],
+      "ranges": {
+        "Bamboo": {
+          "children": [
+            "Bamboo Spinwash",
+            "Bamboo Print"
+          ],
+          "seo": {
+            "title": "Churchill Super Vitrified Bamboo | Splendid Trading",
+            "meta": "Churchill Super Vitrified Bamboo from Splendid Trading: 99 embossed white, Spinwash and Print pieces, all microwave safe, priced per pack."
+          },
+          "intro": "White Super Vitrified with a raised pattern taken from bamboo canes: texture on the table, no print to compete with the food. 64 white pieces run from 9cl stacking cups to 34.5cm oval plates, so one range can cover the whole menu. Selected plates and bowls also come in Spinwash and Print finishes.",
+          "image": {
+            "src": "/assets/brands/churchill-super-vitrified/ranges/bamboo/head.jpg",
+            "alt": "Churchill Bamboo white plate laid with Bamboo cutlery"
+          },
+          "facts": [
+            {
+              "flag": "microwave_safe",
+              "label": "Microwave safe"
+            },
+            {
+              "flag": "dishwasher_safe",
+              "label": "Dishwasher safe*",
+              "except": [
+                "WHBALSA1",
+                "WHBALPE1"
+              ]
+            },
+            {
+              "label": "Stacking cups and bowls"
+            },
+            {
+              "packs": true,
+              "label": "Packs of"
+            }
+          ],
+          "footnote": "*Except salt and pepper, which are hand wash.",
+          "colourways": {
+            "families": [
+              {
+                "name": "White",
+                "text": "The full range: every shape and size, 64 pieces in all.",
+                "label": "Colour",
+                "colours": [
+                  "White"
+                ],
+                "image": "WHBALW111",
+                "alt": "Bamboo white wide rim plate"
+              },
+              {
+                "name": "Spinwash",
+                "text": "A coloured glaze in three shades on 11 plate and bowl sizes.",
+                "label": "Shades",
+                "colours": [
+                  "Alpine",
+                  "Dusk",
+                  "Mist"
+                ],
+                "image": "DUBALD271",
+                "alt": "Bamboo Spinwash Dusk deep coupe plate"
+              },
+              {
+                "name": "Print",
+                "text": "The 28.1cm deep coupe plate with a printed centre, in two colours.",
+                "label": "Colours",
+                "colours": [
+                  "Quartz Black",
+                  "Topaz Blue"
+                ],
+                "image": "RKTBLD271",
+                "alt": "Bamboo Print Topaz Blue deep coupe plate"
+              }
+            ]
+          },
+          "inUse": {
+            "eyebrow": "In use",
+            "title": "One range, breakfast to the last cover",
+            "image": "/assets/brands/churchill-super-vitrified/ranges/bamboo/in-use.jpg",
+            "alt": "Duck with vegetables served on Bamboo Spinwash Dusk with Bamboo cutlery",
+            "points": [
+              {
+                "title": "Every course covered",
+                "text": "Rimmed, footed, coupe and walled plates, 10 bowl shapes, oval and oblong platters, and cups, jugs and teapots for the coffee round."
+              },
+              {
+                "title": "Built to stack",
+                "text": "Stacking cups from 9cl to 28cl and stacking bowls keep shelves and the pass tidy."
+              },
+              {
+                "title": "Through the wash, into the microwave",
+                "text": "All white pieces are microwave safe and all bar the salt and pepper are dishwasher safe."
+              }
+            ],
+            "note": "Kitting out a new menu?",
+            "noteMore": "Our buyers will put the list together with you on",
+            "noteStrong": "020 7684 0000"
+          },
+          "types": [
+            "Plates",
+            "Bowls",
+            "Platters and dishes",
+            "Cups, mugs and saucers",
+            "Pots and jugs",
+            "Small pieces"
+          ],
+          "companions": [
+            {
+              "name": "Bamboo Cutlery",
+              "text": "14 pieces in stainless steel, from demitasse spoons to steak knives. Boxes of 12.",
+              "image": "/assets/brands/churchill-super-vitrified/ranges/bamboo/cutlery.jpg",
+              "alt": "Churchill Bamboo cutlery",
+              "brand": "Churchill Cutlery",
+              "range": "Bamboo Cutlery"
+            },
+            {
+              "name": "Bamboo Glass",
+              "text": "6 glass plates, bowls and a platter in Dusk. Dishwasher safe. Boxes of 6.",
+              "image": "/assets/brands/churchill-super-vitrified/ranges/bamboo/glass.jpg",
+              "alt": "Churchill Bamboo Glass plates and bowls",
+              "brand": "Churchill Glass",
+              "range": "Bamboo Glass"
+            }
+          ],
+          "labels": {
+            "colourwaysHeading": "Bamboo in white, Spinwash and Print",
+            "shapesHeading": "Every Bamboo piece, ready to order",
+            "completeHeading": "Made to go with Bamboo",
+            "mixTitle": "Mix them on one table",
+            "mixText": "Every Spinwash and Print piece is also made in white, in the same shape and size. Build the base in white and add colour where it counts."
+          },
+          "products": {
+            "ALBALD251": {
+              "shape": "Deep coupe plate",
+              "size": "25.5cm",
+              "holds": "",
+              "type": "Plates",
+              "colour": "Alpine"
+            },
+            "ALBALD271": {
+              "shape": "Deep coupe plate",
+              "size": "28.1cm",
+              "holds": "",
+              "type": "Plates",
+              "colour": "Alpine"
+            },
+            "ALBALF101": {
+              "shape": "Footed rimmed plate",
+              "size": "26.1cm",
+              "holds": "",
+              "type": "Plates",
+              "colour": "Alpine"
+            },
+            "ALBALF111": {
+              "shape": "Footed rimmed plate",
+              "size": "30.5cm",
+              "holds": "",
+              "type": "Plates",
+              "colour": "Alpine"
+            },
+            "ALBALF581": {
+              "shape": "Footed rimmed plate",
+              "size": "27.6cm",
+              "holds": "",
+              "type": "Plates",
+              "colour": "Alpine"
+            },
+            "ALBALF91": {
+              "shape": "Footed rimmed plate",
+              "size": "23.4cm",
+              "holds": "",
+              "type": "Plates",
+              "colour": "Alpine"
+            },
+            "ALBALP121": {
+              "shape": "Rimmed plate",
+              "size": "30.5cm",
+              "holds": "",
+              "type": "Plates",
+              "colour": "Alpine"
+            },
+            "ALBALP651": {
+              "shape": "Rimmed plate",
+              "size": "17cm",
+              "holds": "",
+              "type": "Plates",
+              "colour": "Alpine"
+            },
+            "ALBALP81": {
+              "shape": "Rimmed plate",
+              "size": "21cm",
+              "holds": "",
+              "type": "Plates",
+              "colour": "Alpine"
+            },
+            "ALBALWBL1": {
+              "shape": "Wide rim bowl",
+              "size": "28cm",
+              "holds": "",
+              "type": "Bowls",
+              "colour": "Alpine"
+            },
+            "ALBALWBM1": {
+              "shape": "Wide rim bowl",
+              "size": "24cm",
+              "holds": "",
+              "type": "Bowls",
+              "colour": "Alpine"
+            },
+            "DUBALD251": {
+              "shape": "Deep coupe plate",
+              "size": "25.5cm",
+              "holds": "",
+              "type": "Plates",
+              "colour": "Dusk"
+            },
+            "DUBALD271": {
+              "shape": "Deep coupe plate",
+              "size": "28.1cm",
+              "holds": "",
+              "type": "Plates",
+              "colour": "Dusk"
+            },
+            "DUBALF101": {
+              "shape": "Footed rimmed plate",
+              "size": "26.1cm",
+              "holds": "",
+              "type": "Plates",
+              "colour": "Dusk"
+            },
+            "DUBALF111": {
+              "shape": "Footed rimmed plate",
+              "size": "30.5cm",
+              "holds": "",
+              "type": "Plates",
+              "colour": "Dusk"
+            },
+            "DUBALF581": {
+              "shape": "Footed rimmed plate",
+              "size": "27.6cm",
+              "holds": "",
+              "type": "Plates",
+              "colour": "Dusk"
+            },
+            "DUBALF91": {
+              "shape": "Footed rimmed plate",
+              "size": "23.4cm",
+              "holds": "",
+              "type": "Plates",
+              "colour": "Dusk"
+            },
+            "DUBALP121": {
+              "shape": "Rimmed plate",
+              "size": "30.5cm",
+              "holds": "",
+              "type": "Plates",
+              "colour": "Dusk"
+            },
+            "DUBALP651": {
+              "shape": "Rimmed plate",
+              "size": "17cm",
+              "holds": "",
+              "type": "Plates",
+              "colour": "Dusk"
+            },
+            "DUBALP81": {
+              "shape": "Rimmed plate",
+              "size": "21cm",
+              "holds": "",
+              "type": "Plates",
+              "colour": "Dusk"
+            },
+            "DUBALWBL1": {
+              "shape": "Wide rim bowl",
+              "size": "28cm",
+              "holds": "47cl",
+              "type": "Bowls",
+              "colour": "Dusk"
+            },
+            "DUBALWBM1": {
+              "shape": "Wide rim bowl",
+              "size": "24cm",
+              "holds": "28cl",
+              "type": "Bowls",
+              "colour": "Dusk"
+            },
+            "MBBALD251": {
+              "shape": "Deep coupe plate",
+              "size": "25.5cm",
+              "holds": "",
+              "type": "Plates",
+              "colour": "Mist"
+            },
+            "MBBALD271": {
+              "shape": "Deep coupe plate",
+              "size": "28.1cm",
+              "holds": "",
+              "type": "Plates",
+              "colour": "Mist"
+            },
+            "MBBALF101": {
+              "shape": "Footed rimmed plate",
+              "size": "26.1cm",
+              "holds": "",
+              "type": "Plates",
+              "colour": "Mist"
+            },
+            "MBBALF111": {
+              "shape": "Footed rimmed plate",
+              "size": "30.5cm",
+              "holds": "",
+              "type": "Plates",
+              "colour": "Mist"
+            },
+            "MBBALF581": {
+              "shape": "Footed rimmed plate",
+              "size": "27.6cm",
+              "holds": "",
+              "type": "Plates",
+              "colour": "Mist"
+            },
+            "MBBALF91": {
+              "shape": "Footed rimmed plate",
+              "size": "23.4cm",
+              "holds": "",
+              "type": "Plates",
+              "colour": "Mist"
+            },
+            "MBBALP121": {
+              "shape": "Rimmed plate",
+              "size": "30.5cm",
+              "holds": "",
+              "type": "Plates",
+              "colour": "Mist"
+            },
+            "MBBALP651": {
+              "shape": "Rimmed plate",
+              "size": "17cm",
+              "holds": "",
+              "type": "Plates",
+              "colour": "Mist"
+            },
+            "MBBALP81": {
+              "shape": "Rimmed plate",
+              "size": "21cm",
+              "holds": "",
+              "type": "Plates",
+              "colour": "Mist"
+            },
+            "MBBALWBL1": {
+              "shape": "Wide rim bowl",
+              "size": "28cm",
+              "holds": "47cl",
+              "type": "Bowls",
+              "colour": "Mist"
+            },
+            "MBBALWBM1": {
+              "shape": "Wide rim bowl",
+              "size": "24cm",
+              "holds": "28cl",
+              "type": "Bowls",
+              "colour": "Mist"
+            },
+            "RKBQLD271": {
+              "shape": "Deep coupe plate",
+              "size": "28.1cm",
+              "holds": "",
+              "type": "Plates",
+              "colour": "Quartz Black"
+            },
+            "RKTBLD271": {
+              "shape": "Deep coupe plate",
+              "size": "28.1cm",
+              "holds": "",
+              "type": "Plates",
+              "colour": "Topaz Blue"
+            },
+            "WHBALB101": {
+              "shape": "Stacking bowl",
+              "size": "11.5cm",
+              "holds": "28cl",
+              "type": "Bowls",
+              "colour": "White"
+            },
+            "WHBALB141": {
+              "shape": "Stacking bowl",
+              "size": "11.5cm",
+              "holds": "36cl",
+              "type": "Bowls",
+              "colour": "White"
+            },
+            "WHBALB151": {
+              "shape": "Teapot",
+              "size": "42.6cl",
+              "holds": "",
+              "type": "Pots and jugs",
+              "colour": "White"
+            },
+            "WHBALB231": {
+              "shape": "Triangle shallow bowl",
+              "size": "21 × 21cm",
+              "holds": "",
+              "type": "Bowls",
+              "colour": "White"
+            },
+            "WHBALB271": {
+              "shape": "Triangle shallow bowl",
+              "size": "27.2 × 26.7cm",
+              "holds": "",
+              "type": "Bowls",
+              "colour": "White"
+            },
+            "WHBALB301": {
+              "shape": "Teapot",
+              "size": "85.2cl",
+              "holds": "",
+              "type": "Pots and jugs",
+              "colour": "White"
+            },
+            "WHBALB451": {
+              "shape": "Rice bowl",
+              "size": "11.5cm",
+              "holds": "28cl",
+              "type": "Bowls",
+              "colour": "White"
+            },
+            "WHBALC201": {
+              "shape": "Stacking cup",
+              "size": "20cl",
+              "holds": "",
+              "type": "Cups, mugs and saucers",
+              "colour": "White"
+            },
+            "WHBALC281": {
+              "shape": "Stacking cup",
+              "size": "28cl",
+              "holds": "",
+              "type": "Cups, mugs and saucers",
+              "colour": "White"
+            },
+            "WHBALD251": {
+              "shape": "Deep coupe plate",
+              "size": "25.5cm",
+              "holds": "",
+              "type": "Plates",
+              "colour": "White"
+            },
+            "WHBALD271": {
+              "shape": "Deep coupe plate",
+              "size": "28.1cm",
+              "holds": "",
+              "type": "Plates",
+              "colour": "White"
+            },
+            "WHBALE31": {
+              "shape": "Cup",
+              "size": "11cl",
+              "holds": "",
+              "type": "Cups, mugs and saucers",
+              "colour": "White"
+            },
+            "WHBALF101": {
+              "shape": "Footed rimmed plate",
+              "size": "26.1cm",
+              "holds": "",
+              "type": "Plates",
+              "colour": "White"
+            },
+            "WHBALF111": {
+              "shape": "Footed rimmed plate",
+              "size": "30.5cm",
+              "holds": "",
+              "type": "Plates",
+              "colour": "White"
+            },
+            "WHBALF581": {
+              "shape": "Footed rimmed plate",
+              "size": "27.6cm",
+              "holds": "",
+              "type": "Plates",
+              "colour": "White"
+            },
+            "WHBALF91": {
+              "shape": "Footed rimmed plate",
+              "size": "23.4cm",
+              "holds": "",
+              "type": "Plates",
+              "colour": "White"
+            },
+            "WHBALH141": {
+              "shape": "Handled stacking bowl",
+              "size": "11.5cm",
+              "holds": "36cl",
+              "type": "Bowls",
+              "colour": "White"
+            },
+            "WHBALJ21": {
+              "shape": "Jug",
+              "size": "5.6cl",
+              "holds": "",
+              "type": "Pots and jugs",
+              "colour": "White"
+            },
+            "WHBALJ41": {
+              "shape": "Jug",
+              "size": "11.4cl",
+              "holds": "",
+              "type": "Pots and jugs",
+              "colour": "White"
+            },
+            "WHBALJ81": {
+              "shape": "Jug",
+              "size": "22.7cl",
+              "holds": "",
+              "type": "Pots and jugs",
+              "colour": "White"
+            },
+            "WHBALM121": {
+              "shape": "Mug",
+              "size": "34cl",
+              "holds": "",
+              "type": "Cups, mugs and saucers",
+              "colour": "White"
+            },
+            "WHBALO101": {
+              "shape": "Oval plate",
+              "size": "25 × 19.4 × 3.2cm",
+              "holds": "",
+              "type": "Platters and dishes",
+              "colour": "White"
+            },
+            "WHBALO111": {
+              "shape": "Oblong platter",
+              "size": "29.5 × 15cm",
+              "holds": "",
+              "type": "Platters and dishes",
+              "colour": "White"
+            },
+            "WHBALO121": {
+              "shape": "Oval plate",
+              "size": "29 × 22.7 × 3.8cm",
+              "holds": "",
+              "type": "Platters and dishes",
+              "colour": "White"
+            },
+            "WHBALO141": {
+              "shape": "Oval plate",
+              "size": "34.5 × 26.3 × 5cm",
+              "holds": "",
+              "type": "Platters and dishes",
+              "colour": "White"
+            },
+            "WHBALO81": {
+              "shape": "Oval plate",
+              "size": "19.5 × 15 × 2.5cm",
+              "holds": "",
+              "type": "Platters and dishes",
+              "colour": "White"
+            },
+            "WHBALP101": {
+              "shape": "Rimmed plate",
+              "size": "26.1cm",
+              "holds": "",
+              "type": "Plates",
+              "colour": "White"
+            },
+            "WHBALP111": {
+              "shape": "Rimmed plate",
+              "size": "30.5cm",
+              "holds": "",
+              "type": "Plates",
+              "colour": "White"
+            },
+            "WHBALP121": {
+              "shape": "Presentation plate",
+              "size": "30.5cm",
+              "holds": "",
+              "type": "Plates",
+              "colour": "White"
+            },
+            "WHBALP581": {
+              "shape": "Rimmed plate",
+              "size": "27.6cm",
+              "holds": "",
+              "type": "Plates",
+              "colour": "White"
+            },
+            "WHBALP651": {
+              "shape": "Rimmed plate",
+              "size": "17cm",
+              "holds": "",
+              "type": "Plates",
+              "colour": "White"
+            },
+            "WHBALP81": {
+              "shape": "Rimmed plate",
+              "size": "21cm",
+              "holds": "",
+              "type": "Plates",
+              "colour": "White"
+            },
+            "WHBALP91": {
+              "shape": "Rimmed plate",
+              "size": "23.4cm",
+              "holds": "",
+              "type": "Plates",
+              "colour": "White"
+            },
+            "WHBALPE1": {
+              "shape": "Pepper",
+              "size": "7cm",
+              "holds": "",
+              "type": "Small pieces",
+              "colour": "White"
+            },
+            "WHBALPOB1": {
+              "shape": "Oatmeal bowl",
+              "size": "17cm",
+              "holds": "26cl",
+              "type": "Bowls",
+              "colour": "White"
+            },
+            "WHBALR111": {
+              "shape": "Rimmed oval dish",
+              "size": "28cm",
+              "holds": "",
+              "type": "Platters and dishes",
+              "colour": "White"
+            },
+            "WHBALR131": {
+              "shape": "Rimmed oval dish",
+              "size": "33cm",
+              "holds": "",
+              "type": "Platters and dishes",
+              "colour": "White"
+            },
+            "WHBALRPP1": {
+              "shape": "Rimmed bowl",
+              "size": "30.8cm",
+              "holds": "60cl",
+              "type": "Bowls",
+              "colour": "White"
+            },
+            "WHBALRSB1": {
+              "shape": "Rimmed bowl",
+              "size": "24.9cm",
+              "holds": "50cl",
+              "type": "Bowls",
+              "colour": "White"
+            },
+            "WHBALS111": {
+              "shape": "Square plate",
+              "size": "25.5cm",
+              "holds": "",
+              "type": "Plates",
+              "colour": "White"
+            },
+            "WHBALS141": {
+              "shape": "Snack bowl",
+              "size": "13cm",
+              "holds": "40cl",
+              "type": "Bowls",
+              "colour": "White"
+            },
+            "WHBALS61": {
+              "shape": "Bowl stand",
+              "size": "15.2cm",
+              "holds": "",
+              "type": "Platters and dishes",
+              "colour": "White"
+            },
+            "WHBALS71": {
+              "shape": "Square plate",
+              "size": "17cm",
+              "holds": "",
+              "type": "Plates",
+              "colour": "White"
+            },
+            "WHBALS91": {
+              "shape": "Square plate",
+              "size": "22cm",
+              "holds": "",
+              "type": "Plates",
+              "colour": "White"
+            },
+            "WHBALSA1": {
+              "shape": "Salt",
+              "size": "7cm",
+              "holds": "",
+              "type": "Small pieces",
+              "colour": "White"
+            },
+            "WHBALSB61": {
+              "shape": "Shallow bowl",
+              "size": "11.6cm",
+              "holds": "20cl",
+              "type": "Bowls",
+              "colour": "White"
+            },
+            "WHBALSB91": {
+              "shape": "Shallow bowl",
+              "size": "13cm",
+              "holds": "26cl",
+              "type": "Bowls",
+              "colour": "White"
+            },
+            "WHBALSC31": {
+              "shape": "Stacking cup",
+              "size": "9cl",
+              "holds": "",
+              "type": "Cups, mugs and saucers",
+              "colour": "White"
+            },
+            "WHBALSC81": {
+              "shape": "Stacking cup",
+              "size": "22cl",
+              "holds": "",
+              "type": "Cups, mugs and saucers",
+              "colour": "White"
+            },
+            "WHBALSCM1": {
+              "shape": "Chip mug",
+              "size": "10cm",
+              "holds": "31cl",
+              "type": "Cups, mugs and saucers",
+              "colour": "White"
+            },
+            "WHBALSD21": {
+              "shape": "Dip pot",
+              "size": "7cm",
+              "holds": "6cl",
+              "type": "Small pieces",
+              "colour": "White"
+            },
+            "WHBALSD41": {
+              "shape": "Dip pot",
+              "size": "8.5cm",
+              "holds": "11cl",
+              "type": "Small pieces",
+              "colour": "White"
+            },
+            "WHBALSDB1": {
+              "shape": "Deep bowl",
+              "size": "10.2cm",
+              "holds": "24cl",
+              "type": "Bowls",
+              "colour": "White"
+            },
+            "WHBALSGR1": {
+              "shape": "Sugar bowl",
+              "size": "22.7cl",
+              "holds": "",
+              "type": "Pots and jugs",
+              "colour": "White"
+            },
+            "WHBALSM1": {
+              "shape": "Saucer",
+              "size": "15cm",
+              "holds": "",
+              "type": "Cups, mugs and saucers",
+              "colour": "White"
+            },
+            "WHBALSS1": {
+              "shape": "Saucer",
+              "size": "12.8cm",
+              "holds": "",
+              "type": "Cups, mugs and saucers",
+              "colour": "White"
+            },
+            "WHBALT121": {
+              "shape": "Cup",
+              "size": "34cl",
+              "holds": "",
+              "type": "Cups, mugs and saucers",
+              "colour": "White"
+            },
+            "WHBALT81": {
+              "shape": "Cup",
+              "size": "22cl",
+              "holds": "",
+              "type": "Cups, mugs and saucers",
+              "colour": "White"
+            },
+            "WHBALW111": {
+              "shape": "Wide rim plate",
+              "size": "30.5cm",
+              "holds": "",
+              "type": "Plates",
+              "colour": "White"
+            },
+            "WHBALW211": {
+              "shape": "Walled plate",
+              "size": "21cm",
+              "holds": "",
+              "type": "Plates",
+              "colour": "White"
+            },
+            "WHBALW261": {
+              "shape": "Walled plate",
+              "size": "26cm",
+              "holds": "",
+              "type": "Plates",
+              "colour": "White"
+            },
+            "WHBALW581": {
+              "shape": "Wide rim plate",
+              "size": "27.2cm",
+              "holds": "",
+              "type": "Plates",
+              "colour": "White"
+            },
+            "WHBALWBL1": {
+              "shape": "Wide rim bowl",
+              "size": "28cm",
+              "holds": "47cl",
+              "type": "Bowls",
+              "colour": "White"
+            },
+            "WHBALWBM1": {
+              "shape": "Wide rim bowl",
+              "size": "24cm",
+              "holds": "28cl",
+              "type": "Bowls",
+              "colour": "White"
+            }
+          }
+        }
+      },
+      "rangeLabels": {
+        "shop": "Shop all shapes and sizes",
+        "colourways": "See the colourways",
+        "colourwaysEyebrow": "Colourways",
+        "shapesEyebrow": "Shapes and sizes",
+        "completeEyebrow": "Complete the table",
+        "colourwayLabel": "Colourway",
+        "typeLabel": "Type",
+        "all": "All",
+        "colSize": "Size",
+        "colHolds": "Holds",
+        "colCode": "Code",
+        "colEach": "Each",
+        "colPack": "Per pack",
+        "colPacks": "Packs",
+        "barHint": "Set pack numbers on as many sizes as you need, then add them all in one go.",
+        "clear": "Clear",
+        "addAll": "Add all to basket",
+        "moreIn": "More in",
+        "allCollections": "All Churchill Super Vitrified collections",
+        "showing": "Showing",
+        "in": "in",
+        "piece": "piece",
+        "pieces": "pieces",
+        "shape": "shape",
+        "shapes": "shapes",
+        "size": "size",
+        "sizes": "sizes",
+        "packsOf": "packs of",
+        "or": "or",
+        "for": "for",
+        "packsOfItem": "Packs of",
+        "selSize": "size",
+        "selSizes": "sizes",
+        "selPack": "pack",
+        "selPacks": "packs"
+      }
     }
   }
 }

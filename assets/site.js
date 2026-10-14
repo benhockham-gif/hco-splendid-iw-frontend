@@ -197,3 +197,76 @@
 (function(){var D=["bar-top-accessories","beer","bottles-jars","brandy-fortified-wine","champagne","cocktails","crystal-glassware","dash-bottles","hiballs-tumblers","hot-drinks","ice-champagne","jugs-pitchers-carafes","measures-pourers","metal-drinkware","openers","rocks","shake","shot-glasses","skewers","soda-siphons-cream-whippers","speciality","speed-rails","stir","strain","straws","trays","tumblers","wine"];
 function run(){document.querySelectorAll('a.subtile[href^="/category/"]').forEach(function(a){var s=a.getAttribute("href").split("/")[2].split("?")[0];if(D.indexOf(s)<0)return;var i=a.querySelector("img");if(i){i.src="/assets/dept/"+s+".jpg";i.removeAttribute("srcset");}});}
 if(document.readyState==="loading")document.addEventListener("DOMContentLoaded",run);else run();})();
+
+/* Range page: pack steppers, the add-all bar's running total, colour and type tabs that switch in place (every piece is
+   already on the page; quantities stay set across colours), and each shape's picture following the size under the pointer.
+   Without this file the tabs are links and the quantities are typed; the form posts the same either way. */
+(function () {
+  'use strict';
+  var form = document.querySelector('form.rorder');
+  if (!form) return;
+  var $$ = function (s, r) { return Array.prototype.slice.call((r || document).querySelectorAll(s)); };
+  var L = function (k) { return form.getAttribute('data-l-' + k) || ''; };
+  var money = function (n) { return new Intl.NumberFormat('en-GB', { style: 'currency', currency: 'GBP' }).format(n); };
+  var bar = form.querySelector('.rbar-t'), hint = bar ? bar.innerHTML : '';
+  function clamp(v) { v = parseInt(v, 10); return isNaN(v) ? 0 : Math.max(0, Math.min(99, v)); }
+  function sum() {
+    var lines = 0, packs = 0, pieces = 0, total = 0;
+    $$('.rrow', form).forEach(function (row) {
+      var inp = row.querySelector('.rq-v'); if (!inp) return;
+      var q = clamp(inp.value);
+      row.classList.toggle('on', q > 0);
+      if (!q) return;
+      lines++; packs += q; pieces += q * (parseInt(row.getAttribute('data-pack'), 10) || 1); total += q * (parseFloat(row.getAttribute('data-price')) || 0);
+    });
+    if (!bar) return;
+    if (!lines) { bar.innerHTML = hint; bar.classList.remove('sel'); return; }
+    bar.classList.add('sel');
+    bar.innerHTML = '';
+    var b1 = document.createElement('b'); b1.textContent = lines + ' ' + (lines > 1 ? L('sizes') : L('size')) + ', ' + packs + ' ' + (packs > 1 ? L('packs') : L('pack'));
+    var b2 = document.createElement('b'); b2.textContent = money(total);
+    bar.appendChild(b1); bar.appendChild(document.createTextNode(' · ' + pieces + ' ' + (pieces === 1 ? L('piece') : L('pieces')) + ' · ')); bar.appendChild(b2);
+  }
+  form.addEventListener('click', function (e) {
+    var b = e.target.closest('.rq-b'); if (!b) return;
+    var inp = b.parentNode.querySelector('.rq-v');
+    inp.value = clamp(clamp(inp.value) + parseInt(b.getAttribute('data-rq'), 10));
+    sum();
+  });
+  form.addEventListener('input', function (e) { if (e.target.classList.contains('rq-v')) sum(); });
+  form.addEventListener('reset', function () { setTimeout(sum, 0); });
+  form.addEventListener('submit', function (e) { if (!$$('.rq-v', form).some(function (i) { return clamp(i.value) > 0; })) e.preventDefault(); });
+  // The shape's picture follows the size under the pointer.
+  $$('.rrow[data-img]', form).forEach(function (row) {
+    row.addEventListener('mouseenter', function () { var im = row.closest('.rshape').querySelector('.rshape-im img'); if (im && im.src.indexOf(row.getAttribute('data-img')) < 0) im.src = row.getAttribute('data-img'); });
+  });
+  // Colour and type: switch what shows without a reload, and keep the address in step.
+  function current() { var a = document.querySelector('[data-iw-range-colourtab][aria-current]'); return a ? a.getAttribute('data-colour') : ''; }
+  function show(colour, type) {
+    if (colour === null) colour = current();
+    $$('[data-colour]').forEach(function (el) {
+      if (el.hasAttribute('data-iw-range-colourtab')) { if (el.getAttribute('data-colour') === colour) el.setAttribute('aria-current', 'true'); else el.removeAttribute('aria-current'); }
+      else el.hidden = colour !== '' && el.getAttribute('data-colour') !== colour;
+    });
+    $$('[data-iw-range-colour-link]').forEach(function (a) { if (new URL(a.href).searchParams.get('colour') === colour) a.setAttribute('aria-current', 'true'); else a.removeAttribute('aria-current'); });
+    $$('[data-iw-range-typetabs]').forEach(function (box) {
+      if (box.hidden) return;
+      $$('[data-iw-range-typetab]', box).forEach(function (a) { if ((a.getAttribute('data-type') || '') === type) a.setAttribute('aria-current', 'true'); else a.removeAttribute('aria-current'); });
+    });
+    $$('[data-iw-range-groups]').forEach(function (gs) { if (gs.hidden) return; $$('[data-iw-range-group]', gs).forEach(function (g) { g.hidden = !!type && g.getAttribute('data-type') !== type; }); });
+    var u = new URL(location.href);
+    if (colour) u.searchParams.set('colour', colour); else u.searchParams.delete('colour');
+    if (type) u.searchParams.set('type', type); else u.searchParams.delete('type');
+    history.replaceState(null, '', u.pathname + u.search + '#shapes');
+  }
+  document.addEventListener('click', function (e) {
+    var a = e.target.closest('[data-iw-range-colourtab],[data-iw-range-colour-link],[data-iw-range-family-link],[data-iw-range-typetab]');
+    if (!a || e.metaKey || e.ctrlKey || e.shiftKey) return;
+    e.preventDefault();
+    if (a.hasAttribute('data-iw-range-typetab')) show(null, a.getAttribute('data-type') || '');
+    else show(new URL(a.href).searchParams.get('colour') || '', '');
+    var target = document.getElementById('shapes');
+    if (!a.closest('#shapes') && target) target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  });
+  sum();
+})();
