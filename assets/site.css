@@ -723,7 +723,7 @@ html.js .rv.is-in{opacity:1;transform:none}
 /* v4.2: home department cards match the subcategory tiles (pebble + name, no card) */
 .depts{gap:28px 20px;border-top:0}
 .dept{background:transparent;border:0;padding:0;gap:10px}
-.dept:hover .peb{filter:brightness(.96)}
+/* home department tiles use the brand-page tile style (.btile, .im): name overlap, size, hover zoom */
 .dept:hover .n{color:var(--rust)}
 /* v4.2: header icon states: heart red when there are favourites, basket green when it has items */
 .ic-none,.ic-some{display:flex}
@@ -916,7 +916,7 @@ html:has(#vp-a:checked) .vp-onlyB,html:has(#vp-b:checked) .vp-onlyA{display:none
 .kf-chips .kf-more:hover{border-color:var(--ink)}
 .kf-chips .kf-more button{all:inherit;cursor:pointer}
 
-/* Brand page content (Churchill Super Vitrified proposal v3): feature chips, why band, collection and department tiles */
+/* Brand page content (Churchill Super Vitrified proposal v3): feature chips, why band, collection and department tiles; .btile is also the home page department tile */
 .brand-copy .kf-chips{margin:0}
 .bwhy{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.15fr);background:var(--ink);color:var(--paper)}
 .bwhy-img{position:relative;overflow:hidden;background:#2E2921;min-height:360px}
